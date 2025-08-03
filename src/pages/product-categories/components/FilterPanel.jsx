@@ -1,30 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Button from '../../../components/ui/Button';
+import Button from "../../../components/ui/Button";
 
 const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
   const [activeFilters, setActiveFilters] = useState({
-    mealType: [],
+    beverageType: [],
     dietary: [],
-    spiceLevel: [],
-    cuisine: [],
-    cookingMethod: [],
-    occasion: []
+    tasteProfile: [],
+    occasion: [],
+    size: [],
+    brand: [],
   });
 
   const filterOptions = {
-    mealType: ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Beverages'],
-    dietary: ['Vegetarian', 'Vegan', 'No Onion-Garlic', 'Gluten-Free', 'Low Sodium'],
-    spiceLevel: ['Mild', 'Medium', 'Hot', 'Extra Hot'],
-    cuisine: ['Indian', 'Chinese', 'Continental', 'Italian', 'Thai', 'Mexican'],
-    cookingMethod: ['Grilling', 'Stir-Frying', 'Baking', 'Roasting', 'Steaming', 'Deep Frying'],
-    occasion: ['Daily Cooking', 'Party', 'Festival', 'Gifting', 'Picnic', 'Office Lunch']
+    beverageType: [
+      "Lassi",
+      "Shake",
+      "Chai",
+      "Coffee",
+      "Smoothie",
+      "Yogurt Drink",
+    ],
+    dietary: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Sugar-Free"],
+    tasteProfile: [
+      "Sweet",
+      "Refreshing",
+      "Creamy",
+      "Fruity",
+      "Traditional",
+      "Premium",
+    ],
+    occasion: [
+      "Daily",
+      "Summer",
+      "Parties",
+      "Festivals",
+      "Office",
+      "Health & Fitness",
+    ],
+    size: ["200ml", "300ml", "320ml", "340ml", "500ml"],
+    brand: ["VEEBA Vega"],
   };
 
   const handleFilterToggle = (category, value) => {
     const newFilters = { ...activeFilters };
     if (newFilters[category].includes(value)) {
-      newFilters[category] = newFilters[category].filter(item => item !== value);
+      newFilters[category] = newFilters[category].filter(
+        (item) => item !== value
+      );
     } else {
       newFilters[category] = [...newFilters[category], value];
     }
@@ -34,12 +57,12 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
 
   const clearAllFilters = () => {
     const clearedFilters = {
-      mealType: [],
+      beverageType: [],
       dietary: [],
-      spiceLevel: [],
-      cuisine: [],
-      cookingMethod: [],
-      occasion: []
+      tasteProfile: [],
+      occasion: [],
+      size: [],
+      brand: [],
     };
     setActiveFilters(clearedFilters);
     onFilterChange(clearedFilters);
@@ -65,7 +88,11 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
       </div>
 
       {/* Filter Panel */}
-      <div className={`lg:block ${isOpen ? 'block' : 'hidden'} bg-white culinary-shadow rounded-xl p-6 mb-6 lg:mb-0`}>
+      <div
+        className={`lg:block ${
+          isOpen ? "block" : "hidden"
+        } bg-white culinary-shadow rounded-xl p-6 mb-6 lg:mb-0`}
+      >
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-semibold text-primary">Filters</h3>
           {getActiveFilterCount() > 0 && (
@@ -84,7 +111,7 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
           {Object.entries(filterOptions).map(([category, options]) => (
             <div key={category}>
               <h4 className="font-medium text-text-primary mb-3 capitalize">
-                {category.replace(/([A-Z])/g, ' $1').trim()}
+                {category.replace(/([A-Z])/g, " $1").trim()}
               </h4>
               <div className="space-y-2">
                 {options.map((option) => (
@@ -110,11 +137,7 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
 
         {/* Mobile Close Button */}
         <div className="lg:hidden mt-6 pt-6 border-t border-border">
-          <Button
-            variant="primary"
-            onClick={onToggle}
-            className="w-full"
-          >
+          <Button variant="primary" onClick={onToggle} className="w-full">
             Apply Filters
           </Button>
         </div>
