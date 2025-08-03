@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Icon from "../../../components/AppIcon";
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
 
 const ProductCard = ({ product, onAddToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,18 +20,18 @@ const ProductCard = ({ product, onAddToCart }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link to="/product-detail-page" className="block">
+      <Link to={`/product-detail-page?id=${product.id}`} className="block">
         {/* Product Image */}
         <div className="relative h-48 bg-surface overflow-hidden">
           <Image
             src={product.image}
             alt={product.name}
             className={`w-full h-full object-cover transition-all duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            } ${isHovered ? 'scale-110' : 'scale-100'}`}
+              imageLoaded ? "opacity-100" : "opacity-0"
+            } ${isHovered ? "scale-110" : "scale-100"}`}
             onLoad={() => setImageLoaded(true)}
           />
-          
+
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-2">
             {product.isNew && (
@@ -52,9 +52,11 @@ const ProductCard = ({ product, onAddToCart }) => {
           </div>
 
           {/* Quick Recipe Overlay */}
-          <div className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 ${
-            isHovered ? 'opacity-100' : 'opacity-0'
-          }`}>
+          <div
+            className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
             <div className="text-center text-white p-4">
               <Icon name="ChefHat" size={32} className="mx-auto mb-2" />
               <p className="text-sm font-medium mb-2">Quick Recipe Ideas</p>
@@ -79,7 +81,11 @@ const ProductCard = ({ product, onAddToCart }) => {
               </p>
             </div>
             <div className="flex items-center gap-1 ml-2">
-              <Icon name="Star" size={14} className="text-amber-400 fill-current" />
+              <Icon
+                name="Star"
+                size={14}
+                className="text-amber-400 fill-current"
+              />
               <span className="text-sm font-medium text-text-primary">
                 {product.rating}
               </span>
