@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
-import Icon from '../../../components/AppIcon';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
+import Icon from "../../../components/AppIcon";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,23 +12,40 @@ const HeroSection = () => {
       id: 1,
       title: "Premium Mayonnaise",
       subtitle: "Creamy perfection in every spoonful",
-      image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=800&h=600&fit=crop",
-      cta: "Discover Mayo Range"
+      image:
+        "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=800&h=600&fit=crop",
+      cta: "Discover Mayo Range",
     },
+
     {
       id: 2,
-      title: "Sandwich Spreads",
-      subtitle: "Transform ordinary into extraordinary",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800&h=600&fit=crop",
-      cta: "Explore Spreads"
+      title: "Vega Berry Shake",
+      subtitle: "Fresh and fruity berry goodness",
+      image: "/assets/images/vegaBerryShake.jpg",
+      cta: "Explore Berry Shakes",
     },
     {
       id: 3,
+      title: "Vega Mango Lassi",
+      subtitle: "Traditional taste with a modern twist",
+      image: "/assets/images/vegaMangoLassi.jpg",
+      cta: "Try Mango Lassi",
+    },
+    {
+      id: 4,
+      title: "Vega Strawberry Lassi",
+      subtitle: "Sweet and refreshing strawberry delight",
+      image: "/assets/images/vegastrawberrylassi.jpg",
+      cta: "Explore Strawberry Lassi",
+    },
+    {
+      id: 5,
       title: "WOK TOK Sauces",
       subtitle: "Authentic Asian flavors at home",
-      image: "https://images.pixabay.com/photo/2017/06/16/11/38/sauce-2408952_1280.jpg?w=800&h=600&fit=crop",
-      cta: "Try WOK TOK"
-    }
+      image:
+        "https://images.pixabay.com/photo/2017/06/16/11/38/sauce-2408952_1280.jpg?w=800&h=600&fit=crop",
+      cta: "Try WOK TOK",
+    },
   ];
 
   useEffect(() => {
@@ -44,25 +61,28 @@ const HeroSection = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+    );
   };
 
   return (
-    <section className="relative h-screen bg-gradient-to-br from-primary/5 to-secondary/10 overflow-hidden">
+    <section className="relative h-screen min-h-[600px] lg:min-h-screen xl:min-h-screen bg-gradient-to-br from-primary/5 to-secondary/10 overflow-hidden">
       {/* Background Slides */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
             <div className="absolute inset-0 bg-black/20 z-10"></div>
             <Image
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover appetite-filter"
+              className="w-full h-full object-cover object-center min-h-screen lg:min-h-full appetite-filter lg:object-cover lg:filter-none"
+              loading="eager"
             />
           </div>
         ))}
@@ -91,7 +111,10 @@ const HeroSection = () => {
                 {heroSlides[currentSlide].subtitle}
               </p>
               <Link to="/product-categories">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-primary hover:bg-gray-100"
+                >
                   {heroSlides[currentSlide].cta}
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
@@ -105,7 +128,7 @@ const HeroSection = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    index === currentSlide ? "bg-white" : "bg-white/50"
                   }`}
                 />
               ))}
