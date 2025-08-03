@@ -14,7 +14,7 @@ const ProductCategories = () => {
   const [filters, setFilters] = useState({});
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isComboBuilderOpen, setIsComboBuilderOpen] = useState(false);
-  const [sortBy, setSortBy] = useState("popularity");
+  const [sortBy, setSortBy] = useState("price-low");
   const [viewMode, setViewMode] = useState("grid");
   const [cartItems, setCartItems] = useState([]);
 
@@ -194,14 +194,9 @@ const ProductCategories = () => {
       case "price-high":
         filtered.sort((a, b) => b.price - a.price);
         break;
-      case "rating":
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
-      case "newest":
-        filtered.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
-        break;
       default:
-        // Keep original order for popularity
+        // Default to price low to high
+        filtered.sort((a, b) => a.price - b.price);
         break;
     }
 
@@ -225,11 +220,8 @@ const ProductCategories = () => {
   };
 
   const sortOptions = [
-    { value: "popularity", label: "Most Popular", icon: "TrendingUp" },
-    { value: "price-low", label: "Price: Low to High", icon: "ChevronUp" },
-    { value: "price-high", label: "Price: High to Low", icon: "ChevronDown" },
-    { value: "rating", label: "Highest Rated", icon: "Star" },
-    { value: "newest", label: "Newest First", icon: "Sparkles" },
+    { value: "price-low", label: "Price: Low to High", icon: "ArrowUpDown" },
+    { value: "price-high", label: "Price: High to Low", icon: "ArrowDownUp" },
   ];
 
   useEffect(() => {
