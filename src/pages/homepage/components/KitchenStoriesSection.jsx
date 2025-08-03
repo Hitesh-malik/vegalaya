@@ -1,97 +1,102 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
-import Icon from '../../../components/AppIcon';
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
+import Icon from "../../../components/AppIcon";
 
 const KitchenStoriesSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
-    { id: 'all', name: 'All Stories', icon: 'Grid3X3' },
-    { id: 'quick', name: 'Quick Recipes', icon: 'Clock' },
-    { id: 'gourmet', name: 'Gourmet', icon: 'ChefHat' },
-    { id: 'party', name: 'Party Food', icon: 'Users' }
+    { id: "all", name: "All Stories", icon: "Grid3X3" },
+    { id: "quick", name: "Quick Recipes", icon: "Clock" },
+    { id: "gourmet", name: "Gourmet", icon: "ChefHat" },
+    { id: "party", name: "Party Food", icon: "Users" },
   ];
 
   const stories = [
     {
       id: 1,
-      title: '5-Minute Sandwich Spread Magic',
-      author: 'Sneha Gupta',
-      authorImage: 'https://randomuser.me/api/portraits/women/32.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=400&h=300&fit=crop',
-      duration: '5 min',
+      title: "5-Minute Sandwich Spread Magic",
+      author: "Sneha Gupta",
+      authorImage: "https://randomuser.me/api/portraits/women/32.jpg",
+      thumbnail: "/assets/images/vegacocolassi.jpg",
+      duration: "5 min",
       likes: 234,
-      category: 'quick',
-      description: 'Transform boring sandwiches into gourmet delights with VEEBA spreads',
-      veebaProduct: 'Sandwich Spread'
+      category: "quick",
+      description:
+        "Transform boring sandwiches into gourmet delights with VEEBA spreads",
+      veebaProduct: "Sandwich Spread",
     },
     {
       id: 2,
-      title: 'WOK TOK Noodles Masterclass',
-      author: 'Chef Rahul',
-      authorImage: 'https://randomuser.me/api/portraits/men/45.jpg',
-      thumbnail: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400&h=300&fit=crop',
-      duration: '15 min',
+      title: "WOK TOK Noodles Masterclass",
+      author: "Chef Rahul",
+      authorImage: "https://randomuser.me/api/portraits/men/45.jpg",
+      thumbnail: "/assets/images/vegamoka.jpg",
+      duration: "15 min",
       likes: 567,
-      category: 'gourmet',
-      description: 'Authentic Asian flavors at home with WOK TOK sauce collection',
-      veebaProduct: 'WOK TOK Sauce'
+      category: "gourmet",
+      description:
+        "Authentic Asian flavors at home with WOK TOK sauce collection",
+      veebaProduct: "WOK TOK Sauce",
     },
     {
       id: 3,
-      title: 'Party Dip Platter Ideas',
-      author: 'Meera Shah',
-      authorImage: 'https://randomuser.me/api/portraits/women/28.jpg',
-      thumbnail: 'https://images.pixabay.com/photo/2017/06/16/11/38/sauce-2408952_1280.jpg?w=400&h=300&fit=crop',
-      duration: '10 min',
+      title: "Party Dip Platter Ideas",
+      author: "Meera Shah",
+      authorImage: "https://randomuser.me/api/portraits/women/28.jpg",
+      thumbnail: "/assets/images/vegaBerryShake.jpg",
+      duration: "10 min",
       likes: 189,
-      category: 'party',
-      description: 'Create stunning party platters with VEEBA mayo and sauce varieties',
-      veebaProduct: 'Mayo Collection'
+      category: "party",
+      description:
+        "Create stunning party platters with VEEBA mayo and sauce varieties",
+      veebaProduct: "Mayo Collection",
     },
     {
       id: 4,
-      title: 'Breakfast Toast Transformations',
-      author: 'Amit Patel',
-      authorImage: 'https://randomuser.me/api/portraits/men/33.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      duration: '7 min',
+      title: "Breakfast Toast Transformations",
+      author: "Amit Patel",
+      authorImage: "https://randomuser.me/api/portraits/men/33.jpg",
+      thumbnail: "/assets/images/vegakesarchai.jpg",
+      duration: "7 min",
       likes: 345,
-      category: 'quick',
-      description: 'Elevate your morning toast game with creative VEEBA combinations',
-      veebaProduct: 'Mint Mayo'
+      category: "quick",
+      description:
+        "Elevate your morning toast game with creative VEEBA combinations",
+      veebaProduct: "Mint Mayo",
     },
     {
       id: 5,
-      title: 'Gourmet Salad Dressings',
-      author: 'Chef Priya',
-      authorImage: 'https://randomuser.me/api/portraits/women/41.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop',
-      duration: '12 min',
+      title: "Gourmet Salad Dressings",
+      author: "Chef Priya",
+      authorImage: "https://randomuser.me/api/portraits/women/41.jpg",
+      thumbnail: "/assets/images/vegacocolassi.jpg",
+      duration: "12 min",
       likes: 423,
-      category: 'gourmet',
-      description: 'Restaurant-style salads with VEEBA premium dressing range',
-      veebaProduct: 'Caesar Dressing'
+      category: "gourmet",
+      description: "Restaurant-style salads with VEEBA premium dressing range",
+      veebaProduct: "Caesar Dressing",
     },
     {
       id: 6,
-      title: 'Kids\' Favorite Snack Hacks',
-      author: 'Ritu Sharma',
-      authorImage: 'https://randomuser.me/api/portraits/women/35.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=300&fit=crop',
-      duration: '8 min',
+      title: "Kids' Favorite Snack Hacks",
+      author: "Ritu Sharma",
+      authorImage: "https://randomuser.me/api/portraits/women/35.jpg",
+      thumbnail: "/assets/images/vegaMangoLassi.jpg",
+      duration: "8 min",
       likes: 278,
-      category: 'quick',
-      description: 'Make healthy snacks exciting for kids with VEEBA flavors',
-      veebaProduct: 'Sandwich Spread'
-    }
+      category: "quick",
+      description: "Make healthy snacks exciting for kids with VEEBA flavors",
+      veebaProduct: "Sandwich Spread",
+    },
   ];
 
-  const filteredStories = selectedCategory === 'all' 
-    ? stories 
-    : stories.filter(story => story.category === selectedCategory);
+  const filteredStories =
+    selectedCategory === "all"
+      ? stories
+      : stories.filter((story) => story.category === selectedCategory);
 
   return (
     <section className="py-16 bg-white">
@@ -101,7 +106,8 @@ const KitchenStoriesSection = () => {
             VEEBA Kitchen Stories
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Get inspired by our community of food lovers sharing their VEEBA creations
+            Get inspired by our community of food lovers sharing their VEEBA
+            creations
           </p>
         </div>
 
@@ -113,7 +119,8 @@ const KitchenStoriesSection = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-primary text-white' :'bg-accent/20 text-primary hover:bg-accent/30'
+                  ? "bg-primary text-white"
+                  : "bg-accent/20 text-primary hover:bg-accent/30"
               }`}
             >
               <Icon name={category.icon} size={18} />
@@ -136,7 +143,7 @@ const KitchenStoriesSection = () => {
                   alt={story.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 appetite-filter"
                 />
-                
+
                 {/* Play Button Overlay */}
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
@@ -174,9 +181,11 @@ const KitchenStoriesSection = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <span className="text-sm font-medium text-primary">{story.author}</span>
+                    <span className="text-sm font-medium text-primary">
+                      {story.author}
+                    </span>
                   </div>
-                  
+
                   <div className="flex items-center space-x-1 text-text-secondary">
                     <Icon name="Heart" size={16} className="text-red-500" />
                     <span className="text-sm">{story.likes}</span>
@@ -194,10 +203,10 @@ const KitchenStoriesSection = () => {
               Share Your VEEBA Story
             </h3>
             <p className="text-lg text-text-secondary mb-8">
-              Create amazing dishes with VEEBA products and share your recipes with our community. 
-              Get featured and inspire fellow food lovers!
+              Create amazing dishes with VEEBA products and share your recipes
+              with our community. Get featured and inspire fellow food lovers!
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg">
                 <Icon name="Upload" size={20} className="mr-2" />
@@ -213,11 +222,15 @@ const KitchenStoriesSection = () => {
             <div className="grid grid-cols-3 gap-8 mt-8 pt-8 border-t border-border">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">2.5K+</div>
-                <div className="text-sm text-text-secondary">Recipes Shared</div>
+                <div className="text-sm text-text-secondary">
+                  Recipes Shared
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">15K+</div>
-                <div className="text-sm text-text-secondary">Community Members</div>
+                <div className="text-sm text-text-secondary">
+                  Community Members
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">50K+</div>

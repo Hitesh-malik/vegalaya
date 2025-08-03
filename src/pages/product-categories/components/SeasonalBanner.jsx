@@ -1,7 +1,7 @@
-import React from 'react';
-import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
+import React from "react";
+import Icon from "../../../components/AppIcon";
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
 
 const SeasonalBanner = () => {
   const seasonalOffers = [
@@ -9,24 +9,26 @@ const SeasonalBanner = () => {
       id: 1,
       title: "Festival Special Collection",
       subtitle: "Diwali Delights",
-      description: "Celebrate with authentic flavors - Special combo packs for festive cooking",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop",
+      description:
+        "Celebrate with authentic flavors - Special combo packs for festive cooking",
+      image: "/assets/images/vegacocolassi.jpg",
       discount: "25% OFF",
       validUntil: "Oct 31, 2024",
       cta: "Shop Festival Pack",
-      gradient: "from-amber-500 to-orange-600"
+      gradient: "from-amber-500 to-orange-600",
     },
     {
       id: 2,
       title: "Winter Warmers",
       subtitle: "Comfort Food Essentials",
-      description: "Rich, creamy sauces perfect for hearty winter meals and hot preparations",
-      image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&h=400&fit=crop",
+      description:
+        "Rich, creamy sauces perfect for hearty winter meals and hot preparations",
+      image: "/assets/images/vegamoka.jpg",
       discount: "20% OFF",
       validUntil: "Dec 31, 2024",
       cta: "Explore Collection",
-      gradient: "from-red-500 to-pink-600"
-    }
+      gradient: "from-red-500 to-pink-600",
+    },
   ];
 
   const currentOffer = seasonalOffers[0];
@@ -41,7 +43,9 @@ const SeasonalBanner = () => {
             alt={currentOffer.title}
             className="w-full h-full object-cover"
           />
-          <div className={`absolute inset-0 bg-gradient-to-r ${currentOffer.gradient} opacity-85`}></div>
+          <div
+            className={`absolute inset-0 bg-gradient-to-r ${currentOffer.gradient} opacity-85`}
+          ></div>
         </div>
 
         {/* Content */}
@@ -53,17 +57,19 @@ const SeasonalBanner = () => {
                   <Icon name="Sparkles" size={24} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium opacity-90">{currentOffer.subtitle}</p>
+                  <p className="text-sm font-medium opacity-90">
+                    {currentOffer.subtitle}
+                  </p>
                   <h2 className="text-2xl lg:text-3xl font-bold font-accent">
                     {currentOffer.title}
                   </h2>
                 </div>
               </div>
-              
+
               <p className="text-white/90 text-sm lg:text-base mb-4 max-w-lg">
                 {currentOffer.description}
               </p>
-              
+
               <div className="flex items-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Icon name="Tag" size={16} />
@@ -114,10 +120,10 @@ const SeasonalBanner = () => {
       {/* Quick Access Seasonal Categories */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
         {[
-          { name: 'Festival Packs', icon: 'Gift', count: '12 items' },
-          { name: 'Winter Specials', icon: 'Snowflake', count: '8 items' },
-          { name: 'Party Essentials', icon: 'PartyPopper', count: '15 items' },
-          { name: 'Gift Combos', icon: 'Heart', count: '6 items' }
+          { name: "Festival Packs", icon: "Gift", count: "12 items" },
+          { name: "Winter Specials", icon: "Snowflake", count: "8 items" },
+          { name: "Party Essentials", icon: "PartyPopper", count: "15 items" },
+          { name: "Gift Combos", icon: "Heart", count: "6 items" },
         ].map((category, index) => (
           <div
             key={index}

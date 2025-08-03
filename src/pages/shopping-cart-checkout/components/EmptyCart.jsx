@@ -1,35 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
-import Image from '../../../components/AppImage';
+import React from "react";
+import { Link } from "react-router-dom";
+import Icon from "../../../components/AppIcon";
+import Button from "../../../components/ui/Button";
+import Image from "../../../components/AppImage";
 
 const EmptyCart = () => {
   const suggestedProducts = [
     {
       id: 1,
-      name: 'VEEBA Eggless Mayo',
-      image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=300',
+      name: "VEEBA Eggless Mayo",
+      image: "/assets/images/vegacocolassi.jpg",
       price: 89,
       originalPrice: 99,
-      category: 'Spreads'
+      category: "Spreads",
     },
     {
       id: 2,
-      name: 'WOK TOK Schezwan Sauce',
-      image: 'https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg?auto=compress&cs=tinysrgb&w=300',
+      name: "WOK TOK Schezwan Sauce",
+      image: "/assets/images/vegakesarchai.jpg",
       price: 129,
       originalPrice: 149,
-      category: 'Sauces'
+      category: "Sauces",
     },
     {
       id: 3,
-      name: 'VEEBA Cheese Dip',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300',
+      name: "VEEBA Cheese Dip",
+      image: "/assets/images/vegamoka.jpg",
       price: 149,
       originalPrice: 169,
-      category: 'Dips'
-    }
+      category: "Dips",
+    },
   ];
 
   return (
@@ -40,13 +40,17 @@ const EmptyCart = () => {
           <div className="w-64 h-64 mx-auto mb-8 relative">
             <div className="w-full h-full bg-surface rounded-full flex items-center justify-center">
               <div className="relative">
-                <Icon name="ShoppingCart" size={80} className="text-text-secondary/30" />
+                <Icon
+                  name="ShoppingCart"
+                  size={80}
+                  className="text-text-secondary/30"
+                />
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
                   <Icon name="X" size={16} className="text-text-secondary" />
                 </div>
               </div>
             </div>
-            
+
             {/* Floating Elements */}
             <div className="absolute top-8 left-8 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center animate-bounce">
               <Icon name="Heart" size={20} className="text-primary" />
@@ -68,7 +72,8 @@ const EmptyCart = () => {
               Looks like you haven't added any delicious VEEBA products yet!
             </p>
             <p className="text-text-secondary">
-              Explore our range of premium sauces, spreads, and dips to transform your meals.
+              Explore our range of premium sauces, spreads, and dips to
+              transform your meals.
             </p>
           </div>
 
@@ -96,7 +101,7 @@ const EmptyCart = () => {
                 Start with These Popular Items
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {suggestedProducts.map((product) => (
                 <div key={product.id} className="group cursor-pointer">
@@ -108,7 +113,7 @@ const EmptyCart = () => {
                         className="w-full h-full object-cover appetite-filter"
                       />
                     </div>
-                    
+
                     <div className="text-center">
                       <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
                         {product.category}
@@ -116,7 +121,7 @@ const EmptyCart = () => {
                       <h3 className="font-semibold text-text-primary mt-2 mb-2">
                         {product.name}
                       </h3>
-                      
+
                       <div className="flex items-center justify-center gap-2 mb-3">
                         <span className="text-lg font-bold text-primary">
                           ₹{product.price}
@@ -125,7 +130,7 @@ const EmptyCart = () => {
                           ₹{product.originalPrice}
                         </span>
                       </div>
-                      
+
                       <Link to="/product-detail-page">
                         <Button size="sm" className="w-full">
                           <Icon name="Plus" size={16} className="mr-1" />
@@ -145,27 +150,33 @@ const EmptyCart = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Truck" size={24} className="text-primary" />
               </div>
-              <h3 className="font-semibold text-text-primary mb-2">Free Delivery</h3>
+              <h3 className="font-semibold text-text-primary mb-2">
+                Free Delivery
+              </h3>
               <p className="text-sm text-text-secondary">
                 Free shipping on orders above ₹500
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Shield" size={24} className="text-primary" />
               </div>
-              <h3 className="font-semibold text-text-primary mb-2">Quality Assured</h3>
+              <h3 className="font-semibold text-text-primary mb-2">
+                Quality Assured
+              </h3>
               <p className="text-sm text-text-secondary">
                 Premium ingredients, consistent taste
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="RotateCcw" size={24} className="text-primary" />
               </div>
-              <h3 className="font-semibold text-text-primary mb-2">Easy Returns</h3>
+              <h3 className="font-semibold text-text-primary mb-2">
+                Easy Returns
+              </h3>
               <p className="text-sm text-text-secondary">
                 Hassle-free returns within 7 days
               </p>

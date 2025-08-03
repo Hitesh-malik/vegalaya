@@ -1,39 +1,43 @@
-import React from 'react';
-import Icon from '../../../components/AppIcon';
+import React from "react";
+import Icon from "../../../components/AppIcon";
 
 const CategoryHeader = ({ selectedCategory, onCategoryChange }) => {
   const categories = [
     {
-      id: 'quick-meals',
-      name: 'Quick Meals',
-      description: 'Transform everyday meals into extraordinary experiences with our range of spreads, mayo, and instant flavor enhancers.',
-      icon: 'Clock',
-      color: 'bg-amber-50 text-amber-700'
+      id: "all",
+      name: "All Products",
+      description:
+        "Explore our complete range of premium VEEBA beverages and drinks.",
+      icon: "Grid3X3",
+      color: "bg-blue-50 text-blue-700",
     },
     {
-      id: 'gourmet-cooking',
-      name: 'Gourmet Cooking',
-      description: 'Elevate your culinary creations with premium sauces and specialty items trusted by professional chefs.',
-      icon: 'ChefHat',
-      color: 'bg-purple-50 text-purple-700'
+      id: "beverages",
+      name: "Beverages",
+      description:
+        "Refreshing and traditional beverages including lassi, shakes, and specialty drinks.",
+      icon: "Coffee",
+      color: "bg-amber-50 text-amber-700",
     },
     {
-      id: 'wok-tok-asian',
-      name: 'WOK TOK Asian',
-      description: 'Authentic Asian flavors and cooking essentials for traditional stir-fries, noodles, and oriental delicacies.',
-      icon: 'Utensils',
-      color: 'bg-red-50 text-red-700'
+      id: "traditional",
+      name: "Traditional Drinks",
+      description:
+        "Authentic Indian beverages like chai, lassi, and traditional refreshments.",
+      icon: "Utensils",
+      color: "bg-red-50 text-red-700",
     },
     {
-      id: 'seasonal-specials',
-      name: 'Seasonal Specials',
-      description: 'Festival cooking essentials and trending flavor combinations for special occasions and celebrations.',
-      icon: 'Sparkles',
-      color: 'bg-green-50 text-green-700'
-    }
+      id: "premium",
+      name: "Premium Beverages",
+      description: "Premium and specialty drinks for discerning taste buds.",
+      icon: "Sparkles",
+      color: "bg-purple-50 text-purple-700",
+    },
   ];
 
-  const currentCategory = categories.find(cat => cat.id === selectedCategory) || categories[0];
+  const currentCategory =
+    categories.find((cat) => cat.id === selectedCategory) || categories[0];
 
   return (
     <div className="bg-white culinary-shadow rounded-xl p-6 mb-8">
@@ -51,7 +55,7 @@ const CategoryHeader = ({ selectedCategory, onCategoryChange }) => {
             {currentCategory.description}
           </p>
         </div>
-        
+
         {/* Category Selector */}
         <div className="flex flex-wrap lg:flex-nowrap gap-2">
           {categories.map((category) => (
@@ -60,7 +64,8 @@ const CategoryHeader = ({ selectedCategory, onCategoryChange }) => {
               onClick={() => onCategoryChange(category.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 selectedCategory === category.id
-                  ? 'bg-primary text-white' :'bg-surface text-text-secondary hover:bg-accent/20 hover:text-primary'
+                  ? "bg-primary text-white"
+                  : "bg-surface text-text-secondary hover:bg-accent/20 hover:text-primary"
               }`}
             >
               {category.name}

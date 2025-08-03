@@ -12,8 +12,7 @@ const HeroSection = () => {
       id: 1,
       title: "Premium Mayonnaise",
       subtitle: "Creamy perfection in every spoonful",
-      image:
-        "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=800&h=600&fit=crop",
+      image: "/assets/images/vegacocolassi.jpg",
       cta: "Discover Mayo Range",
     },
 
@@ -42,8 +41,7 @@ const HeroSection = () => {
       id: 5,
       title: "WOK TOK Sauces",
       subtitle: "Authentic Asian flavors at home",
-      image:
-        "https://images.pixabay.com/photo/2017/06/16/11/38/sauce-2408952_1280.jpg?w=800&h=600&fit=crop",
+      image: "/assets/images/vegakesarchai.jpg",
       cta: "Try WOK TOK",
     },
   ];

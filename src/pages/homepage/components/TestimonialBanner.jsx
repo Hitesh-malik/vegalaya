@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Image from '../../../components/AppImage';
-import Icon from '../../../components/AppIcon';
+import React, { useState, useEffect } from "react";
+import Image from "../../../components/AppImage";
+import Icon from "../../../components/AppIcon";
 
 const TestimonialBanner = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -8,48 +8,52 @@ const TestimonialBanner = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Rajesh Kumar',
-      business: 'Kumar\'s Sandwich Corner',
-      location: 'Mumbai',
-      review: 'VEEBA mayo made my sandwich shop famous! Customers specifically ask for VEEBA now.',
+      name: "Rajesh Kumar",
+      business: "Kumar's Sandwich Corner",
+      location: "Mumbai",
+      review:
+        "VEEBA mayo made my sandwich shop famous! Customers specifically ask for VEEBA now.",
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/men/32.jpg',
-      dishImage: 'https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=400&h=300&fit=crop',
-      transformation: 'From 50 to 200 sandwiches daily'
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      dishImage: "/assets/images/vegacocolassi.jpg",
+      transformation: "From 50 to 200 sandwiches daily",
     },
     {
       id: 2,
-      name: 'Priya Sharma',
-      business: 'Home Chef',
-      location: 'Delhi',
-      review: 'My family gatherings are incomplete without VEEBA sauces. The WOK TOK range is absolutely amazing!',
+      name: "Priya Sharma",
+      business: "Home Chef",
+      location: "Delhi",
+      review:
+        "My family gatherings are incomplete without VEEBA sauces. The WOK TOK range is absolutely amazing!",
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/women/44.jpg',
-      dishImage: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400&h=300&fit=crop',
-      transformation: 'Became the family\'s favorite cook'
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      dishImage: "/assets/images/vegamoka.jpg",
+      transformation: "Became the family's favorite cook",
     },
     {
       id: 3,
-      name: 'Chef Arjun Mehta',
-      business: 'Spice Garden Restaurant',
-      location: 'Bangalore',
-      review: 'VEEBA\'s consistency and quality help us maintain our restaurant standards. Our customers love the taste!',
+      name: "Chef Arjun Mehta",
+      business: "Spice Garden Restaurant",
+      location: "Bangalore",
+      review:
+        "VEEBA's consistency and quality help us maintain our restaurant standards. Our customers love the taste!",
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/men/56.jpg',
-      dishImage: 'https://images.pixabay.com/photo/2017/06/16/11/38/sauce-2408952_1280.jpg?w=400&h=300&fit=crop',
-      transformation: '4.8★ rating on food apps'
+      image: "https://randomuser.me/api/portraits/men/56.jpg",
+      dishImage: "/assets/images/vegaBerryShake.jpg",
+      transformation: "4.8★ rating on food apps",
     },
     {
       id: 4,
-      name: 'Meera Patel',
-      business: 'Tiffin Service',
-      location: 'Ahmedabad',
-      review: 'VEEBA products have transformed my tiffin business. Kids especially love the sandwich spreads!',
+      name: "Meera Patel",
+      business: "Tiffin Service",
+      location: "Ahmedabad",
+      review:
+        "VEEBA products have transformed my tiffin business. Kids especially love the sandwich spreads!",
       rating: 5,
-      image: 'https://randomuser.me/api/portraits/women/28.jpg',
-      dishImage: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
-      transformation: '300+ daily tiffin orders'
-    }
+      image: "https://randomuser.me/api/portraits/women/28.jpg",
+      dishImage: "/assets/images/vegakesarchai.jpg",
+      transformation: "300+ daily tiffin orders",
+    },
   ];
 
   useEffect(() => {
@@ -65,7 +69,9 @@ const TestimonialBanner = () => {
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
@@ -89,9 +95,16 @@ const TestimonialBanner = () => {
                 <div className="mb-6">
                   {/* Rating Stars */}
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={20} className="text-yellow-400 fill-current" />
-                    ))}
+                    {[...Array(testimonials[currentTestimonial].rating)].map(
+                      (_, i) => (
+                        <Icon
+                          key={i}
+                          name="Star"
+                          size={20}
+                          className="text-yellow-400 fill-current"
+                        />
+                      )
+                    )}
                   </div>
 
                   {/* Review Text */}
@@ -102,7 +115,11 @@ const TestimonialBanner = () => {
                   {/* Transformation Highlight */}
                   <div className="bg-accent/20 rounded-lg p-4 mb-6">
                     <div className="flex items-center space-x-2">
-                      <Icon name="TrendingUp" size={20} className="text-green-600" />
+                      <Icon
+                        name="TrendingUp"
+                        size={20}
+                        className="text-green-600"
+                      />
                       <span className="font-semibold text-green-800">
                         {testimonials[currentTestimonial].transformation}
                       </span>
@@ -142,10 +159,12 @@ const TestimonialBanner = () => {
                   className="w-full h-full object-cover appetite-filter"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                
+
                 {/* VEEBA Badge */}
                 <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <span className="text-sm font-semibold text-primary">Made with VEEBA</span>
+                  <span className="text-sm font-semibold text-primary">
+                    Made with VEEBA
+                  </span>
                 </div>
               </div>
             </div>
@@ -167,7 +186,7 @@ const TestimonialBanner = () => {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial ? 'bg-primary' : 'bg-gray-300'
+                    index === currentTestimonial ? "bg-primary" : "bg-gray-300"
                   }`}
                 />
               ))}
@@ -185,7 +204,10 @@ const TestimonialBanner = () => {
           <div className="mt-12 overflow-hidden">
             <div className="flex animate-scroll space-x-8">
               {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 bg-white rounded-lg p-4 culinary-shadow min-w-80">
+                <div
+                  key={index}
+                  className="flex-shrink-0 bg-white rounded-lg p-4 culinary-shadow min-w-80"
+                >
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-10 h-10 rounded-full overflow-hidden">
                       <Image
@@ -195,8 +217,12 @@ const TestimonialBanner = () => {
                       />
                     </div>
                     <div>
-                      <h5 className="font-semibold text-primary text-sm">{testimonial.name}</h5>
-                      <p className="text-xs text-text-secondary">{testimonial.business}</p>
+                      <h5 className="font-semibold text-primary text-sm">
+                        {testimonial.name}
+                      </h5>
+                      <p className="text-xs text-text-secondary">
+                        {testimonial.business}
+                      </p>
                     </div>
                   </div>
                   <p className="text-sm text-text-primary line-clamp-2">
@@ -211,8 +237,12 @@ const TestimonialBanner = () => {
 
       <style jsx>{`
         @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
         }
         .animate-scroll {
           animation: scroll 30s linear infinite;

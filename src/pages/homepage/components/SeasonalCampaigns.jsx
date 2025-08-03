@@ -1,31 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
-import Icon from '../../../components/AppIcon';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Image from "../../../components/AppImage";
+import Button from "../../../components/ui/Button";
+import Icon from "../../../components/AppIcon";
 
 const SeasonalCampaigns = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
 
   // Calculate time left for current campaign
   useEffect(() => {
-    const targetDate = new Date('2025-08-15T23:59:59').getTime();
-    
+    const targetDate = new Date("2025-08-15T23:59:59").getTime();
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
-      
+
       if (difference > 0) {
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+          seconds: Math.floor((difference % (1000 * 60)) / 1000),
         });
       }
     }, 1000);
@@ -35,41 +37,43 @@ const SeasonalCampaigns = () => {
 
   const campaigns = [
     {
-      id: 'monsoon-special',
-      title: 'Monsoon Comfort Combos',
-      subtitle: 'Warm up your rainy days',
-      description: 'Perfect combinations for cozy monsoon evenings with family',
-      image: 'https://images.unsplash.com/photo-1534353341328-ffa6d66c2c8d?w=600&h=400&fit=crop',
-      discount: '25% OFF',
-      products: ['Hot & Sweet Sauce', 'Schezwan Mayo', 'Sandwich Spread'],
-      validUntil: 'August 15, 2025',
-      bgColor: 'from-blue-500 to-indigo-600',
-      isLimited: true
+      id: "monsoon-special",
+      title: "Monsoon Comfort Combos",
+      subtitle: "Warm up your rainy days",
+      description: "Perfect combinations for cozy monsoon evenings with family",
+      image: "/assets/images/vegacocolassi.jpg",
+      discount: "25% OFF",
+      products: ["Hot & Sweet Sauce", "Schezwan Mayo", "Sandwich Spread"],
+      validUntil: "August 15, 2025",
+      bgColor: "from-blue-500 to-indigo-600",
+      isLimited: true,
     },
     {
-      id: 'independence-day',
-      title: 'Freedom Flavors Festival',
-      subtitle: 'Celebrate with tricolor treats',
-      description: 'Create patriotic dishes with our special tricolor combo pack',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=600&h=400&fit=crop',
-      discount: '30% OFF',
-      products: ['Mint Mayo', 'Classic Mayo', 'Tandoori Mayo'],
-      validUntil: 'August 31, 2025',
-      bgColor: 'from-orange-500 to-green-600',
-      isLimited: false
+      id: "independence-day",
+      title: "Freedom Flavors Festival",
+      subtitle: "Celebrate with tricolor treats",
+      description:
+        "Create patriotic dishes with our special tricolor combo pack",
+      image: "/assets/images/vegamoka.jpg",
+      discount: "30% OFF",
+      products: ["Mint Mayo", "Classic Mayo", "Tandoori Mayo"],
+      validUntil: "August 31, 2025",
+      bgColor: "from-orange-500 to-green-600",
+      isLimited: false,
     },
     {
-      id: 'back-to-school',
-      title: 'Back to School Lunch Pack',
-      subtitle: 'Healthy & tasty tiffin solutions',
-      description: 'Make school lunches exciting with kid-friendly VEEBA products',
-      image: 'https://images.pixabay.com/photo/2017/06/16/11/38/sauce-2408952_1280.jpg?w=600&h=400&fit=crop',
-      discount: '20% OFF',
-      products: ['Sandwich Spread', 'Mint Mayo', 'Sweet & Sour Sauce'],
-      validUntil: 'September 30, 2025',
-      bgColor: 'from-yellow-500 to-orange-500',
-      isLimited: false
-    }
+      id: "back-to-school",
+      title: "Back to School Lunch Pack",
+      subtitle: "Healthy & tasty tiffin solutions",
+      description:
+        "Make school lunches exciting with kid-friendly VEEBA products",
+      image: "/assets/images/vegaBerryShake.jpg",
+      discount: "20% OFF",
+      products: ["Sandwich Spread", "Mint Mayo", "Sweet & Sour Sauce"],
+      validUntil: "September 30, 2025",
+      bgColor: "from-yellow-500 to-orange-500",
+      isLimited: false,
+    },
   ];
 
   const [activeCampaign, setActiveCampaign] = useState(0);
@@ -121,37 +125,62 @@ const SeasonalCampaigns = () => {
 
                 {/* Featured Products */}
                 <div className="mb-8">
-                  <h4 className="font-semibold text-primary mb-3">Combo Includes:</h4>
+                  <h4 className="font-semibold text-primary mb-3">
+                    Combo Includes:
+                  </h4>
                   <div className="space-y-2">
-                    {campaigns[activeCampaign].products.map((product, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <Icon name="Check" size={16} className="text-green-500" />
-                        <span className="text-text-primary">{product}</span>
-                      </div>
-                    ))}
+                    {campaigns[activeCampaign].products.map(
+                      (product, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2"
+                        >
+                          <Icon
+                            name="Check"
+                            size={16}
+                            className="text-green-500"
+                          />
+                          <span className="text-text-primary">{product}</span>
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
 
                 {/* Countdown Timer */}
                 {campaigns[activeCampaign].isLimited && (
                   <div className="bg-accent/20 rounded-lg p-4 mb-6">
-                    <h4 className="font-semibold text-primary mb-3 text-center">Offer Ends In:</h4>
+                    <h4 className="font-semibold text-primary mb-3 text-center">
+                      Offer Ends In:
+                    </h4>
                     <div className="grid grid-cols-4 gap-2 text-center">
                       <div className="bg-white rounded-lg p-2">
-                        <div className="text-2xl font-bold text-primary">{timeLeft.days}</div>
+                        <div className="text-2xl font-bold text-primary">
+                          {timeLeft.days}
+                        </div>
                         <div className="text-xs text-text-secondary">Days</div>
                       </div>
                       <div className="bg-white rounded-lg p-2">
-                        <div className="text-2xl font-bold text-primary">{timeLeft.hours}</div>
+                        <div className="text-2xl font-bold text-primary">
+                          {timeLeft.hours}
+                        </div>
                         <div className="text-xs text-text-secondary">Hours</div>
                       </div>
                       <div className="bg-white rounded-lg p-2">
-                        <div className="text-2xl font-bold text-primary">{timeLeft.minutes}</div>
-                        <div className="text-xs text-text-secondary">Minutes</div>
+                        <div className="text-2xl font-bold text-primary">
+                          {timeLeft.minutes}
+                        </div>
+                        <div className="text-xs text-text-secondary">
+                          Minutes
+                        </div>
                       </div>
                       <div className="bg-white rounded-lg p-2">
-                        <div className="text-2xl font-bold text-primary">{timeLeft.seconds}</div>
-                        <div className="text-xs text-text-secondary">Seconds</div>
+                        <div className="text-2xl font-bold text-primary">
+                          {timeLeft.seconds}
+                        </div>
+                        <div className="text-xs text-text-secondary">
+                          Seconds
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -179,16 +208,18 @@ const SeasonalCampaigns = () => {
                   alt={campaigns[activeCampaign].title}
                   className="w-full h-full object-cover appetite-filter"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${campaigns[activeCampaign].bgColor} opacity-60`}></div>
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${campaigns[activeCampaign].bgColor} opacity-60`}
+                ></div>
+
                 {/* Floating Discount Badge */}
                 <div className="absolute top-6 right-6 bg-white rounded-full p-4 culinary-shadow">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-conversion-accent">
-                      {campaigns[activeCampaign].discount.split(' ')[0]}
+                      {campaigns[activeCampaign].discount.split(" ")[0]}
                     </div>
                     <div className="text-xs text-text-secondary">
-                      {campaigns[activeCampaign].discount.split(' ')[1]}
+                      {campaigns[activeCampaign].discount.split(" ")[1]}
                     </div>
                   </div>
                 </div>
@@ -205,8 +236,8 @@ const SeasonalCampaigns = () => {
               onClick={() => setActiveCampaign(index)}
               className={`text-left p-6 rounded-2xl transition-all duration-300 ${
                 index === activeCampaign
-                  ? 'bg-white culinary-shadow scale-105'
-                  : 'bg-white/50 hover:bg-white/80'
+                  ? "bg-white culinary-shadow scale-105"
+                  : "bg-white/50 hover:bg-white/80"
               }`}
             >
               <div className="flex items-center justify-between mb-3">
@@ -215,10 +246,18 @@ const SeasonalCampaigns = () => {
                   <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                 )}
               </div>
-              <p className="text-sm text-text-secondary mb-3">{campaign.subtitle}</p>
+              <p className="text-sm text-text-secondary mb-3">
+                {campaign.subtitle}
+              </p>
               <div className="flex items-center justify-between">
-                <span className="text-conversion-accent font-bold">{campaign.discount}</span>
-                <Icon name="ArrowRight" size={16} className="text-text-secondary" />
+                <span className="text-conversion-accent font-bold">
+                  {campaign.discount}
+                </span>
+                <Icon
+                  name="ArrowRight"
+                  size={16}
+                  className="text-text-secondary"
+                />
               </div>
             </button>
           ))}
@@ -230,7 +269,8 @@ const SeasonalCampaigns = () => {
             Never Miss a Deal
           </h3>
           <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
-            Subscribe to get exclusive access to seasonal offers, new product launches, and special festival combos before anyone else.
+            Subscribe to get exclusive access to seasonal offers, new product
+            launches, and special festival combos before anyone else.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
