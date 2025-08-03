@@ -601,38 +601,38 @@ const ProductDetailPage = () => {
           </div>
 
           {/* Product Tabs */}
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <ProductTabs product={currentProduct} />
-          </div>
+          </div> */}
 
           {/* Perfect Pairings */}
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <PerfectPairings
               pairings={mockPairings}
               onAddBundle={handleAddBundle}
             />
-          </div>
+          </div> */}
 
           {/* Customer Reviews */}
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <CustomerReviews
               reviews={mockReviews}
               averageRating={currentProduct.rating}
               totalReviews={currentProduct.reviewCount}
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Recipe Inspiration & Recommendations */}
-        <div className="bg-surface py-12">
+        {/* <div className="bg-surface py-12">
           <div className="max-w-7xl mx-auto px-4 lg:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Recipe Inspiration */}
+              
               <div className="lg:col-span-1">
                 <RecipeInspiration recipes={mockRecipes} />
               </div>
 
-              {/* Smart Recommendations */}
+             
               <div className="lg:col-span-2">
                 <SmartRecommendations
                   recommendations={mockRecommendations}
@@ -641,10 +641,10 @@ const ProductDetailPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Footer CTA */}
-        <div className="bg-gradient-brand py-12">
+        <div className="bg-gradient-brand py-12 bg-[#2b3a87]">
           <div className="max-w-4xl mx-auto px-4 lg:px-6 text-center text-white">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
               Transform Your Meals with VEEBA
