@@ -166,13 +166,13 @@ const ProductCategories = () => {
     // Filter by category
     if (selectedCategory !== "all") {
       const categoryMap = {
-        beverages: "Beverages",
-        traditional: "Beverages",
-        premium: "Beverages",
-        branded: "Branded",
+        lassi: "Lassi",
+        chai: "Chai",
+        coffee: "Coffee",
+        shake: "Shake",
       };
-      filtered = filtered.filter(
-        (product) => product.category === categoryMap[selectedCategory]
+      filtered = filtered.filter((product) =>
+        product.beverageType.includes(categoryMap[selectedCategory])
       );
     }
 
