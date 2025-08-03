@@ -7,6 +7,7 @@ import ComboBuilder from "./components/ComboBuilder";
 import SeasonalBanner from "./components/SeasonalBanner";
 import Icon from "../../components/AppIcon";
 import Button from "../../components/ui/Button";
+import Select from "../../components/ui/Select";
 
 const ProductCategories = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -156,28 +157,6 @@ const ProductCategories = () => {
       cookingMethod: ["No Cooking"],
       occasion: ["Daily", "Summer", "Parties"],
     },
-    {
-      id: 7,
-      name: "VEEBA Logo Collection",
-      category: "Branded",
-      size: "250ml",
-      price: 125,
-      originalPrice: 140,
-      discount: 11,
-      rating: 4.2,
-      image: "/assets/images/vagalayaLogo.png",
-      isNew: false,
-      isBestseller: false,
-      tags: ["Branded", "Premium", "Collector"],
-      usageContext: "Brand merchandise, gifts, collections",
-      quickRecipes: ["Branded Drink", "Logo Collection", "Premium Beverage"],
-      mealType: ["Beverages", "Snacks"],
-      dietary: ["Vegetarian", "Gluten-Free"],
-      spiceLevel: ["Mild"],
-      cuisine: ["Branded", "Premium"],
-      cookingMethod: ["No Cooking"],
-      occasion: ["Gifts", "Collections", "Brand Loyalty"],
-    },
   ];
 
   // Filter products based on selected category and filters
@@ -246,8 +225,11 @@ const ProductCategories = () => {
   };
 
   const sortOptions = [
-    { value: "price-low", label: "Price: Low to High" },
-    { value: "price-high", label: "Price: High to Low" },
+    { value: "popularity", label: "Most Popular", icon: "TrendingUp" },
+    { value: "price-low", label: "Price: Low to High", icon: "ChevronUp" },
+    { value: "price-high", label: "Price: High to Low", icon: "ChevronDown" },
+    { value: "rating", label: "Highest Rated", icon: "Star" },
+    { value: "newest", label: "Newest First", icon: "Sparkles" },
   ];
 
   useEffect(() => {
@@ -302,17 +284,13 @@ const ProductCategories = () => {
 
                 <div className="flex items-center gap-4">
                   {/* Sort Dropdown */}
-                  <select
+                  <Select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="px-3 py-2 border border-border rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    {sortOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
+                    onChange={setSortBy}
+                    options={sortOptions}
+                    placeholder="Sort by..."
+                    className="w-40 sm:w-48"
+                  />
 
                   {/* View Mode Toggle */}
                   <div className="flex border border-border rounded-lg overflow-hidden">
