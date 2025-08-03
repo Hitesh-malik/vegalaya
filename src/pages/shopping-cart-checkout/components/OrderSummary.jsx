@@ -1,65 +1,70 @@
-import React, { useState } from 'react';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
-import Input from '../../../components/ui/Input';
+import React, { useState } from "react";
+import Icon from "../../../components/AppIcon";
+import Button from "../../../components/ui/Button";
+import Input from "../../../components/ui/Input";
 
 const OrderSummary = ({ cartItems, onApplyCoupon }) => {
-  const [couponCode, setCouponCode] = useState('');
+  const [couponCode, setCouponCode] = useState("");
   const [appliedCoupon, setAppliedCoupon] = useState(null);
-  const [couponError, setCouponError] = useState('');
+  const [couponError, setCouponError] = useState("");
 
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const subtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
   const savings = cartItems.reduce((sum, item) => {
     if (item.originalPrice && item.originalPrice > item.price) {
-      return sum + ((item.originalPrice - item.price) * item.quantity);
+      return sum + (item.originalPrice - item.price) * item.quantity;
     }
     return sum;
   }, 0);
 
   const deliveryFee = subtotal > 500 ? 0 : 40;
   const packagingFee = 15;
-  
+
   const couponDiscount = appliedCoupon ? appliedCoupon.discount : 0;
   const total = subtotal + deliveryFee + packagingFee - couponDiscount;
 
   const availableCoupons = [
     {
-      code: 'VEEBA20',
+      code: "VEEBA20",
       discount: 50,
       minOrder: 300,
-      description: '₹50 off on orders above ₹300'
+      description: "₹50 off on orders above ₹300",
     },
     {
-      code: 'FIRSTORDER',
+      code: "FIRSTORDER",
       discount: 100,
       minOrder: 500,
-      description: '₹100 off on first order above ₹500'
+      description: "₹100 off on first order above ₹500",
     },
     {
-      code: 'FLAVOR25',
+      code: "FLAVOR25",
       discount: 75,
       minOrder: 400,
-      description: '₹75 off on orders above ₹400'
-    }
+      description: "₹75 off on orders above ₹400",
+    },
   ];
 
   const handleApplyCoupon = () => {
-    setCouponError('');
-    const coupon = availableCoupons.find(c => c.code === couponCode.toUpperCase());
-    
+    setCouponError("");
+    const coupon = availableCoupons.find(
+      (c) => c.code === couponCode.toUpperCase()
+    );
+
     if (!coupon) {
-      setCouponError('Invalid coupon code');
+      setCouponError("Invalid coupon code");
       return;
     }
-    
+
     if (subtotal < coupon.minOrder) {
       setCouponError(`Minimum order of ₹${coupon.minOrder} required`);
       return;
     }
-    
+
     setAppliedCoupon(coupon);
     onApplyCoupon(coupon);
-    setCouponCode('');
+    setCouponCode("");
   };
 
   const removeCoupon = () => {
@@ -68,7 +73,7 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg culinary-shadow p-6 sticky top-24">
+    <div className="bg-white rounded-lg culinary-shadow p-6">
       <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center gap-2">
         <Icon name="Receipt" size={20} />
         Order Summary
@@ -102,7 +107,7 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
             <span className="text-xs text-success ml-1">(Free)</span>
           )}
         </span>
-        <span className={deliveryFee === 0 ? 'text-success line-through' : ''}>
+        <span className={deliveryFee === 0 ? "text-success line-through" : ""}>
           ₹{deliveryFee.toFixed(2)}
         </span>
       </div>
@@ -137,7 +142,7 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
                 Apply
               </Button>
             </div>
-            
+
             {/* Available Coupons */}
             <div className="space-y-2">
               <p className="text-xs text-text-secondary">Available offers:</p>
@@ -148,8 +153,12 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
                   onClick={() => setCouponCode(coupon.code)}
                 >
                   <div>
-                    <span className="text-xs font-medium text-primary">{coupon.code}</span>
-                    <p className="text-xs text-text-secondary">{coupon.description}</p>
+                    <span className="text-xs font-medium text-primary">
+                      {coupon.code}
+                    </span>
+                    <p className="text-xs text-text-secondary">
+                      {coupon.description}
+                    </p>
                   </div>
                   <Icon name="Copy" size={12} className="text-primary" />
                 </div>
@@ -161,8 +170,12 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle" size={16} className="text-success" />
               <div>
-                <span className="text-sm font-medium text-success">{appliedCoupon.code}</span>
-                <p className="text-xs text-text-secondary">-₹{appliedCoupon.discount}</p>
+                <span className="text-sm font-medium text-success">
+                  {appliedCoupon.code}
+                </span>
+                <p className="text-xs text-text-secondary">
+                  -₹{appliedCoupon.discount}
+                </p>
               </div>
             </div>
             <Button
@@ -218,7 +231,8 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
           <div className="flex items-center gap-2">
             <Icon name="Sparkles" size={14} className="text-success" />
             <span className="text-sm font-medium text-success">
-              You're saving ₹{(savings + couponDiscount).toFixed(2)} on this order!
+              You're saving ₹{(savings + couponDiscount).toFixed(2)} on this
+              order!
             </span>
           </div>
         </div>
