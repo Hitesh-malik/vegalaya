@@ -43,7 +43,7 @@ const ProductCategories = () => {
       dietary: ["Vegetarian", "Gluten-Free"],
       tasteProfile: ["Refreshing", "Traditional"],
       occasion: ["Daily", "Festivals", "Parties"],
-      size: ["500ml"],
+      sizes: ["500ml"],
       brand: ["VEEBA Vega"],
     },
     {
@@ -64,7 +64,7 @@ const ProductCategories = () => {
       dietary: ["Vegetarian", "Gluten-Free"],
       tasteProfile: ["Sweet", "Creamy", "Fruity"],
       occasion: ["Daily", "Summer", "Parties"],
-      size: ["500ml"],
+      sizes: ["500ml"],
       brand: ["VEEBA Vega"],
     },
     {
@@ -86,7 +86,7 @@ const ProductCategories = () => {
       dietary: ["Vegetarian", "Gluten-Free"],
       tasteProfile: ["Traditional", "Premium"],
       occasion: ["Daily", "Special Occasions", "Festivals"],
-      size: ["200ml"],
+      sizes: ["200ml"],
       brand: ["VEEBA Vega"],
     },
     {
@@ -107,7 +107,7 @@ const ProductCategories = () => {
       dietary: ["Vegetarian", "Gluten-Free"],
       tasteProfile: ["Premium"],
       occasion: ["Daily", "Office", "Parties"],
-      size: ["320ml"],
+      sizes: ["320ml"],
       brand: ["VEEBA Vega"],
     },
     {
@@ -129,7 +129,7 @@ const ProductCategories = () => {
       dietary: ["Vegetarian", "Gluten-Free", "Healthy"],
       tasteProfile: ["Fruity", "Healthy"],
       occasion: ["Daily", "Health", "Fitness"],
-      size: ["300ml"],
+      sizes: ["300ml"],
       brand: ["VEEBA Vega"],
     },
     {
@@ -154,7 +154,7 @@ const ProductCategories = () => {
       dietary: ["Vegetarian", "Gluten-Free"],
       tasteProfile: ["Sweet", "Refreshing", "Fruity"],
       occasion: ["Daily", "Summer", "Parties"],
-      size: ["340ml"],
+      sizes: ["340ml"],
       brand: ["VEEBA Vega"],
     },
   ];
