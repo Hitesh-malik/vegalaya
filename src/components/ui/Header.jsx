@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Icon from '../AppIcon';
-import Button from './Button';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Icon from "../AppIcon";
+import Button from "./Button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,15 +14,15 @@ const Header = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navigationItems = [
-    { name: 'Home', path: '/homepage', icon: 'Home' },
-    { name: 'Categories', path: '/product-categories', icon: 'Grid3X3' },
-    { name: 'Products', path: '/product-detail-page', icon: 'Package' },
-    { name: 'Contact', path: '/contact-support', icon: 'MessageCircle' }
+    { name: "Home", path: "/homepage", icon: "Home" },
+    { name: "Categories", path: "/product-categories", icon: "Grid3X3" },
+    { name: "Products", path: "/product-detail-page", icon: "Package" },
+    { name: "Contact", path: "/contact-support", icon: "MessageCircle" },
   ];
 
   const isActivePath = (path) => {
@@ -34,24 +34,26 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md culinary-shadow' : 'bg-white'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/95 backdrop-blur-md culinary-shadow" : "bg-white"
+      }`}
+    >
       <div className="w-full">
         <div className="flex items-center justify-between h-16 px-4 lg:px-6">
           {/* Logo */}
           <Link to="/homepage" className="flex items-center space-x-2 group">
             <div className="relative">
-              <div className="w-10 h-10 gradient-brand rounded-lg flex items-center justify-center transform transition-transform group-hover:scale-105">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
+              <img
+                src="/assets/images/vagalayaLogo.png"
+                alt="Vagalaya Logo"
+                className="w-10 h-10 rounded-lg object-cover transform transition-transform group-hover:scale-105"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary font-accent">VEEBA</span>
+              <span className="text-xl font-bold text-primary font-accent">
+                VEEBA
+              </span>
               <span className="text-xs text-text-secondary -mt-1">Store</span>
             </div>
           </Link>
@@ -64,7 +66,8 @@ const Header = () => {
                 to={item.path}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   isActivePath(item.path)
-                    ? 'text-primary bg-accent/20' :'text-text-secondary hover:text-primary hover:bg-accent/10'
+                    ? "text-primary bg-accent/20"
+                    : "text-text-secondary hover:text-primary hover:bg-accent/10"
                 }`}
               >
                 <Icon name={item.icon} size={16} />
@@ -110,9 +113,11 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`lg:hidden transition-all duration-300 ease-smooth ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden bg-white border-t border-border`}>
+        <div
+          className={`lg:hidden transition-all duration-300 ease-smooth ${
+            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden bg-white border-t border-border`}
+        >
           <nav className="px-4 py-4 space-y-2">
             {navigationItems.map((item) => (
               <Link
@@ -121,14 +126,15 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActivePath(item.path)
-                    ? 'text-primary bg-accent/20' :'text-text-secondary hover:text-primary hover:bg-accent/10'
+                    ? "text-primary bg-accent/20"
+                    : "text-text-secondary hover:text-primary hover:bg-accent/10"
                 }`}
               >
                 <Icon name={item.icon} size={18} />
                 <span>{item.name}</span>
               </Link>
             ))}
-            
+
             {/* Mobile-only actions */}
             <div className="pt-4 border-t border-border mt-4">
               <div className="flex items-center space-x-4">
