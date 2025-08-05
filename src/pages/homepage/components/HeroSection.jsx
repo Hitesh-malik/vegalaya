@@ -10,39 +10,48 @@ const HeroSection = () => {
   const heroSlides = [
     {
       id: 1,
-      title: "Premium Mayonnaise",
-      subtitle: "Creamy perfection in every spoonful",
-      image: "/assets/images/vegacocolassi.jpg",
-      cta: "Discover Mayo Range",
+      title: "VegaMangoLassi",
+      subtitle:
+        "Naturally sweetened mango lassi — dairy-free, creamy & refreshing.",
+      image: "/assets/images/vegaMangoLassi.jpg",
+      cta: "Try Mango Magic",
+      subtitle2: "Authentic Taste, Plant-Based Twist.",
     },
 
     {
       id: 2,
-      title: "Vega Berry Shake",
-      subtitle: "Fresh and fruity berry goodness",
+      title: "VegaBerryShake",
+      subtitle: "Real berries blended into a smooth, dairy-free delight.",
       image: "/assets/images/vegaBerryShake.jpg",
-      cta: "Explore Berry Shakes",
+      cta: "Explore Berry Shake",
+      subtitle2: "Berrylicious. Nourishing. 100% Plant-Based.",
     },
     {
       id: 3,
-      title: "Vega Mango Lassi",
-      subtitle: "Traditional taste with a modern twist",
-      image: "/assets/images/vegaMangoLassi.jpg",
-      cta: "Try Mango Lassi",
+      title: "VegaKesarChai",
+      subtitle:
+        "Aromatic saffron chai – vegan, soothing, and naturally indulgent.",
+      image: "/assets/images/vegakesarchai.jpg",
+      cta: "Sip the Bliss",
+      subtitle2: "Spiced with Tradition. Steeped in Purity.",
     },
     {
       id: 4,
-      title: "Vega Strawberry Lassi",
-      subtitle: "Sweet and refreshing strawberry delight",
-      image: "/assets/images/vegastrawberrylassi.jpg",
-      cta: "Explore Strawberry Lassi",
+      title: "VegaCocoLassi",
+      subtitle:
+        "Dairy-free coconut lassi — creamy, hydrating, and refreshingly pure.",
+      image: "/assets/images/vegacocolassi.jpg",
+      cta: "Discover Coconut Joy",
+      subtitle2: "Tropical Goodness in Every Sip.",
     },
     {
       id: 5,
-      title: "WOK TOK Sauces",
-      subtitle: "Authentic Asian flavors at home",
-      image: "/assets/images/vegakesarchai.jpg",
-      cta: "Try WOK TOK",
+      // title: "WOK TOK Sauces",
+      subtitle:
+        "Taste the future of sustainable beverages. Crafted with love, exported with purpose.",
+      image: "/assets/images/no_image.png",
+      cta: "Explore Our Range",
+      subtitle2: "Farm to Cup • Purely Plant-Based • Proudly Indian",
     },
   ];
 
@@ -96,7 +105,7 @@ const HeroSection = () => {
                 VEGALYA
               </h1>
               <p className="text-xl lg:text-2xl font-medium opacity-90">
-                Mehnat ka phal VEGALYA hota hai
+                {heroSlides[currentSlide].subtitle2}
               </p>
             </div>
 
