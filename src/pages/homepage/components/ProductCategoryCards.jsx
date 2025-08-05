@@ -9,49 +9,64 @@ const ProductCategoryCards = () => {
 
   const categories = [
     {
-      id: "quick-meals",
-      title: "Quick Meals",
-      subtitle: "Sandwich spreads & mayo",
-      description: "Perfect for busy mornings and quick lunch fixes",
-      image: "/assets/images/vegacocolassi.jpg",
-      products: ["Classic Mayo", "Sandwich Spread", "Mint Mayo"],
-      usageScenarios: [
-        "Office lunch sandwiches",
-        "Kids' school tiffin",
-        "Quick breakfast toast",
+      id: "plant-based-refreshments",
+      title: "Plant-Based Refreshments",
+      subtitle: "Deliciously dairy-free drinks for every mood",
+      description: "Deliciously dairy-free drinks for every mood",
+      image: "/assets/images/vegaMangoLassi.jpg",
+      products: [
+        "VegaMangoLassi",
+        "VegaBerryShake",
+        "VegaCocoLassi",
+        "VegaKesarChai",
       ],
-      color: "from-green-400 to-green-600",
-      icon: "Clock",
+      usageScenarios: [
+        "Daily refreshments",
+        "Healthy lifestyle choices",
+        "Dairy-free alternatives",
+      ],
+      color: "from-orange-400 to-orange-600",
+      icon: "Droplets",
     },
     {
-      id: "gourmet-cooking",
-      title: "Gourmet Cooking",
-      subtitle: "Premium sauces",
-      description: "Elevate your home cooking to restaurant quality",
+      id: "brew-blend",
+      title: "Brew & Blend",
+      subtitle: "For mindful sips and morning rituals",
+      description: "For mindful sips and morning rituals",
       image: "/assets/images/vegamoka.jpg",
-      products: ["Peri Peri Sauce", "Thousand Island", "Caesar Dressing"],
+      products: [
+        "VegaMoka",
+        "VegaKesarChai",
+        "Oat Milk Creamer",
+        "Soy Milk Creamer",
+      ],
       usageScenarios: [
-        "Weekend dinner parties",
-        "Special occasion meals",
-        "Gourmet salad dressings",
+        "Morning coffee rituals",
+        "Afternoon tea breaks",
+        "Mindful drinking moments",
+      ],
+      color: "from-brown-400 to-brown-600",
+      icon: "Coffee",
+    },
+    {
+      id: "everyday-creamers",
+      title: "Everyday Creamers",
+      subtitle: "Smooth, sustainable creamers for tea, coffee & more",
+      description: "Smooth, sustainable creamers for tea, coffee & more",
+      image: "/assets/images/vegacocolassi.jpg",
+      products: [
+        "Coconut Creamer",
+        "Almond Creamer",
+        "Soy Creamer",
+        "Jowar Milk Creamer",
+      ],
+      usageScenarios: [
+        "Coffee and tea enhancement",
+        "Sustainable dairy alternatives",
+        "Everyday beverage enhancement",
       ],
       color: "from-purple-400 to-purple-600",
-      icon: "ChefHat",
-    },
-    {
-      id: "party-entertaining",
-      title: "Party Entertaining",
-      subtitle: "Combo packs",
-      description: "Everything you need for memorable gatherings",
-      image: "/assets/images/vegaBerryShake.jpg",
-      products: ["Party Combo Pack", "Dip Variety Set", "BBQ Collection"],
-      usageScenarios: [
-        "House parties & celebrations",
-        "BBQ gatherings",
-        "Festival entertaining",
-      ],
-      color: "from-orange-400 to-red-500",
-      icon: "Users",
+      icon: "Droplets",
     },
   ];
 
@@ -60,10 +75,11 @@ const ProductCategoryCards = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary font-accent mb-4">
-            Taste the Difference
+            Taste the Future
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Discover VEEBA products organized by how you love to eat and cook
+            Discover Vegalaya products crafted for conscious living — one sip at
+            a time.
           </p>
         </div>
 
@@ -157,7 +173,11 @@ const ProductCategoryCards = () => {
                     variant="outline"
                     className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
                   >
-                    Explore {category.title}
+                    {category.id === "plant-based-refreshments" &&
+                      "Explore Beverages →"}
+                    {category.id === "brew-blend" && "Brew the Goodness →"}
+                    {category.id === "everyday-creamers" &&
+                      "Discover Creamers →"}
                     <Icon name="ArrowRight" size={16} className="ml-2" />
                   </Button>
                 </Link>
