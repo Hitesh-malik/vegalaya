@@ -22,7 +22,7 @@ const Homepage = () => {
       <HeroSection />
 
       {/* Flavor Discovery Quiz Widget */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-primary font-accent mb-4">
@@ -35,7 +35,7 @@ const Homepage = () => {
           </div>
           <FlavorQuizWidget />
         </div>
-      </section>
+      </section> */}
 
       {/* Taste the Difference - Product Categories */}
       <ProductCategoryCards />

@@ -44,7 +44,7 @@ const ProductCategories = () => {
       tasteProfile: ["Refreshing", "Traditional"],
       occasion: ["Daily", "Festivals", "Parties"],
       size: ["500ml"],
-      brand: ["VEGALYA Vega"],
+      brand: ["VEEBA Vega"],
     },
     {
       id: 2,
@@ -65,7 +65,7 @@ const ProductCategories = () => {
       tasteProfile: ["Sweet", "Creamy", "Fruity"],
       occasion: ["Daily", "Summer", "Parties"],
       size: ["500ml"],
-      brand: ["VEGALYA Vega"],
+      brand: ["VEEBA Vega"],
     },
     {
       id: 3,
@@ -87,7 +87,7 @@ const ProductCategories = () => {
       tasteProfile: ["Traditional", "Premium"],
       occasion: ["Daily", "Special Occasions", "Festivals"],
       size: ["200ml"],
-      brand: ["VEGALYA Vega"],
+      brand: ["VEEBA Vega"],
     },
     {
       id: 4,
@@ -108,7 +108,7 @@ const ProductCategories = () => {
       tasteProfile: ["Premium"],
       occasion: ["Daily", "Office", "Parties"],
       size: ["320ml"],
-      brand: ["VEGALYA Vega"],
+      brand: ["VEEBA Vega"],
     },
     {
       id: 5,
@@ -130,7 +130,7 @@ const ProductCategories = () => {
       tasteProfile: ["Fruity", "Healthy"],
       occasion: ["Daily", "Health", "Fitness"],
       size: ["300ml"],
-      brand: ["VEGALYA Vega"],
+      brand: ["VEEBA Vega"],
     },
     {
       id: 6,
@@ -155,7 +155,7 @@ const ProductCategories = () => {
       tasteProfile: ["Sweet", "Refreshing", "Fruity"],
       occasion: ["Daily", "Summer", "Parties"],
       size: ["340ml"],
-      brand: ["VEGALYA Vega"],
+      brand: ["VEEBA Vega"],
     },
   ];
 

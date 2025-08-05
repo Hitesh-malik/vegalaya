@@ -20,7 +20,7 @@ const ShoppingCartCheckout = () => {
     const mockCartItems = [
       {
         id: 1,
-        name: "VEGALYA Eggless Mayonnaise",
+        name: "VEEBA Eggless Mayonnaise",
         description:
           "Creamy and delicious eggless mayo perfect for sandwiches and salads",
         image: "/assets/images/vegacocolassi.jpg",
@@ -50,7 +50,7 @@ const ShoppingCartCheckout = () => {
       },
       {
         id: 3,
-        name: "VEGALYA Cheese Dip",
+        name: "VEEBA Cheese Dip",
         description: "Rich and creamy cheese dip for all your snacking needs",
         image: "/assets/images/vegamoka.jpg",
         price: 149,
