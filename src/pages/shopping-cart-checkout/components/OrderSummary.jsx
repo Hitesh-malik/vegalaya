@@ -27,7 +27,7 @@ const OrderSummary = ({ cartItems, onApplyCoupon }) => {
 
   const availableCoupons = [
     {
-      code: "VEEBA20",
+      code: "VEGALAYA20",
       discount: 50,
       minOrder: 300,
       description: "₹50 off on orders above ₹300",
