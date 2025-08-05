@@ -166,21 +166,6 @@ const ProductCategoryCards = () => {
                     </ul>
                   </div>
                 </div>
-
-                {/* CTA Button */}
-                <Link to="/product-categories">
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
-                  >
-                    {category.id === "plant-based-refreshments" &&
-                      "Explore Beverages →"}
-                    {category.id === "brew-blend" && "Brew the Goodness →"}
-                    {category.id === "everyday-creamers" &&
-                      "Discover Creamers →"}
-                    <Icon name="ArrowRight" size={16} className="ml-2" />
-                  </Button>
-                </Link>
               </div>
             </div>
           ))}

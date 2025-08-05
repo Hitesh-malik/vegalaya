@@ -3,14 +3,9 @@ import Header from "../../components/ui/Header";
 import HeroSection from "./components/HeroSection";
 import FlavorQuizWidget from "./components/FlavorQuizWidget";
 import ProductCategoryCards from "./components/ProductCategoryCards";
-import AboutVegalaya from "./components/AboutVegalaya";
-import VegalayaJourney from "./components/VegalayaJourney";
-import OurPhilosophy from "./components/OurPhilosophy";
-import MeetTheLineup from "./components/MeetTheLineup";
 import BrewBetterFuture from "./components/BrewBetterFuture";
 import TestimonialBanner from "./components/TestimonialBanner";
 import KitchenStoriesSection from "./components/KitchenStoriesSection";
-import RootedInNatureSection from "./components/RootedInNatureSection";
 import SeasonalCampaigns from "./components/SeasonalCampaigns";
 import Footer from "./components/Footer";
 
@@ -46,18 +41,6 @@ const Homepage = () => {
       {/* Taste the Difference - Product Categories */}
       <ProductCategoryCards />
 
-      {/* About Vegalaya Section */}
-      <AboutVegalaya />
-
-      {/* The Vegalaya Journey Section */}
-      <VegalayaJourney />
-
-      {/* Our Philosophy Section */}
-      <OurPhilosophy />
-
-      {/* Meet the Lineup Section */}
-      <MeetTheLineup />
-
       {/* Let's Brew a Better Future Section */}
       <BrewBetterFuture />
 
@@ -66,9 +49,6 @@ const Homepage = () => {
 
       {/* VEGALYA Kitchen Stories */}
       <KitchenStoriesSection />
-
-      {/* Rooted in Nature Section */}
-      <RootedInNatureSection />
 
       {/* Seasonal Campaign Banners */}
       <SeasonalCampaigns />
