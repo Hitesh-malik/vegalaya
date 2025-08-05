@@ -166,7 +166,7 @@ const FlavorPairingSidebar = ({ cartItems, onAddToCart }) => {
           <span className="text-xs font-medium text-primary">Pro Tip</span>
         </div>
         <p className="text-xs text-text-secondary">
-          Mix and match different VEEBA products to create unique flavor
+          Mix and match different VEGALYA products to create unique flavor
           profiles. Our community has shared over 500+ recipe combinations!
         </p>
       </div>

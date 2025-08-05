@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import Header from '../../components/ui/Header';
-import HeroSection from './components/HeroSection';
-import FlavorQuizWidget from './components/FlavorQuizWidget';
-import ProductCategoryCards from './components/ProductCategoryCards';
-import TestimonialBanner from './components/TestimonialBanner';
-import KitchenStoriesSection from './components/KitchenStoriesSection';
-import SeasonalCampaigns from './components/SeasonalCampaigns';
-import Footer from './components/Footer';
+import React, { useEffect } from "react";
+import Header from "../../components/ui/Header";
+import HeroSection from "./components/HeroSection";
+import FlavorQuizWidget from "./components/FlavorQuizWidget";
+import ProductCategoryCards from "./components/ProductCategoryCards";
+import TestimonialBanner from "./components/TestimonialBanner";
+import KitchenStoriesSection from "./components/KitchenStoriesSection";
+import SeasonalCampaigns from "./components/SeasonalCampaigns";
+import Footer from "./components/Footer";
 
 const Homepage = () => {
   useEffect(() => {
@@ -17,7 +17,7 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section with Dynamic Product Showcase */}
       <HeroSection />
 
@@ -29,7 +29,8 @@ const Homepage = () => {
               Find Your Perfect Flavor Match
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              Take our personalized quiz to discover VEEBA products that match your taste preferences
+              Take our personalized quiz to discover VEGALYA products that match
+              your taste preferences
             </p>
           </div>
           <FlavorQuizWidget />
@@ -42,7 +43,7 @@ const Homepage = () => {
       {/* Scrolling Testimonial Banner */}
       <TestimonialBanner />
 
-      {/* VEEBA Kitchen Stories */}
+      {/* VEGALYA Kitchen Stories */}
       <KitchenStoriesSection />
 
       {/* Seasonal Campaign Banners */}

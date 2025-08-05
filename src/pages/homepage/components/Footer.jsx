@@ -1,60 +1,60 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
+import React from "react";
+import { Link } from "react-router-dom";
+import Icon from "../../../components/AppIcon";
+import Button from "../../../components/ui/Button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-      title: 'Products',
+      title: "Products",
       links: [
-        { name: 'Mayonnaise Range', path: '/product-categories' },
-        { name: 'Sandwich Spreads', path: '/product-categories' },
-        { name: 'WOK TOK Sauces', path: '/product-categories' },
-        { name: 'Premium Dressings', path: '/product-categories' },
-        { name: 'Combo Packs', path: '/product-categories' }
-      ]
+        { name: "Mayonnaise Range", path: "/product-categories" },
+        { name: "Sandwich Spreads", path: "/product-categories" },
+        { name: "WOK TOK Sauces", path: "/product-categories" },
+        { name: "Premium Dressings", path: "/product-categories" },
+        { name: "Combo Packs", path: "/product-categories" },
+      ],
     },
     {
-      title: 'Recipes & Tips',
+      title: "Recipes & Tips",
       links: [
-        { name: 'Quick Recipes', path: '/homepage' },
-        { name: 'Cooking Tips', path: '/homepage' },
-        { name: 'Video Tutorials', path: '/homepage' },
-        { name: 'Chef Collaborations', path: '/homepage' },
-        { name: 'Seasonal Specials', path: '/homepage' }
-      ]
+        { name: "Quick Recipes", path: "/homepage" },
+        { name: "Cooking Tips", path: "/homepage" },
+        { name: "Video Tutorials", path: "/homepage" },
+        { name: "Chef Collaborations", path: "/homepage" },
+        { name: "Seasonal Specials", path: "/homepage" },
+      ],
     },
     {
-      title: 'Business Solutions',
+      title: "Business Solutions",
       links: [
-        { name: 'Bulk Ordering', path: '/contact-support' },
-        { name: 'Dealer Partnerships', path: '/contact-support' },
-        { name: 'Restaurant Solutions', path: '/contact-support' },
-        { name: 'Food Service', path: '/contact-support' },
-        { name: 'Franchise Opportunities', path: '/contact-support' }
-      ]
+        { name: "Bulk Ordering", path: "/contact-support" },
+        { name: "Dealer Partnerships", path: "/contact-support" },
+        { name: "Restaurant Solutions", path: "/contact-support" },
+        { name: "Food Service", path: "/contact-support" },
+        { name: "Franchise Opportunities", path: "/contact-support" },
+      ],
     },
     {
-      title: 'Support',
+      title: "Support",
       links: [
-        { name: 'Customer Care', path: '/contact-support' },
-        { name: 'Cooking Support', path: '/contact-support' },
-        { name: 'Order Tracking', path: '/contact-support' },
-        { name: 'Returns & Refunds', path: '/contact-support' },
-        { name: 'FAQ', path: '/contact-support' }
-      ]
-    }
+        { name: "Customer Care", path: "/contact-support" },
+        { name: "Cooking Support", path: "/contact-support" },
+        { name: "Order Tracking", path: "/contact-support" },
+        { name: "Returns & Refunds", path: "/contact-support" },
+        { name: "FAQ", path: "/contact-support" },
+      ],
+    },
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: 'Facebook', url: '#' },
-    { name: 'Instagram', icon: 'Instagram', url: '#' },
-    { name: 'Twitter', icon: 'Twitter', url: '#' },
-    { name: 'YouTube', icon: 'Youtube', url: '#' },
-    { name: 'LinkedIn', icon: 'Linkedin', url: '#' }
+    { name: "Facebook", icon: "Facebook", url: "#" },
+    { name: "Instagram", icon: "Instagram", url: "#" },
+    { name: "Twitter", icon: "Twitter", url: "#" },
+    { name: "YouTube", icon: "Youtube", url: "#" },
+    { name: "LinkedIn", icon: "Linkedin", url: "#" },
   ];
 
   return (
@@ -66,36 +66,63 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/homepage" className="flex items-center space-x-2 mb-6">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="text-primary"
+                >
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold font-accent">VEEBA</span>
+                <span className="text-2xl font-bold font-accent">VEGALYA</span>
                 <span className="text-sm opacity-80">Store</span>
               </div>
             </Link>
-            
+
             <p className="text-white/80 mb-6 leading-relaxed">
-              Mehnat ka phal VEEBA hota hai. Transform your meals with our premium range of mayonnaise, spreads, and sauces crafted for the discerning taste.
+              Mehnat ka phal VEGALYA hota hai. Transform your meals with our
+              premium range of mayonnaise, spreads, and sauces crafted for the
+              discerning taste.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Icon name="Phone" size={18} className="text-secondary" />
-                <span className="text-white/80">1800-123-VEEBA</span>
+                <span className="text-white/80">1800-123-VEGALYA</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Icon name="Mail" size={18} className="text-secondary" />
-                <span className="text-white/80">hello@veeba.com</span>
+                <span className="text-white/80">hello@vegalaya.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <Icon name="MapPin" size={18} className="text-secondary mt-1" />
                 <span className="text-white/80">
-                  VEEBA Foods Pvt. Ltd.<br />
+                  VEGALYA Foods Pvt. Ltd.
+                  <br />
                   Gurgaon, Haryana, India
                 </span>
               </div>
@@ -142,10 +169,11 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="max-w-2xl">
             <h4 className="text-xl font-semibold mb-3 text-secondary">
-              Stay Updated with VEEBA
+              Stay Updated with VEGALYA
             </h4>
             <p className="text-white/80 mb-4">
-              Get the latest recipes, cooking tips, and exclusive offers delivered to your inbox.
+              Get the latest recipes, cooking tips, and exclusive offers
+              delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
@@ -167,15 +195,26 @@ const Footer = () => {
         <div className="container mx-auto px-4 lg:px-6 py-6">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-white/80 text-sm">
-              <span>© {currentYear} VEEBA Foods Pvt. Ltd. All rights reserved.</span>
+              <span>
+                © {currentYear} VEGALYA Foods Pvt. Ltd. All rights reserved.
+              </span>
               <div className="flex space-x-4">
-                <Link to="/homepage" className="hover:text-white transition-colors">
+                <Link
+                  to="/homepage"
+                  className="hover:text-white transition-colors"
+                >
                   Privacy Policy
                 </Link>
-                <Link to="/homepage" className="hover:text-white transition-colors">
+                <Link
+                  to="/homepage"
+                  className="hover:text-white transition-colors"
+                >
                   Terms of Service
                 </Link>
-                <Link to="/homepage" className="hover:text-white transition-colors">
+                <Link
+                  to="/homepage"
+                  className="hover:text-white transition-colors"
+                >
                   Cookie Policy
                 </Link>
               </div>

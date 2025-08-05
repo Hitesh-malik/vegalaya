@@ -20,8 +20,8 @@ const ProductDetailPage = () => {
   const mockProducts = {
     1: {
       id: "1",
-      name: "VEEBA Vega Coco Lassi",
-      brand: "VEEBA",
+      name: "VEGALYA Vega Coco Lassi",
+      brand: "VEGALYA",
       tagline: "Refreshing coconut delight",
       mainImage: "/assets/images/vegacocolassi.jpg",
       rating: 4.5,
@@ -70,8 +70,8 @@ const ProductDetailPage = () => {
     },
     2: {
       id: "2",
-      name: "VEEBA Vega Mango Lassi",
-      brand: "VEEBA",
+      name: "VEGALYA Vega Mango Lassi",
+      brand: "VEGALYA",
       tagline: "Sun-kissed mangoes in every sip",
       mainImage: "/assets/images/vegaMangoLassi.jpg",
       rating: 4.7,
@@ -120,8 +120,8 @@ const ProductDetailPage = () => {
     },
     3: {
       id: "3",
-      name: "VEEBA Vega Keshar Chai",
-      brand: "VEEBA",
+      name: "VEGALYA Vega Keshar Chai",
+      brand: "VEGALYA",
       tagline: "Premium saffron-infused tea",
       mainImage: "/assets/images/vegakesarchai.jpg",
       rating: 4.6,
@@ -170,8 +170,8 @@ const ProductDetailPage = () => {
     },
     4: {
       id: "4",
-      name: "VEEBA Vega Moka",
-      brand: "VEEBA",
+      name: "VEGALYA Vega Moka",
+      brand: "VEGALYA",
       tagline: "Rich coffee with chocolate notes",
       mainImage: "/assets/images/vegamoka.jpg",
       rating: 4.4,
@@ -219,8 +219,8 @@ const ProductDetailPage = () => {
     },
     5: {
       id: "5",
-      name: "VEEBA Vega Berry Shake",
-      brand: "VEEBA",
+      name: "VEGALYA Vega Berry Shake",
+      brand: "VEGALYA",
       tagline: "Fresh berry goodness in every sip",
       mainImage: "/assets/images/vegaBerryShake.jpg",
       rating: 4.3,
@@ -276,21 +276,21 @@ const ProductDetailPage = () => {
       products: [
         {
           id: "1",
-          name: "VEEBA Creamy Mayo",
+          name: "VEGALYA Creamy Mayo",
           size: "500g",
           price: 159,
           image: "/assets/images/vegaMangoLassi.jpg",
         },
         {
           id: "2",
-          name: "VEEBA Thousand Island",
+          name: "VEGALYA Thousand Island",
           size: "300g",
           price: 129,
           image: "/assets/images/vegacocolassi.jpg",
         },
         {
           id: "3",
-          name: "VEEBA Mint Mayo",
+          name: "VEGALYA Mint Mayo",
           size: "250g",
           price: 99,
           image: "/assets/images/vegakesarchai.jpg",
@@ -304,14 +304,14 @@ const ProductDetailPage = () => {
       products: [
         {
           id: "1",
-          name: "VEEBA Creamy Mayo",
+          name: "VEGALYA Creamy Mayo",
           size: "1kg",
           price: 289,
           image: "/assets/images/vegaMangoLassi.jpg",
         },
         {
           id: "4",
-          name: "VEEBA BBQ Sauce",
+          name: "VEGALYA BBQ Sauce",
           size: "350g",
           price: 149,
           image:
@@ -388,7 +388,7 @@ const ProductDetailPage = () => {
       keyIngredients: ["Bread", "Chicken", "Bacon", "Lettuce", "Tomato"],
       quickSteps: [
         "Toast bread slices until golden",
-        "Spread VEEBA mayo generously",
+        "Spread VEGALYA mayo generously",
         "Layer chicken, bacon, and vegetables",
         "Secure with toothpicks and serve",
       ],
@@ -396,7 +396,7 @@ const ProductDetailPage = () => {
     {
       id: 2,
       name: "Creamy Coleslaw",
-      description: "Fresh and crunchy coleslaw with VEEBA mayo dressing",
+      description: "Fresh and crunchy coleslaw with VEGALYA mayo dressing",
       image:
         "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=200&h=200&fit=crop",
       cookingTime: "10 mins",
@@ -440,7 +440,7 @@ const ProductDetailPage = () => {
   const mockRecommendations = [
     {
       id: "2",
-      name: "VEEBA Thousand Island Dressing",
+      name: "VEGALYA Thousand Island Dressing",
       description: "Tangy and sweet dressing perfect for salads",
       image:
         "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=300&fit=crop",
@@ -454,7 +454,7 @@ const ProductDetailPage = () => {
     },
     {
       id: "3",
-      name: "VEEBA Mint Mayonnaise",
+      name: "VEGALYA Mint Mayonnaise",
       description: "Refreshing mint-flavored mayo for a cool twist",
       image:
         "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=300&fit=crop",
@@ -468,7 +468,7 @@ const ProductDetailPage = () => {
     },
     {
       id: "4",
-      name: "VEEBA BBQ Sauce",
+      name: "VEGALYA BBQ Sauce",
       description: "Smoky BBQ sauce for grilling and dipping",
       image:
         "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&h=300&fit=crop",
@@ -647,10 +647,10 @@ const ProductDetailPage = () => {
         <div className="bg-gradient-brand py-12 bg-[#2b3a87]">
           <div className="max-w-4xl mx-auto px-4 lg:px-6 text-center text-white">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-              Transform Your Meals with VEEBA
+              Transform Your Meals with VEGALYA
             </h2>
             <p className="text-lg opacity-90 mb-6">
-              Join thousands of satisfied customers who trust VEEBA for
+              Join thousands of satisfied customers who trust VEGALYA for
               exceptional taste
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">

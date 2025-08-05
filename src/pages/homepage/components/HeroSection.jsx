@@ -93,10 +93,10 @@ const HeroSection = () => {
             {/* Brand Tagline */}
             <div className="mb-8">
               <h1 className="text-5xl lg:text-7xl font-bold font-accent mb-4">
-                VEEBA
+                VEGALYA
               </h1>
               <p className="text-xl lg:text-2xl font-medium opacity-90">
-                Mehnat ka phal VEEBA hota hai
+                Mehnat ka phal VEGALYA hota hai
               </p>
             </div>
 

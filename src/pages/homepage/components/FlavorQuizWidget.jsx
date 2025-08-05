@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Button from '../../../components/ui/Button';
-import Icon from '../../../components/AppIcon';
+import React, { useState } from "react";
+import Button from "../../../components/ui/Button";
+import Icon from "../../../components/AppIcon";
 
 const FlavorQuizWidget = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -11,52 +11,54 @@ const FlavorQuizWidget = () => {
   const questions = [
     {
       id: 1,
-      question: "What\'s your preferred spice level?",
+      question: "What's your preferred spice level?",
       options: [
-        { id: 'mild', label: 'Mild & Creamy', icon: 'Smile' },
-        { id: 'medium', label: 'Medium Heat', icon: 'Zap' },
-        { id: 'hot', label: 'Spicy & Bold', icon: 'Flame' }
-      ]
+        { id: "mild", label: "Mild & Creamy", icon: "Smile" },
+        { id: "medium", label: "Medium Heat", icon: "Zap" },
+        { id: "hot", label: "Spicy & Bold", icon: "Flame" },
+      ],
     },
     {
       id: 2,
       question: "Which cuisine excites you most?",
       options: [
-        { id: 'indian', label: 'Indian Classics', icon: 'Utensils' },
-        { id: 'asian', label: 'Asian Fusion', icon: 'Coffee' },
-        { id: 'continental', label: 'Continental', icon: 'Wine' }
-      ]
+        { id: "indian", label: "Indian Classics", icon: "Utensils" },
+        { id: "asian", label: "Asian Fusion", icon: "Coffee" },
+        { id: "continental", label: "Continental", icon: "Wine" },
+      ],
     },
     {
       id: 3,
       question: "Your ideal meal time?",
       options: [
-        { id: 'quick', label: 'Quick Bites', icon: 'Clock' },
-        { id: 'elaborate', label: 'Elaborate Cooking', icon: 'ChefHat' },
-        { id: 'party', label: 'Party Hosting', icon: 'Users' }
-      ]
-    }
+        { id: "quick", label: "Quick Bites", icon: "Clock" },
+        { id: "elaborate", label: "Elaborate Cooking", icon: "ChefHat" },
+        { id: "party", label: "Party Hosting", icon: "Users" },
+      ],
+    },
   ];
 
   const flavorProfiles = {
-    'mild-indian-quick': {
-      title: 'The Comfort Seeker',
-      description: 'You love familiar flavors that bring warmth and satisfaction.',
-      products: ['Classic Mayo', 'Sandwich Spread', 'Mint Mayo'],
-      color: 'bg-green-100 text-green-800'
+    "mild-indian-quick": {
+      title: "The Comfort Seeker",
+      description:
+        "You love familiar flavors that bring warmth and satisfaction.",
+      products: ["Classic Mayo", "Sandwich Spread", "Mint Mayo"],
+      color: "bg-green-100 text-green-800",
     },
-    'medium-asian-elaborate': {
-      title: 'The Flavor Explorer',
-      description: 'You enjoy discovering new tastes and cooking adventures.',
-      products: ['WOK TOK Sauces', 'Schezwan Mayo', 'Thai Chili Sauce'],
-      color: 'bg-orange-100 text-orange-800'
+    "medium-asian-elaborate": {
+      title: "The Flavor Explorer",
+      description: "You enjoy discovering new tastes and cooking adventures.",
+      products: ["WOK TOK Sauces", "Schezwan Mayo", "Thai Chili Sauce"],
+      color: "bg-orange-100 text-orange-800",
     },
-    'hot-continental-party': {
-      title: 'The Bold Entertainer',
-      description: 'You love making a statement with intense, memorable flavors.',
-      products: ['Peri Peri Mayo', 'Jalapeño Spread', 'Hot & Sweet Sauce'],
-      color: 'bg-red-100 text-red-800'
-    }
+    "hot-continental-party": {
+      title: "The Bold Entertainer",
+      description:
+        "You love making a statement with intense, memorable flavors.",
+      products: ["Peri Peri Mayo", "Jalapeño Spread", "Hot & Sweet Sauce"],
+      color: "bg-red-100 text-red-800",
+    },
   };
 
   const handleAnswer = (optionId) => {
@@ -68,7 +70,8 @@ const FlavorQuizWidget = () => {
     } else {
       // Generate result based on answers
       const profileKey = `${newAnswers[0]}-${newAnswers[1]}-${newAnswers[2]}`;
-      const profile = flavorProfiles[profileKey] || flavorProfiles['mild-indian-quick'];
+      const profile =
+        flavorProfiles[profileKey] || flavorProfiles["mild-indian-quick"];
       setShowResult(profile);
     }
   };
@@ -95,7 +98,8 @@ const FlavorQuizWidget = () => {
             Discover Your Flavor Profile
           </h3>
           <p className="text-text-secondary mb-6">
-            Take our quick quiz to find VEEBA products perfectly matched to your taste preferences.
+            Take our quick quiz to find VEGALYA products perfectly matched to
+            your taste preferences.
           </p>
           <Button onClick={startQuiz} size="lg" className="w-full">
             Start Flavor Quiz
@@ -110,21 +114,26 @@ const FlavorQuizWidget = () => {
     return (
       <div className="bg-white rounded-2xl p-8 culinary-shadow max-w-md mx-auto">
         <div className="text-center">
-          <div className={`inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 ${showResult.color}`}>
+          <div
+            className={`inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 ${showResult.color}`}
+          >
             Your Flavor Profile
           </div>
           <h3 className="text-2xl font-bold text-primary mb-3">
             {showResult.title}
           </h3>
-          <p className="text-text-secondary mb-6">
-            {showResult.description}
-          </p>
-          
+          <p className="text-text-secondary mb-6">{showResult.description}</p>
+
           <div className="mb-6">
-            <h4 className="font-semibold text-primary mb-3">Recommended Products:</h4>
+            <h4 className="font-semibold text-primary mb-3">
+              Recommended Products:
+            </h4>
             <div className="space-y-2">
               {showResult.products.map((product, index) => (
-                <div key={index} className="flex items-center justify-center space-x-2 text-sm">
+                <div
+                  key={index}
+                  className="flex items-center justify-center space-x-2 text-sm"
+                >
                   <Icon name="Check" size={16} className="text-green-500" />
                   <span>{product}</span>
                 </div>
@@ -157,13 +166,13 @@ const FlavorQuizWidget = () => {
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full ${
-                  index <= currentQuestion ? 'bg-primary' : 'bg-gray-200'
+                  index <= currentQuestion ? "bg-primary" : "bg-gray-200"
                 }`}
               />
             ))}
           </div>
         </div>
-        
+
         <h3 className="text-xl font-bold text-primary mb-6">
           {questions[currentQuestion].question}
         </h3>

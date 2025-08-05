@@ -25,7 +25,7 @@ const KitchenStoriesSection = () => {
       likes: 234,
       category: "quick",
       description:
-        "Transform boring sandwiches into gourmet delights with VEEBA spreads",
+        "Transform boring sandwiches into gourmet delights with VEGALYA spreads",
       veebaProduct: "Sandwich Spread",
     },
     {
@@ -51,7 +51,7 @@ const KitchenStoriesSection = () => {
       likes: 189,
       category: "party",
       description:
-        "Create stunning party platters with VEEBA mayo and sauce varieties",
+        "Create stunning party platters with VEGALYA mayo and sauce varieties",
       veebaProduct: "Mayo Collection",
     },
     {
@@ -64,7 +64,7 @@ const KitchenStoriesSection = () => {
       likes: 345,
       category: "quick",
       description:
-        "Elevate your morning toast game with creative VEEBA combinations",
+        "Elevate your morning toast game with creative VEGALYA combinations",
       veebaProduct: "Mint Mayo",
     },
     {
@@ -76,7 +76,8 @@ const KitchenStoriesSection = () => {
       duration: "12 min",
       likes: 423,
       category: "gourmet",
-      description: "Restaurant-style salads with VEEBA premium dressing range",
+      description:
+        "Restaurant-style salads with VEGALYA premium dressing range",
       veebaProduct: "Caesar Dressing",
     },
     {
@@ -88,7 +89,7 @@ const KitchenStoriesSection = () => {
       duration: "8 min",
       likes: 278,
       category: "quick",
-      description: "Make healthy snacks exciting for kids with VEEBA flavors",
+      description: "Make healthy snacks exciting for kids with VEGALYA flavors",
       veebaProduct: "Sandwich Spread",
     },
   ];
@@ -103,10 +104,10 @@ const KitchenStoriesSection = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary font-accent mb-4">
-            VEEBA Kitchen Stories
+            VEGALYA Kitchen Stories
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Get inspired by our community of food lovers sharing their VEEBA
+            Get inspired by our community of food lovers sharing their VEGALYA
             creations
           </p>
         </div>
@@ -156,7 +157,7 @@ const KitchenStoriesSection = () => {
                   {story.duration}
                 </div>
 
-                {/* VEEBA Product Badge */}
+                {/* VEGALYA Product Badge */}
                 <div className="absolute bottom-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
                   {story.veebaProduct}
                 </div>
@@ -200,10 +201,10 @@ const KitchenStoriesSection = () => {
         <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 lg:p-12 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl font-bold text-primary mb-4">
-              Share Your VEEBA Story
+              Share Your VEGALYA Story
             </h3>
             <p className="text-lg text-text-secondary mb-8">
-              Create amazing dishes with VEEBA products and share your recipes
+              Create amazing dishes with VEGALYA products and share your recipes
               with our community. Get featured and inspire fellow food lovers!
             </p>
 
