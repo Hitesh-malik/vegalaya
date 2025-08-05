@@ -52,7 +52,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-primary font-accent">
-                VEEBA
+                VEGALAYA
               </span>
               <span className="text-xs text-text-secondary -mt-1">Store</span>
             </div>

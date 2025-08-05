@@ -12,7 +12,7 @@ const TestimonialBanner = () => {
       business: "Kumar's Sandwich Corner",
       location: "Mumbai",
       review:
-        "VEEBA mayo made my sandwich shop famous! Customers specifically ask for VEEBA now.",
+        "VEGALAYA mayo made my sandwich shop famous! Customers specifically ask for VEGALAYA now.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/32.jpg",
       dishImage: "/assets/images/vegacocolassi.jpg",
@@ -24,7 +24,7 @@ const TestimonialBanner = () => {
       business: "Home Chef",
       location: "Delhi",
       review:
-        "My family gatherings are incomplete without VEEBA sauces. The WOK TOK range is absolutely amazing!",
+        "My family gatherings are incomplete without VEGALAYA sauces. The WOK TOK range is absolutely amazing!",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/44.jpg",
       dishImage: "/assets/images/vegamoka.jpg",
@@ -36,7 +36,7 @@ const TestimonialBanner = () => {
       business: "Spice Garden Restaurant",
       location: "Bangalore",
       review:
-        "VEEBA's consistency and quality help us maintain our restaurant standards. Our customers love the taste!",
+        "VEGALAYA's consistency and quality help us maintain our restaurant standards. Our customers love the taste!",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/56.jpg",
       dishImage: "/assets/images/vegaBerryShake.jpg",
@@ -48,7 +48,7 @@ const TestimonialBanner = () => {
       business: "Tiffin Service",
       location: "Ahmedabad",
       review:
-        "VEEBA products have transformed my tiffin business. Kids especially love the sandwich spreads!",
+        "VEGALAYA products have transformed my tiffin business. Kids especially love the sandwich spreads!",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/28.jpg",
       dishImage: "/assets/images/vegakesarchai.jpg",
@@ -82,7 +82,7 @@ const TestimonialBanner = () => {
             Taste Transformations
           </h2>
           <p className="text-xl text-text-secondary">
-            Real stories from VEEBA lovers across India
+            Real stories from VEGALAYA lovers across India
           </p>
         </div>
 
@@ -163,7 +163,7 @@ const TestimonialBanner = () => {
                 {/* VEEBA Badge */}
                 <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
                   <span className="text-sm font-semibold text-primary">
-                    Made with VEEBA
+                    Made with VEGALAYA
                   </span>
                 </div>
               </div>

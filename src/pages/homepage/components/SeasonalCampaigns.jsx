@@ -66,7 +66,7 @@ const SeasonalCampaigns = () => {
       title: "Back to School Lunch Pack",
       subtitle: "Healthy & tasty tiffin solutions",
       description:
-        "Make school lunches exciting with kid-friendly VEEBA products",
+        "Make school lunches exciting with kid-friendly VEGALAYA products",
       image: "/assets/images/vegaBerryShake.jpg",
       discount: "20% OFF",
       products: ["Sandwich Spread", "Mint Mayo", "Sweet & Sour Sauce"],
