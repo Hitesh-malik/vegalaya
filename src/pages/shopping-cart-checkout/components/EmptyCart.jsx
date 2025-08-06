@@ -8,7 +8,7 @@ const EmptyCart = () => {
   const suggestedProducts = [
     {
       id: 1,
-      name: "VEGALYA Eggless Mayo",
+      name: "VEGALAYA Eggless Mayo",
       image: "/assets/images/vegacocolassi.jpg",
       price: 89,
       originalPrice: 99,
@@ -24,7 +24,7 @@ const EmptyCart = () => {
     },
     {
       id: 3,
-      name: "VEGALYA Cheese Dip",
+      name: "VEGALAYA Cheese Dip",
       image: "/assets/images/vegamoka.jpg",
       price: 149,
       originalPrice: 169,
@@ -69,7 +69,7 @@ const EmptyCart = () => {
               Your Cart is Empty
             </h1>
             <p className="text-lg text-text-secondary mb-2">
-              Looks like you haven't added any delicious VEGALYA products yet!
+              Looks like you haven't added any delicious VEGALAYA products yet!
             </p>
             <p className="text-text-secondary">
               Explore our range of premium sauces, spreads, and dips to

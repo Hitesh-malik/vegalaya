@@ -160,7 +160,7 @@ const TestimonialBanner = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 
-                {/* VEEBA Badge */}
+                {/* VEGALAYA Badge */}
                 <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
                   <span className="text-sm font-semibold text-primary">
                     Made with VEGALAYA

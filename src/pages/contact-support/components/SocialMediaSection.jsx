@@ -7,30 +7,30 @@ const SocialMediaSection = () => {
   const socialPlatforms = [
     {
       name: "Instagram",
-      handle: "@veebaofficial",
+      handle: "@VEGALAYAofficial",
       followers: "125K",
       description: "Daily recipe inspiration, cooking tips, and community creations",
       icon: "Instagram",
       color: "bg-gradient-to-r from-purple-500 to-pink-500",
-      url: "https://instagram.com/veebaofficial"
+      url: "https://instagram.com/VEGALAYAofficial"
     },
     {
       name: "Facebook",
-      handle: "VEEBA Foods",
+      handle: "VEGALAYA Foods",
       followers: "89K",
       description: "Join our cooking community for live sessions and recipe sharing",
       icon: "Facebook",
       color: "bg-blue-600",
-      url: "https://facebook.com/veebafoods"
+      url: "https://facebook.com/VEGALAYAfoods"
     },
     {
       name: "YouTube",
-      handle: "VEEBA Kitchen",
+      handle: "VEGALAYA Kitchen",
       followers: "45K",
       description: "Step-by-step cooking tutorials and chef collaborations",
       icon: "Youtube",
       color: "bg-red-600",
-      url: "https://youtube.com/veebakitchen"
+      url: "https://youtube.com/VEGALAYAkitchen"
     },
     {
       name: "WhatsApp",
@@ -48,7 +48,7 @@ const SocialMediaSection = () => {
       id: 1,
       user: "Priya Sharma",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
-      content: "Made the most amazing pasta with VEEBA Pesto sauce! My family loved it. Thank you for the recipe suggestion! 🍝❤️",
+      content: "Made the most amazing pasta with VEGALAYA Pesto sauce! My family loved it. Thank you for the recipe suggestion! 🍝❤️",
       image: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=300",
       likes: 24,
       platform: "Instagram"
@@ -57,7 +57,7 @@ const SocialMediaSection = () => {
       id: 2,
       user: "Rajesh Kumar",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-      content: "VEEBA\'s cooking helpline saved my dinner party! The chef guided me through the perfect marinade technique. Excellent support! 👨‍🍳",
+      content: "VEGALAYA\'s cooking helpline saved my dinner party! The chef guided me through the perfect marinade technique. Excellent support! 👨‍🍳",
       likes: 18,
       platform: "Facebook"
     },
@@ -65,7 +65,7 @@ const SocialMediaSection = () => {
       id: 3,
       user: "Sneha Patel",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
-      content: "Just watched the new VEEBA cooking tutorial on YouTube. The sandwich spread combinations are genius! Can\'t wait to try them all. 🥪",
+      content: "Just watched the new VEGALAYA cooking tutorial on YouTube. The sandwich spread combinations are genius! Can\'t wait to try them all. 🥪",
       likes: 31,
       platform: "YouTube"
     }
@@ -168,7 +168,7 @@ const SocialMediaSection = () => {
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6 text-center">
-        <h4 className="text-lg font-semibold text-text-primary mb-2">Share Your VEEBA Creations</h4>
+        <h4 className="text-lg font-semibold text-text-primary mb-2">Share Your VEGALAYA Creations</h4>
         <p className="text-sm text-text-secondary mb-4">
           Tag us in your cooking adventures and get featured in our community highlights!
         </p>
@@ -179,7 +179,7 @@ const SocialMediaSection = () => {
             size="sm"
             iconName="Camera"
             iconPosition="left"
-            onClick={() => handleSocialClick("https://instagram.com/veebaofficial")}
+            onClick={() => handleSocialClick("https://instagram.com/VEGALAYAofficial")}
           >
             Share on Instagram
           </Button>

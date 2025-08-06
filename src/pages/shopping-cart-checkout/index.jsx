@@ -20,7 +20,7 @@ const ShoppingCartCheckout = () => {
     const mockCartItems = [
       {
         id: 1,
-        name: "VEEBA Eggless Mayonnaise",
+        name: "VEGALAYA Eggless Mayonnaise",
         description:
           "Creamy and delicious eggless mayo perfect for sandwiches and salads",
         image: "/assets/images/vegacocolassi.jpg",
@@ -50,7 +50,7 @@ const ShoppingCartCheckout = () => {
       },
       {
         id: 3,
-        name: "VEEBA Cheese Dip",
+        name: "VEGALAYA Cheese Dip",
         description: "Rich and creamy cheese dip for all your snacking needs",
         image: "/assets/images/vegamoka.jpg",
         price: 149,
@@ -143,7 +143,7 @@ const ShoppingCartCheckout = () => {
               </h1>
 
               <p className="text-lg text-text-secondary mb-6">
-                Thank you for choosing VEGALYA! Your order #
+                Thank you for choosing VEGALAYA! Your order #
                 {orderDetails.orderId} has been confirmed.
               </p>
 

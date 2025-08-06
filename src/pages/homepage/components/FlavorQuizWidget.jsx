@@ -98,7 +98,7 @@ const FlavorQuizWidget = () => {
             Discover Your Flavor Profile
           </h3>
           <p className="text-text-secondary mb-6">
-            Take our quick quiz to find VEGALYA products perfectly matched to
+            Take our quick quiz to find VEGALAYA products perfectly matched to
             your taste preferences.
           </p>
           <Button onClick={startQuiz} size="lg" className="w-full">

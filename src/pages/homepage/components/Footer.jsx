@@ -10,11 +10,10 @@ const Footer = () => {
     {
       title: "Products",
       links: [
-        { name: "Mayonnaise Range", path: "/product-categories" },
-        { name: "Sandwich Spreads", path: "/product-categories" },
-        { name: "WOK TOK Sauces", path: "/product-categories" },
-        { name: "Premium Dressings", path: "/product-categories" },
-        { name: "Combo Packs", path: "/product-categories" },
+        { name: "VegaMangoLassi", path: "/product-categories" },
+        { name: "VegaMoka", path: "/product-categories" },
+        { name: "VegaMangoLassi", path: "/product-categories" },
+        { name: "Soy Creamer", path: "/product-categories" },
       ],
     },
     {
@@ -97,13 +96,13 @@ const Footer = () => {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold font-accent">VEGALYA</span>
+                <span className="text-2xl font-bold font-accent">VEGALAYA</span>
                 <span className="text-sm opacity-80">Store</span>
               </div>
             </Link>
 
             <p className="text-white/80 mb-6 leading-relaxed">
-              Mehnat ka phal VEGALYA hota hai. Transform your meals with our
+              Mehnat ka phal VEGALAYA hota hai. Transform your meals with our
               premium range of mayonnaise, spreads, and sauces crafted for the
               discerning taste.
             </p>
@@ -112,18 +111,21 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Icon name="Phone" size={18} className="text-secondary" />
-                <span className="text-white/80">1800-123-VEGALYA</span>
+                <span className="text-white/80">1800-123-VEGALAYA</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Icon name="Mail" size={18} className="text-secondary" />
-                <span className="text-white/80">hello@vegalaya.com</span>
+                <span className="text-white/80">
+                  {" "}
+                  <a href="mailto:carecup@vegalaya.com">carecup@vegalaya.com</a>
+                </span>
               </div>
               <div className="flex items-start space-x-3">
                 <Icon name="MapPin" size={18} className="text-secondary mt-1" />
                 <span className="text-white/80">
-                  VEGALYA Foods Pvt. Ltd.
+                  VEGALAYA Foods Pvt. Ltd.
                   <br />
-                  Gurgaon, Haryana, India
+                  New Delhi India
                 </span>
               </div>
             </div>
@@ -169,7 +171,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="max-w-2xl">
             <h4 className="text-xl font-semibold mb-3 text-secondary">
-              Stay Updated with VEGALYA
+              Stay Updated with VEGALAYA
             </h4>
             <p className="text-white/80 mb-4">
               Get the latest recipes, cooking tips, and exclusive offers
@@ -196,7 +198,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-white/80 text-sm">
               <span>
-                © {currentYear} VEGALYA Foods Pvt. Ltd. All rights reserved.
+                © {currentYear} VEGALAYA Foods Pvt. Ltd. All rights reserved.
               </span>
               <div className="flex space-x-4">
                 <Link

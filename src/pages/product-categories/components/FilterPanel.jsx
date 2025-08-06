@@ -39,7 +39,7 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
       "Health & Fitness",
     ],
     size: ["200ml", "300ml", "320ml", "340ml", "500ml"],
-    brand: ["VEEBA Vega"],
+    brand: ["VEGALAYA Vega"],
   };
 
   const handleFilterToggle = (category, value) => {
