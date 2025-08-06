@@ -48,10 +48,10 @@ const Homepage = () => {
       <TestimonialBanner />
 
       {/* VEGALAYA Kitchen Stories */}
-      <KitchenStoriesSection />
+      {/* <KitchenStoriesSection /> */}
 
       {/* Seasonal Campaign Banners */}
-      <SeasonalCampaigns />
+      {/* <SeasonalCampaigns /> */}
 
       {/* Footer with Quick Links */}
       <Footer />
