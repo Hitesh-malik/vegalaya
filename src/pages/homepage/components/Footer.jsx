@@ -103,9 +103,8 @@ const Footer = () => {
             </Link>
 
             <p className="text-white/80 mb-6 leading-relaxed">
-              Mehnat ka phal VEGALYA hota hai. Transform your meals with our
-              premium range of mayonnaise, spreads, and sauces crafted for the
-              discerning taste.
+              Transform your meals with our premium range of mayonnaise,
+              spreads, and sauces crafted for the discerning taste.
             </p>
 
             {/* Contact Info */}

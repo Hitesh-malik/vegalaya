@@ -13,7 +13,7 @@ const HeroSection = () => {
       title: "VegaMangoLassi",
       subtitle:
         "Naturally sweetened mango lassi — dairy-free, creamy & refreshing.",
-      image: "/assets/images/vegaMangoLassi.jpg",
+      image: "/assets/images/NewVegaMangoLassi.jpg",
       cta: "Try Mango Magic",
       subtitle2: "Authentic Taste, Plant-Based Twist.",
     },
@@ -22,7 +22,7 @@ const HeroSection = () => {
       id: 2,
       title: "VegaBerryShake",
       subtitle: "Real berries blended into a smooth, dairy-free delight.",
-      image: "/assets/images/vegaBerryShake.jpg",
+      image: "/assets/images/NewVegaberryShake.jpg",
       cta: "Explore Berry Shake",
       subtitle2: "Berrylicious. Nourishing. 100% Plant-Based.",
     },
@@ -31,7 +31,7 @@ const HeroSection = () => {
       title: "VegaKesarChai",
       subtitle:
         "Aromatic saffron chai – vegan, soothing, and naturally indulgent.",
-      image: "/assets/images/vegakesarchai.jpg",
+      image: "/assets/images/NewVagaKesarCHai.jpg",
       cta: "Sip the Bliss",
       subtitle2: "Spiced with Tradition. Steeped in Purity.",
     },
@@ -40,7 +40,7 @@ const HeroSection = () => {
       title: "VegaCocoLassi",
       subtitle:
         "Dairy-free coconut lassi — creamy, hydrating, and refreshingly pure.",
-      image: "/assets/images/vegacocolassi.jpg",
+      image: "/assets/images/NewVegaCocalassi.jpg",
       cta: "Discover Coconut Joy",
       subtitle2: "Tropical Goodness in Every Sip.",
     },
