@@ -16,36 +16,6 @@ const Footer = () => {
         { name: "Soy Creamer", path: "/product-categories" },
       ],
     },
-    {
-      title: "Recipes & Tips",
-      links: [
-        { name: "Quick Recipes", path: "/homepage" },
-        { name: "Cooking Tips", path: "/homepage" },
-        { name: "Video Tutorials", path: "/homepage" },
-        { name: "Chef Collaborations", path: "/homepage" },
-        { name: "Seasonal Specials", path: "/homepage" },
-      ],
-    },
-    {
-      title: "Business Solutions",
-      links: [
-        { name: "Bulk Ordering", path: "/contact-support" },
-        { name: "Dealer Partnerships", path: "/contact-support" },
-        { name: "Restaurant Solutions", path: "/contact-support" },
-        { name: "Food Service", path: "/contact-support" },
-        { name: "Franchise Opportunities", path: "/contact-support" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { name: "Customer Care", path: "/contact-support" },
-        { name: "Cooking Support", path: "/contact-support" },
-        { name: "Order Tracking", path: "/contact-support" },
-        { name: "Returns & Refunds", path: "/contact-support" },
-        { name: "FAQ", path: "/contact-support" },
-      ],
-    },
   ];
 
   const socialLinks = [
@@ -58,10 +28,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-white">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 lg:px-6 py-16">
-        <div className="grid lg:grid-cols-6 gap-8">
-          {/* Brand Section */}
+      <div className="container mx-auto px-4 lg:px-6 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Link to="/homepage" className="flex items-center space-x-2 mb-6">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
@@ -106,7 +74,6 @@ const Footer = () => {
               spreads, and sauces crafted for the discerning taste.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Icon name="Phone" size={18} className="text-secondary" />
@@ -115,7 +82,6 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Icon name="Mail" size={18} className="text-secondary" />
                 <span className="text-white/80">
-                  {" "}
                   <a href="mailto:carecup@vegalaya.com">carecup@vegalaya.com</a>
                 </span>
               </div>
@@ -124,12 +90,11 @@ const Footer = () => {
                 <span className="text-white/80">
                   VEGALAYA Foods Pvt. Ltd.
                   <br />
-                  New Delhi India
+                  New Delhi India
                 </span>
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -144,7 +109,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Links */}
           {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="text-lg font-semibold mb-4 text-secondary">
@@ -165,33 +129,8 @@ const Footer = () => {
             </div>
           ))}
         </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-white/20 mt-12 pt-8">
-          <div className="max-w-2xl">
-            <h4 className="text-xl font-semibold mb-3 text-secondary">
-              Stay Updated with VEGALAYA
-            </h4>
-            <p className="text-white/80 mb-4">
-              Get the latest recipes, cooking tips, and exclusive offers
-              delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary"
-              />
-              <Button variant="secondary" size="lg">
-                Subscribe
-                <Icon name="ArrowRight" size={16} className="ml-2" />
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
 
-      {/* Bottom Footer */}
       <div className="border-t border-white/20">
         <div className="container mx-auto px-4 lg:px-6 py-6">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
@@ -221,7 +160,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quality Certifications */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-white/80 text-sm">
                 <Icon name="Shield" size={16} className="text-secondary" />
