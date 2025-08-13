@@ -120,7 +120,7 @@ const ProductDetailPage = () => {
     },
     3: {
       id: "3",
-      name: "VEGALAYA Vega Keshar Chai",
+      name: "VEGALAYA Vega Kesar Chai",
       brand: "VEGALAYA",
       tagline: "Premium saffron-infused tea",
       mainImage: "/assets/images/vegakesarchai.jpg",
@@ -142,7 +142,7 @@ const ProductDetailPage = () => {
       flavorNotes: ["Saffron", "Cardamom", "Rich", "Aromatic"],
       spiceLevel: 2,
       textureDescription:
-        "Rich and aromatic keshar chai with premium saffron strands. Perfect blend of spices and milk.",
+        "Rich and aromatic kesar chai with premium saffron strands. Perfect blend of spices and milk.",
       usageIdeas: [
         "Morning tea ritual",
         "Special occasions",
