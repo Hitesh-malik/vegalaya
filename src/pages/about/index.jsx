@@ -27,7 +27,7 @@ const About = () => {
       <OurPhilosophy />
 
       {/* Our Journey Section */}
-      <OurJourney />
+      {/* <OurJourney /> */}
 
       {/* Our Values Section */}
       <OurValues />

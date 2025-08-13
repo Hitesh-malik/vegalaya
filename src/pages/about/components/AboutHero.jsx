@@ -22,15 +22,12 @@ const AboutHero = () => {
 
           {/* Logo */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center justify-center w-32 h-32 lg:w-40 lg:h-40 bg-primary rounded-full shadow-lg">
-              <div className="text-center">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 mx-auto mb-2">
-                  <Icon name="Leaf" size={64} className="text-white" />
-                </div>
-                <span className="text-white font-bold text-sm lg:text-base tracking-wider">
-                  VEGALAYA
-                </span>
-              </div>
+            <div className="flex items-center justify-center">
+              <img
+                src="/assets/images/vagalayaLogo.png"
+                alt="Vagalaya Logo"
+                className="w-20 h-20 rounded-lg object-cover lg:w-32 lg:h-32 xl:w-40 xl:h-40"
+              />
             </div>
           </div>
 

@@ -32,7 +32,7 @@ const OurStory = () => {
                     <div className="w-4 h-4 bg-primary rounded-full z-10 relative mt-1"></div>
                     <div className="ml-8">
                       <div className="text-2xl font-bold text-primary mb-1">
-                        2019
+                        2024
                       </div>
                       <div className="text-lg text-text-primary">
                         The Idea Takes Root
@@ -46,13 +46,13 @@ const OurStory = () => {
                     <div className="w-4 h-4 bg-primary rounded-full z-10 relative mt-1"></div>
                     <div className="ml-8">
                       <div className="text-2xl font-bold text-primary mb-1">
-                        2022
+                        2025
                       </div>
                       <div className="text-lg text-text-primary">
                         Official Launch
                       </div>
                       <div className="text-sm text-text-secondary mt-1">
-                        VegaMoka & VegaMangoLassi hit the market
+                        VegaMoka & VegaMangoLass introduced in the market
                       </div>
                     </div>
                   </div>
@@ -60,13 +60,13 @@ const OurStory = () => {
                     <div className="w-4 h-4 bg-primary rounded-full z-10 relative mt-1"></div>
                     <div className="ml-8">
                       <div className="text-2xl font-bold text-primary mb-1">
-                        2025
+                        2026
                       </div>
                       <div className="text-lg text-text-primary">
-                        Global Expansion
+                        Expansion in the market
                       </div>
                       <div className="text-sm text-text-secondary mt-1">
-                        Expansion into creamers & international markets
+                        Hit in the Indian market
                       </div>
                     </div>
                   </div>
