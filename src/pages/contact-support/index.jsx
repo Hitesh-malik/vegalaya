@@ -16,7 +16,7 @@ const ContactSupport = () => {
 
   const handleWhatsAppSupport = () => {
     window.open(
-      "https://wa.me/919876543210?text=Hi! I need cooking support with VEGALYA products.",
+      "https://wa.me/919876543210?text=Hi! I need cooking support with VEGALAYA products.",
       "_blank"
     );
   };
@@ -57,7 +57,7 @@ const ContactSupport = () => {
             <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
               From cooking support to product questions, our culinary experts
               are ready to assist you in creating extraordinary meals with
-              VEGALYA products.
+              VEGALAYA products.
             </p>
           </div>
 
@@ -196,7 +196,7 @@ const ContactSupport = () => {
             </h3>
             <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
               Explore additional support options and learning opportunities to
-              enhance your culinary journey with VEGALYA.
+              enhance your culinary journey with VEGALAYA.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -211,7 +211,7 @@ const ContactSupport = () => {
                 </h4>
                 <p className="text-sm text-text-secondary mb-4">
                   Join our local workshops and online tutorials for hands-on
-                  VEGALYA product education
+                  VEGALAYA product education
                 </p>
                 <Button
                   variant="outline"
@@ -288,13 +288,13 @@ const ContactSupport = () => {
                   />
                 </svg>
               </div>
-              <span className="text-2xl font-bold font-accent">VEGALYA</span>
+              <span className="text-2xl font-bold font-accent">VEGALAYA</span>
             </div>
 
             <p className="text-white/80 mb-6 max-w-2xl mx-auto">
               Your culinary success is our priority. We're committed to
               providing exceptional support and helping you create memorable
-              meals with VEGALYA products.
+              meals with VEGALAYA products.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
@@ -307,7 +307,7 @@ const ContactSupport = () => {
 
             <div className="mt-8 pt-6 border-t border-white/20 text-sm text-white/60">
               <p>
-                &copy; {new Date().getFullYear()} VEGALYA Foods Pvt. Ltd. All
+                &copy; {new Date().getFullYear()} VEGALAYA Foods Pvt. Ltd. All
                 rights reserved.
               </p>
             </div>

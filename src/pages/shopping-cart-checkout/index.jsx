@@ -17,54 +17,7 @@ const ShoppingCartCheckout = () => {
 
   // Mock cart data
   useEffect(() => {
-    const mockCartItems = [
-      {
-        id: 1,
-        name: "VEEBA Eggless Mayonnaise",
-        description:
-          "Creamy and delicious eggless mayo perfect for sandwiches and salads",
-        image: "/assets/images/vegacocolassi.jpg",
-        price: 89,
-        originalPrice: 99,
-        quantity: 2,
-        variant: "250g",
-        category: "spreads",
-        recipeHint: "Club sandwiches & wraps",
-        bulkDiscount: {
-          minQuantity: 4,
-          savings: 20,
-        },
-      },
-      {
-        id: 2,
-        name: "WOK TOK Schezwan Sauce",
-        description:
-          "Authentic Chinese flavor with the perfect blend of spices",
-        image: "/assets/images/vegakesarchai.jpg",
-        price: 129,
-        originalPrice: 149,
-        quantity: 1,
-        variant: "200g",
-        category: "sauces",
-        recipeHint: "Fried rice & noodles",
-      },
-      {
-        id: 3,
-        name: "VEEBA Cheese Dip",
-        description: "Rich and creamy cheese dip for all your snacking needs",
-        image: "/assets/images/vegamoka.jpg",
-        price: 149,
-        originalPrice: 169,
-        quantity: 1,
-        variant: "300g",
-        category: "dips",
-        recipeHint: "Nachos & vegetable sticks",
-        bulkDiscount: {
-          minQuantity: 3,
-          savings: 30,
-        },
-      },
-    ];
+    const mockCartItems = [];
     setCartItems(mockCartItems);
   }, []);
 
@@ -143,7 +96,7 @@ const ShoppingCartCheckout = () => {
               </h1>
 
               <p className="text-lg text-text-secondary mb-6">
-                Thank you for choosing VEGALYA! Your order #
+                Thank you for choosing VEGALAYA! Your order #
                 {orderDetails.orderId} has been confirmed.
               </p>
 
@@ -216,9 +169,9 @@ const ShoppingCartCheckout = () => {
               {isCheckout
                 ? "Complete your order and get ready for a flavor journey"
                 : `${cartItems.reduce(
-                    (sum, item) => sum + item.quantity,
-                    0
-                  )} items in your cart`}
+                  (sum, item) => sum + item.quantity,
+                  0
+                )} items in your cart`}
             </p>
           </div>
 

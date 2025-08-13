@@ -7,7 +7,7 @@ const CategoryHeader = ({ selectedCategory, onCategoryChange }) => {
       id: "all",
       name: "All Products",
       description:
-        "Discover our authentic collection of VEGALYA Vega traditional lassi, premium chai, rich coffee, and refreshing shakes.",
+        "Discover our authentic collection of VEGALAYA Vega traditional lassi, premium chai, rich coffee, and refreshing shakes.",
       icon: "Grid3X3",
       color: "bg-blue-50 text-blue-700",
     },

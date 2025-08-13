@@ -25,8 +25,8 @@ const KitchenStoriesSection = () => {
       likes: 234,
       category: "quick",
       description:
-        "Transform boring sandwiches into gourmet delights with VEGALYA spreads",
-      veebaProduct: "Sandwich Spread",
+        "Transform boring sandwiches into gourmet delights with VEGALAYA spreads",
+      VEGALAYAProduct: "Sandwich Spread",
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const KitchenStoriesSection = () => {
       category: "gourmet",
       description:
         "Authentic Asian flavors at home with WOK TOK sauce collection",
-      veebaProduct: "WOK TOK Sauce",
+      VEGALAYAProduct: "WOK TOK Sauce",
     },
     {
       id: 3,
@@ -51,8 +51,8 @@ const KitchenStoriesSection = () => {
       likes: 189,
       category: "party",
       description:
-        "Create stunning party platters with VEGALYA mayo and sauce varieties",
-      veebaProduct: "Mayo Collection",
+        "Create stunning party platters with VEGALAYA mayo and sauce varieties",
+      VEGALAYAProduct: "Mayo Collection",
     },
     {
       id: 4,
@@ -64,8 +64,8 @@ const KitchenStoriesSection = () => {
       likes: 345,
       category: "quick",
       description:
-        "Elevate your morning toast game with creative VEGALYA combinations",
-      veebaProduct: "Mint Mayo",
+        "Elevate your morning toast game with creative VEGALAYA combinations",
+      VEGALAYAProduct: "Mint Mayo",
     },
     {
       id: 5,
@@ -77,8 +77,8 @@ const KitchenStoriesSection = () => {
       likes: 423,
       category: "gourmet",
       description:
-        "Restaurant-style salads with VEGALYA premium dressing range",
-      veebaProduct: "Caesar Dressing",
+        "Restaurant-style salads with VEGALAYA premium dressing range",
+      VEGALAYAProduct: "Caesar Dressing",
     },
     {
       id: 6,
@@ -89,8 +89,8 @@ const KitchenStoriesSection = () => {
       duration: "8 min",
       likes: 278,
       category: "quick",
-      description: "Make healthy snacks exciting for kids with VEGALYA flavors",
-      veebaProduct: "Sandwich Spread",
+      description: "Make healthy snacks exciting for kids with VEGALAYA flavors",
+      VEGALAYAProduct: "Sandwich Spread",
     },
   ];
 
@@ -104,10 +104,10 @@ const KitchenStoriesSection = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary font-accent mb-4">
-            VEGALYA Kitchen Stories
+            VEGALAYA Kitchen Stories
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Get inspired by our community of food lovers sharing their VEGALYA
+            Get inspired by our community of food lovers sharing their VEGALAYA
             creations
           </p>
         </div>
@@ -157,9 +157,9 @@ const KitchenStoriesSection = () => {
                   {story.duration}
                 </div>
 
-                {/* VEGALYA Product Badge */}
+                {/* VEGALAYA Product Badge */}
                 <div className="absolute bottom-3 left-3 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
-                  {story.veebaProduct}
+                  {story.VEGALAYAProduct}
                 </div>
               </div>
 
@@ -201,10 +201,10 @@ const KitchenStoriesSection = () => {
         <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 lg:p-12 text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl font-bold text-primary mb-4">
-              Share Your VEGALYA Story
+              Share Your VEGALAYA Story
             </h3>
             <p className="text-lg text-text-secondary mb-8">
-              Create amazing dishes with VEGALYA products and share your recipes
+              Create amazing dishes with VEGALAYA products and share your recipes
               with our community. Get featured and inspire fellow food lovers!
             </p>
 

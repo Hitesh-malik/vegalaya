@@ -152,7 +152,7 @@ const CheckoutForm = ({ cartItems, orderTotal, onPlaceOrder }) => {
         ...formData,
         orderItems: cartItems,
         total: orderTotal,
-        orderId: `VEGALYA${Date.now()}`,
+        orderId: `VEGALAYA${Date.now()}`,
         estimatedDelivery: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
       });
       setIsProcessing(false);

@@ -10,7 +10,7 @@ const StoreLocator = () => {
   const nearbyStores = [
     {
       id: 1,
-      name: "VEEBA Premium Store - Connaught Place",
+      name: "VEGALAYA Premium Store - Connaught Place",
       address: "Shop 15, Inner Circle, Connaught Place, New Delhi - 110001",
       phone: "+91 11 4567 8901",
       distance: "0.8 km",
@@ -45,7 +45,7 @@ const StoreLocator = () => {
 
   const handleLocationSearch = () => {
     // Mock location search functionality
-    alert(`Searching for VEEBA stores near: ${searchLocation}`);
+    alert(`Searching for VEGALAYA stores near: ${searchLocation}`);
   };
 
   const handleGetDirections = (store) => {
@@ -64,8 +64,8 @@ const StoreLocator = () => {
           <Icon name="MapPin" size={24} className="text-white" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-text-primary">Find VEEBA Near You</h3>
-          <p className="text-sm text-text-secondary">Locate stores with VEEBA products in your area</p>
+          <h3 className="text-xl font-bold text-text-primary">Find VEGALAYA Near You</h3>
+          <p className="text-sm text-text-secondary">Locate stores with VEGALAYA products in your area</p>
         </div>
       </div>
 
@@ -109,7 +109,7 @@ const StoreLocator = () => {
             width="100%"
             height="100%"
             loading="lazy"
-            title="VEEBA Store Locations"
+            title="VEGALAYA Store Locations"
             referrerPolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=28.6315,77.2167&z=12&output=embed"
             className="border-0"

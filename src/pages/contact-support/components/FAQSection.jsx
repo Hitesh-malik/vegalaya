@@ -11,19 +11,19 @@ const FAQSection = () => {
       faqs: [
         {
           id: 1,
-          question: "What makes VEGALYA products different from other brands?",
-          answer: `VEGALYA products are crafted with premium ingredients and traditional recipes that deliver authentic taste experiences. Our commitment to quality ensures consistent flavor profiles that enhance your culinary creations.\n\nEach product undergoes rigorous quality testing and is made with natural ingredients wherever possible, giving you the confidence to create memorable meals every time.`,
+          question: "What makes VEGALAYA products different from other brands?",
+          answer: `VEGALAYA products are crafted with premium ingredients and traditional recipes that deliver authentic taste experiences. Our commitment to quality ensures consistent flavor profiles that enhance your culinary creations.\n\nEach product undergoes rigorous quality testing and is made with natural ingredients wherever possible, giving you the confidence to create memorable meals every time.`,
         },
         {
           id: 2,
           question:
-            "How should I store VEGALYA products for maximum freshness?",
-          answer: `Most VEGALYA products should be stored in a cool, dry place away from direct sunlight. Once opened, refrigerate immediately and consume within the timeframe mentioned on the packaging.\n\nFor unopened products, check the 'Best Before' date and store according to package instructions. Proper storage ensures optimal taste and quality.`,
+            "How should I store VEGALAYA products for maximum freshness?",
+          answer: `Most VEGALAYA products should be stored in a cool, dry place away from direct sunlight. Once opened, refrigerate immediately and consume within the timeframe mentioned on the packaging.\n\nFor unopened products, check the 'Best Before' date and store according to package instructions. Proper storage ensures optimal taste and quality.`,
         },
         {
           id: 3,
-          question: "Are VEGALYA products suitable for vegetarians?",
-          answer: `Most VEGALYA products are vegetarian-friendly, clearly marked with green dot symbols on packaging. We also offer vegan options for plant-based diets.\n\nAlways check the ingredient list and dietary symbols on product packaging for specific dietary requirements and allergen information.`,
+          question: "Are VEGALAYA products suitable for vegetarians?",
+          answer: `Most VEGALAYA products are vegetarian-friendly, clearly marked with green dot symbols on packaging. We also offer vegan options for plant-based diets.\n\nAlways check the ingredient list and dietary symbols on product packaging for specific dietary requirements and allergen information.`,
         },
       ],
     },
@@ -33,14 +33,14 @@ const FAQSection = () => {
       faqs: [
         {
           id: 4,
-          question: "How much VEGALYA sauce should I use in my recipes?",
-          answer: `Start with 1-2 tablespoons per serving and adjust according to taste preference. VEGALYA products are concentrated for maximum flavor impact.\n\nFor marinades, use 2-3 tablespoons per 500g of protein. For dips and spreads, use as desired. Remember, you can always add more, but you can't take it away!`,
+          question: "How much VEGALAYA sauce should I use in my recipes?",
+          answer: `Start with 1-2 tablespoons per serving and adjust according to taste preference. VEGALAYA products are concentrated for maximum flavor impact.\n\nFor marinades, use 2-3 tablespoons per 500g of protein. For dips and spreads, use as desired. Remember, you can always add more, but you can't take it away!`,
         },
         {
           id: 5,
           question:
-            "Can I use VEGALYA products for cooking or just as condiments?",
-          answer: `VEGALYA products are versatile and perfect for both cooking and as condiments. Use them as marinades, cooking sauces, sandwich spreads, or dipping sauces.\n\nMany of our products work excellently as base ingredients for curries, stir-fries, and pasta dishes. Check our recipe section for creative cooking ideas.`,
+            "Can I use VEGALAYA products for cooking or just as condiments?",
+          answer: `VEGALAYA products are versatile and perfect for both cooking and as condiments. Use them as marinades, cooking sauces, sandwich spreads, or dipping sauces.\n\nMany of our products work excellently as base ingredients for curries, stir-fries, and pasta dishes. Check our recipe section for creative cooking ideas.`,
         },
         {
           id: 6,

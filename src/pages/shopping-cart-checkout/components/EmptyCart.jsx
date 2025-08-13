@@ -5,32 +5,7 @@ import Button from "../../../components/ui/Button";
 import Image from "../../../components/AppImage";
 
 const EmptyCart = () => {
-  const suggestedProducts = [
-    {
-      id: 1,
-      name: "VEGALYA Eggless Mayo",
-      image: "/assets/images/vegacocolassi.jpg",
-      price: 89,
-      originalPrice: 99,
-      category: "Spreads",
-    },
-    {
-      id: 2,
-      name: "WOK TOK Schezwan Sauce",
-      image: "/assets/images/vegakesarchai.jpg",
-      price: 129,
-      originalPrice: 149,
-      category: "Sauces",
-    },
-    {
-      id: 3,
-      name: "VEGALYA Cheese Dip",
-      image: "/assets/images/vegamoka.jpg",
-      price: 149,
-      originalPrice: 169,
-      category: "Dips",
-    },
-  ];
+  const suggestedProducts = [];
 
   return (
     <div className="min-h-screen bg-background-canvas pt-20">
@@ -69,7 +44,7 @@ const EmptyCart = () => {
               Your Cart is Empty
             </h1>
             <p className="text-lg text-text-secondary mb-2">
-              Looks like you haven't added any delicious VEGALYA products yet!
+              Looks like you haven't added any delicious VEGALAYA products yet!
             </p>
             <p className="text-text-secondary">
               Explore our range of premium sauces, spreads, and dips to
@@ -94,7 +69,7 @@ const EmptyCart = () => {
           </div>
 
           {/* Suggested Products */}
-          <div className="bg-white rounded-lg culinary-shadow p-8">
+          {/* <div className="bg-white rounded-lg culinary-shadow p-8">
             <div className="flex items-center justify-center gap-2 mb-6">
               <Icon name="Lightbulb" size={24} className="text-primary" />
               <h2 className="text-xl font-semibold text-text-primary">
@@ -142,7 +117,7 @@ const EmptyCart = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Benefits Section */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">

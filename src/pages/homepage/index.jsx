@@ -30,7 +30,7 @@ const Homepage = () => {
               Find Your Perfect Flavor Match
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              Take our personalized quiz to discover VEGALYA products that match
+              Take our personalized quiz to discover VEGALAYA products that match
               your taste preferences
             </p>
           </div>
@@ -47,11 +47,11 @@ const Homepage = () => {
       {/* Scrolling Testimonial Banner */}
       <TestimonialBanner />
 
-      {/* VEGALYA Kitchen Stories */}
-      <KitchenStoriesSection />
+      {/* VEGALAYA Kitchen Stories */}
+      {/* <KitchenStoriesSection /> */}
 
       {/* Seasonal Campaign Banners */}
-      <SeasonalCampaigns />
+      {/* <SeasonalCampaigns /> */}
 
       {/* Footer with Quick Links */}
       <Footer />

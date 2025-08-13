@@ -137,7 +137,7 @@ const CorporateContactSection = () => {
           <div>
             <h5 className="font-medium text-text-primary mb-2">Head Office</h5>
             <p className="text-sm text-text-secondary leading-relaxed">
-              VEGALYA Foods Pvt. Ltd.
+              VEGALAYA Foods Pvt. Ltd.
               <br />
               Plot No. 123, Sector 18
               <br />
@@ -152,7 +152,7 @@ const CorporateContactSection = () => {
               Manufacturing Unit
             </h5>
             <p className="text-sm text-text-secondary leading-relaxed">
-              VEGALYA Manufacturing Facility
+              VEGALAYA Manufacturing Facility
               <br />
               Industrial Area, Phase 2<br />
               Baddi, Himachal Pradesh - 173205
