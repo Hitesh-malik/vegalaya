@@ -167,11 +167,11 @@ const ContactSupport = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 bg-surface/50">
+      {/* <section className="py-12 bg-surface/50">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           <FAQSection />
         </div>
-      </section>
+      </section> */}
 
       {/* Social Media & Community */}
       <section className="py-12">
@@ -181,14 +181,14 @@ const ContactSupport = () => {
       </section>
 
       {/* Corporate Contacts */}
-      <section className="py-12 bg-surface/50">
+      {/* <section className="py-12 bg-surface/50">
         <div className="max-w-6xl mx-auto px-4 lg:px-6">
           <CorporateContactSection />
         </div>
-      </section>
+      </section> */}
 
       {/* Additional Support Options */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 lg:px-6">
           <div className="bg-white rounded-2xl culinary-shadow p-8 text-center">
             <h3 className="text-2xl font-bold text-text-primary mb-4">
@@ -250,7 +250,7 @@ const ContactSupport = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-primary text-white py-12">

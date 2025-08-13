@@ -118,7 +118,7 @@ const SocialMediaSection = () => {
       </div>
 
       {/* Community Posts */}
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <h4 className="text-lg font-semibold text-text-primary mb-4">Community Highlights</h4>
         
         <div className="space-y-4">
@@ -164,7 +164,7 @@ const SocialMediaSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6 text-center">
