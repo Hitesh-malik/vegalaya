@@ -14,12 +14,7 @@ const ProductCategoryCards = () => {
       subtitle: "Deliciously dairy-free drinks for every mood",
       description: "Deliciously dairy-free drinks for every mood",
       image: "/assets/images/vegaMangoLassi.jpg",
-      products: [
-        "VegaMangoLassi",
-        "VegaBerryShake",
-        "VegaCocoLassi",
-        "VegaKesarChai",
-      ],
+      products: ["VegaMangoLassi", "VegaBerryShake", "VegaCocoLassi"],
       usageScenarios: [
         "Daily refreshments",
         "Healthy lifestyle choices",
@@ -34,12 +29,7 @@ const ProductCategoryCards = () => {
       subtitle: "For mindful sips and morning rituals",
       description: "For mindful sips and morning rituals",
       image: "/assets/images/vegamoka.jpg",
-      products: [
-        "VegaMoka",
-        "VegaKesarChai",
-        "Oat Milk Creamer",
-        "Soy Milk Creamer",
-      ],
+      products: ["VegaMoka", "VegaKesarChai"],
       usageScenarios: [
         "Morning coffee rituals",
         "Afternoon tea breaks",

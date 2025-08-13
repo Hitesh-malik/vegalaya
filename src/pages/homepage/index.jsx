@@ -45,7 +45,7 @@ const Homepage = () => {
       <BrewBetterFuture />
 
       {/* Scrolling Testimonial Banner */}
-      <TestimonialBanner />
+      {/* <TestimonialBanner /> */}
 
       {/* VEGALAYA Kitchen Stories */}
       {/* <KitchenStoriesSection /> */}
