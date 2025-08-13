@@ -62,7 +62,7 @@ const ContactSupport = () => {
           </div>
 
           {/* Emergency Support Banner */}
-          <div className="bg-conversion-accent/10 border border-conversion-accent/20 rounded-2xl p-6 mb-8">
+          {/* <div className="bg-conversion-accent/10 border border-conversion-accent/20 rounded-2xl p-6 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="flex items-center space-x-4 mb-4 md:mb-0">
                 <div className="w-12 h-12 bg-conversion-accent rounded-xl flex items-center justify-center">
@@ -98,12 +98,12 @@ const ContactSupport = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Quick Contact Cards */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <QuickContactCard
@@ -147,21 +147,21 @@ const ContactSupport = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Main Content Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
             {/* Contact Form */}
             <div>
               <ContactForm />
             </div>
 
             {/* Store Locator */}
-            <div>
+            {/* <div>
               <StoreLocator />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

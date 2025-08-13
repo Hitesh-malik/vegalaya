@@ -79,12 +79,12 @@ const Header = () => {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
-            <Button variant="ghost" size="icon" className="hidden md:flex">
+            {/* <Button variant="ghost" size="icon" className="hidden md:flex">
               <Icon name="Search" size={20} />
-            </Button>
+            </Button> */}
 
             {/* Cart */}
-            <Link to="/shopping-cart-checkout" className="relative">
+            {/* <Link to="/shopping-cart-checkout" className="relative">
               <Button variant="ghost" size="icon" className="relative">
                 <Icon name="ShoppingCart" size={20} />
                 {cartCount > 0 && (
@@ -93,12 +93,12 @@ const Header = () => {
                   </span>
                 )}
               </Button>
-            </Link>
+            </Link> */}
 
             {/* User Account */}
-            <Button variant="ghost" size="icon" className="hidden md:flex">
+            {/* <Button variant="ghost" size="icon" className="hidden md:flex">
               <Icon name="User" size={20} />
-            </Button>
+            </Button> */}
 
             {/* Mobile Menu Toggle */}
             <Button
@@ -136,7 +136,7 @@ const Header = () => {
             ))}
 
             {/* Mobile-only actions */}
-            <div className="pt-4 border-t border-border mt-4">
+            {/* <div className="pt-4 border-t border-border mt-4">
               <div className="flex items-center space-x-4">
                 <Button variant="ghost" size="sm" className="flex-1">
                   <Icon name="Search" size={16} className="mr-2" />
@@ -147,7 +147,7 @@ const Header = () => {
                   Account
                 </Button>
               </div>
-            </div>
+            </div> */}
           </nav>
         </div>
       </div>
