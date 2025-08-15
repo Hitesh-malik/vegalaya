@@ -46,6 +46,98 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
         <p className="text-text-secondary text-lg">{product.tagline}</p>
       </div>
 
+      {/* Product Description */}
+      {product.textureDescription && (
+        <div className="bg-surface rounded-lg p-4">
+          <h3 className="font-semibold text-text-primary mb-2">
+            Product Description
+          </h3>
+          <p className="text-text-secondary leading-relaxed">
+            {product.textureDescription}
+          </p>
+        </div>
+      )}
+
+      {/* Key Features */}
+      {product.keyFeatures && product.keyFeatures.length > 0 && (
+        <div className="bg-surface rounded-lg p-4">
+          <h3 className="font-semibold text-text-primary mb-3">Key Features</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {product.keyFeatures.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <Icon
+                  name="Check"
+                  size={16}
+                  className="text-success flex-shrink-0"
+                />
+                <span className="text-sm text-text-secondary">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Ingredients */}
+      {product.ingredients && (
+        <div className="bg-surface rounded-lg p-4">
+          <h3 className="font-semibold text-text-primary mb-2">Ingredients</h3>
+          <p className="text-text-secondary text-sm leading-relaxed">
+            {product.ingredients}
+          </p>
+        </div>
+      )}
+
+      {/* Dietary Information & Nutritional Highlights */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* Dietary Info */}
+        {product.dietaryInfo && product.dietaryInfo.length > 0 && (
+          <div className="bg-surface rounded-lg p-4">
+            <h3 className="font-semibold text-text-primary mb-3">
+              Dietary Information
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {product.dietaryInfo.map((info, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
+                >
+                  {info}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Nutritional Info */}
+        {product.nutritionalInfo && (
+          <div className="bg-surface rounded-lg p-4">
+            <h3 className="font-semibold text-text-primary mb-3">
+              Nutritional Highlights
+            </h3>
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
+                <span className="text-text-secondary">Calories</span>
+                <span className="font-medium text-text-primary">
+                  {product.nutritionalInfo.calories}
+                </span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-text-secondary">Protein</span>
+                <span className="font-medium text-text-primary">
+                  {product.nutritionalInfo.protein}
+                </span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-text-secondary">Total Carbs</span>
+                <span className="font-medium text-text-primary">
+                  {product.nutritionalInfo.totalCarbs}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Rating & Reviews */}
       {/* <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-1">
