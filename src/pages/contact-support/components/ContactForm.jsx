@@ -1,93 +1,145 @@
-import React, { useState } from 'react';
-import Button from '../../../components/ui/Button';
-import Input from '../../../components/ui/Input';
-import Select from '../../../components/ui/Select';
-import { Checkbox } from '../../../components/ui/Checkbox';
-import Icon from '../../../components/AppIcon';
+import React, { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import Button from "../../../components/ui/Button";
+import Input from "../../../components/ui/Input";
+import Select from "../../../components/ui/Select";
+import { Checkbox } from "../../../components/ui/Checkbox";
+import Icon from "../../../components/AppIcon";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    inquiryType: '',
-    subject: '',
-    message: '',
-    agreeToTerms: false
+    name: "",
+    email: "",
+    phone: "",
+    inquiryType: "",
+    subject: "",
+    message: "",
+    agreeToTerms: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
   const inquiryTypes = [
-    { value: 'product-questions', label: 'Product Questions' },
-    { value: 'cooking-support', label: 'Cooking Support' },
-    { value: 'bulk-orders', label: 'Bulk Orders' },
-    { value: 'partnership', label: 'Partnership Opportunities' },
-    { value: 'feedback', label: 'Feedback & Suggestions' },
-    { value: 'quality-assurance', label: 'Quality Assurance' },
-    { value: 'other', label: 'Other' }
+    { value: "product-questions", label: "Product Questions" },
+    { value: "cooking-support", label: "Cooking Support" },
+    { value: "bulk-orders", label: "Bulk Orders" },
+    { value: "partnership", label: "Partnership Opportunities" },
+    { value: "feedback", label: "Feedback & Suggestions" },
+    { value: "quality-assurance", label: "Quality Assurance" },
+    { value: "other", label: "Other" },
   ];
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("gIcTG7-mZL0sYugco");
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
-    
+
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+
+    // Clear submit status when user makes changes
+    if (submitStatus) {
+      setSubmitStatus(null);
     }
   };
 
   const handleSelectChange = (value) => {
-    setFormData(prev => ({ ...prev, inquiryType: value }));
+    setFormData((prev) => ({ ...prev, inquiryType: value }));
     if (errors.inquiryType) {
-      setErrors(prev => ({ ...prev, inquiryType: '' }));
+      setErrors((prev) => ({ ...prev, inquiryType: "" }));
+    }
+    if (submitStatus) {
+      setSubmitStatus(null);
     }
   };
 
   const validateForm = () => {
     const newErrors = {};
-    
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email format';
-    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    if (!formData.inquiryType) newErrors.inquiryType = 'Please select an inquiry type';
-    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
-    if (!formData.agreeToTerms) newErrors.agreeToTerms = 'Please agree to terms and conditions';
-    
+
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Invalid email format";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    if (!formData.inquiryType)
+      newErrors.inquiryType = "Please select an inquiry type";
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+    if (!formData.agreeToTerms)
+      newErrors.agreeToTerms = "Please agree to terms and conditions";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    alert('Thank you for contacting us! We will get back to you within 24 hours.');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      inquiryType: '',
-      subject: '',
-      message: '',
-      agreeToTerms: false
-    });
-    
-    setIsSubmitting(false);
+    setSubmitStatus(null);
+
+    try {
+      // Get the selected inquiry type label
+      const selectedInquiry = inquiryTypes.find(
+        (type) => type.value === formData.inquiryType
+      );
+
+      // Prepare template parameters for EmailJS (matching your template variables)
+      const templateParams = {
+        user_name: formData.name,
+        user_email: formData.email,
+        phone_number: formData.phone,
+        inquiry_type: selectedInquiry
+          ? selectedInquiry.label
+          : formData.inquiryType,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "pandeyjimayank2001@gmail.com", // Your email address
+        submission_date: new Date().toLocaleDateString(),
+        submission_time: new Date().toLocaleTimeString(),
+      };
+
+      console.log("Sending email with params:", templateParams);
+
+      // Send email using EmailJS with updated template ID
+      const result = await emailjs.send(
+        "service_137qk48", // Your service ID
+        "template_4rvupyt", // Updated template ID
+        templateParams,
+        "gIcTG7-mZL0sYugco" // Your public key
+      );
+
+      console.log("SUCCESS!", result.text);
+      setSubmitStatus("success");
+
+      // Reset form on success
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        inquiryType: "",
+        subject: "",
+        message: "",
+        agreeToTerms: false,
+      });
+    } catch (error) {
+      console.error("FAILED...", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -98,9 +150,46 @@ const ContactForm = () => {
         </div>
         <div>
           <h3 className="text-xl font-bold text-text-primary">Get in Touch</h3>
-          <p className="text-sm text-text-secondary">We're here to help with all your culinary needs</p>
+          <p className="text-sm text-text-secondary">
+            We're here to help with all your culinary needs
+          </p>
         </div>
       </div>
+
+      {/* Success/Error Messages */}
+      {submitStatus === "success" && (
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <div className="flex items-center">
+            <Icon
+              name="CheckCircle"
+              size={20}
+              className="text-green-500 mr-3"
+            />
+            <div>
+              <p className="text-green-800 font-medium">
+                Message sent successfully!
+              </p>
+              <p className="text-green-600 text-sm">
+                We'll get back to you within 24 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {submitStatus === "error" && (
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <div className="flex items-center">
+            <Icon name="AlertCircle" size={20} className="text-red-500 mr-3" />
+            <div>
+              <p className="text-red-800 font-medium">Failed to send message</p>
+              <p className="text-red-600 text-sm">
+                Please try again or contact us directly.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -114,7 +203,7 @@ const ContactForm = () => {
             error={errors.name}
             required
           />
-          
+
           <Input
             label="Email Address"
             type="email"
@@ -138,7 +227,7 @@ const ContactForm = () => {
             error={errors.phone}
             required
           />
-          
+
           <Select
             label="Inquiry Type"
             placeholder="Select inquiry type"
@@ -172,7 +261,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleInputChange}
             className={`w-full px-4 py-3 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${
-              errors.message ? 'border-error' : 'border-border'
+              errors.message ? "border-error" : "border-border"
             }`}
           />
           {errors.message && (
@@ -198,7 +287,7 @@ const ContactForm = () => {
           iconName="Send"
           iconPosition="right"
         >
-          {isSubmitting ? 'Sending Message...' : 'Send Message'}
+          {isSubmitting ? "Sending Message..." : "Send Message"}
         </Button>
       </form>
     </div>
