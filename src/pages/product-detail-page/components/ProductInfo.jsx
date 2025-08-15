@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
+import React, { useState } from "react";
+import Icon from "../../../components/AppIcon";
+import Button from "../../../components/ui/Button";
 
 const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
   const [quantity, setQuantity] = useState(1);
@@ -19,11 +19,11 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
     setIsSaved(!isSaved);
   };
 
-  const increaseQuantity = () => setQuantity(prev => prev + 1);
-  const decreaseQuantity = () => setQuantity(prev => Math.max(1, prev - 1));
+  const increaseQuantity = () => setQuantity((prev) => prev + 1);
+  const decreaseQuantity = () => setQuantity((prev) => Math.max(1, prev - 1));
 
   const calculateDiscountedPrice = (originalPrice, discount) => {
-    return originalPrice - (originalPrice * discount / 100);
+    return originalPrice - (originalPrice * discount) / 100;
   };
 
   return (
@@ -43,20 +43,22 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
         <h1 className="text-2xl lg:text-3xl font-bold text-text-primary mb-2">
           {product.name}
         </h1>
-        <p className="text-text-secondary text-lg">
-          {product.tagline}
-        </p>
+        <p className="text-text-secondary text-lg">{product.tagline}</p>
       </div>
 
       {/* Rating & Reviews */}
-      <div className="flex items-center space-x-4">
+      {/* <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-1">
           {[...Array(5)].map((_, i) => (
             <Icon
               key={i}
               name="Star"
               size={16}
-              className={i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}
+              className={
+                i < Math.floor(product.rating)
+                  ? "text-yellow-400 fill-current"
+                  : "text-gray-300"
+              }
             />
           ))}
           <span className="text-sm font-medium text-text-primary ml-2">
@@ -66,13 +68,17 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
         <span className="text-sm text-text-secondary">
           ({product.reviewCount} reviews)
         </span>
-      </div>
+      </div> */}
 
       {/* Pricing */}
-      <div className="space-y-2">
+      {/* <div className="space-y-2">
         <div className="flex items-center space-x-3">
           <span className="text-3xl font-bold text-text-primary">
-            ₹{calculateDiscountedPrice(selectedSize.price, product.discount).toFixed(2)}
+            ₹
+            {calculateDiscountedPrice(
+              selectedSize.price,
+              product.discount
+            ).toFixed(2)}
           </span>
           {product.discount > 0 && (
             <>
@@ -88,10 +94,10 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
         <p className="text-sm text-text-secondary">
           Inclusive of all taxes • Free delivery above ₹499
         </p>
-      </div>
+      </div> */}
 
       {/* Size Selection */}
-      <div className="space-y-3">
+      {/* <div className="space-y-3">
         <h3 className="font-semibold text-text-primary">Size</h3>
         <div className="flex flex-wrap gap-3">
           {product.sizes.map((size) => (
@@ -100,7 +106,8 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
               onClick={() => setSelectedSize(size)}
               className={`px-4 py-2 rounded-lg border-2 transition-all duration-200 ${
                 selectedSize.id === size.id
-                  ? 'border-primary bg-primary/5 text-primary' :'border-border hover:border-primary/50'
+                  ? "border-primary bg-primary/5 text-primary"
+                  : "border-border hover:border-primary/50"
               }`}
             >
               <div className="text-sm font-medium">{size.volume}</div>
@@ -108,10 +115,10 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Quantity Selection */}
-      <div className="space-y-3">
+      {/* <div className="space-y-3">
         <h3 className="font-semibold text-text-primary">Quantity</h3>
         <div className="flex items-center space-x-4">
           <div className="flex items-center border border-border rounded-lg">
@@ -130,13 +137,15 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
             </button>
           </div>
           <span className="text-sm text-text-secondary">
-            {selectedSize.stock > 10 ? 'In Stock' : `Only ${selectedSize.stock} left`}
+            {selectedSize.stock > 10
+              ? "In Stock"
+              : `Only ${selectedSize.stock} left`}
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* Action Buttons */}
-      <div className="space-y-3">
+      {/* <div className="space-y-3">
         <Button
           onClick={handleAddToCart}
           className="w-full"
@@ -151,7 +160,11 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
           ) : (
             <>
               <Icon name="ShoppingCart" size={20} className="mr-2" />
-              Add to Cart - ₹{(calculateDiscountedPrice(selectedSize.price, product.discount) * quantity).toFixed(2)}
+              Add to Cart - ₹
+              {(
+                calculateDiscountedPrice(selectedSize.price, product.discount) *
+                quantity
+              ).toFixed(2)}
             </>
           )}
         </Button>
@@ -162,21 +175,21 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
             className="flex-1"
             onClick={handleSaveForLater}
           >
-            <Icon 
-              name="Heart" 
-              size={18} 
-              className={`mr-2 ${isSaved ? 'fill-current text-red-500' : ''}`} 
+            <Icon
+              name="Heart"
+              size={18}
+              className={`mr-2 ${isSaved ? "fill-current text-red-500" : ""}`}
             />
-            {isSaved ? 'Saved' : 'Save for Later'}
+            {isSaved ? "Saved" : "Save for Later"}
           </Button>
           <Button variant="outline" size="icon">
             <Icon name="Share2" size={18} />
           </Button>
         </div>
-      </div>
+      </div> */}
 
       {/* Key Features */}
-      <div className="bg-surface rounded-lg p-4 space-y-3">
+      {/* <div className="bg-surface rounded-lg p-4 space-y-3">
         <h3 className="font-semibold text-text-primary">Key Features</h3>
         <div className="grid grid-cols-2 gap-3">
           {product.keyFeatures.map((feature, index) => (
@@ -186,7 +199,7 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
