@@ -8,20 +8,20 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = [
-    {
-      id: 1,
-      title: "VegaMangoLassi",
-      subtitle:
-        "Naturally sweetened mango lassi — dairy-free, creamy & refreshing.",
-      image: "/assets/images/NewVegaMangoLassi.jpg",
-      cta: "Try Mango Magic",
-      subtitle2: "Authentic Taste, Plant-Based Twist.",
-    },
+    // {
+    //   id: 1,
+    //   title: "VegaMangoLassi",
+    //   subtitle:
+    //     "Naturally sweetened mango lassi — dairy-free, creamy & refreshing.",
+    //   image: "/assets/images/NewVegaMangoLassi.jpg",
+    //   cta: "Try Mango Magic",
+    //   subtitle2: "Authentic Taste, Plant-Based Twist.",
+    // },
     {
       id: 2,
       title: "VegaBerryShake",
       subtitle: "Real berries blended into a smooth, dairy-free delight.",
-      image: "/assets/images/NewVegaberryShake.jpg",
+      image: "/public/assets/images/newImage/slider/vegaBerryShake.jpg",
       cta: "Explore Berry Shake",
       subtitle2: "Berrylicious. Nourishing. 100% Plant-Based.",
     },
@@ -30,19 +30,29 @@ const HeroSection = () => {
       title: "VegaKesarChai",
       subtitle:
         "Aromatic saffron chai – vegan, soothing, and naturally indulgent.",
-      image: "/assets/images/NewVagaKesarCHai.jpg",
+      image: "/public/assets/images/newImage/slider/vegakesarChai.jpg",
       cta: "Sip the Bliss",
       subtitle2: "Spiced with Tradition. Steeped in Purity.",
     },
+    // {
+    //   id: 4,
+    //   title: "VegaCocoLassi",
+    //   subtitle:
+    //     "Dairy-free coconut lassi — creamy, hydrating, and refreshingly pure.",
+    //   image: "/assets/images/NewVegaCocalassi.jpg",
+    //   cta: "Discover Coconut Joy",
+    //   subtitle2: "Tropical Goodness in Every Sip.",
+    // },
     {
       id: 4,
-      title: "VegaCocoLassi",
+      title: "VegaMoka",
       subtitle:
-        "Dairy-free coconut lassi — creamy, hydrating, and refreshingly pure.",
-      image: "/assets/images/NewVegaCocalassi.jpg",
-      cta: "Discover Coconut Joy",
-      subtitle2: "Tropical Goodness in Every Sip.",
+        "Plant-based mocha blend — rich, bold, and naturally energizing.",
+      image: "/public/assets/images/newImage/slider/vegaMoka.jpg",
+      cta: "Fuel with Flavor",
+      subtitle2: "Indulgence Meets Vitality.",
     },
+
     {
       id: 5,
       subtitle:
