@@ -13,7 +13,7 @@ const ProductCategoryCards = () => {
       title: "Plant-Based Refreshments",
       subtitle: "Deliciously dairy-free drinks for every mood",
       description: "Deliciously dairy-free drinks for every mood",
-      image: "/public/assets/images/newImage/products/vegamongolassi.jpg",
+      image: "/assets/images/newImage/products/vegamongolassi.jpg",
       products: ["VegaMangoLassi", "VegaBerryShake", "VegaCocoLassi"],
       usageScenarios: [
         "Daily refreshments",
@@ -28,7 +28,7 @@ const ProductCategoryCards = () => {
       title: "Brew & Blend",
       subtitle: "For mindful sips and morning rituals",
       description: "For mindful sips and morning rituals",
-      image: "/public/assets/images/newImage/products/vegamoka.jpg",
+      image: "/assets/images/newImage/products/vegamoka.jpg",
       products: ["VegaMoka", "VegaKesarChai"],
       usageScenarios: [
         "Morning coffee rituals",
@@ -43,7 +43,7 @@ const ProductCategoryCards = () => {
       title: "Everyday Creamers",
       subtitle: "Smooth, sustainable creamers for tea, coffee & more",
       description: "Smooth, sustainable creamers for tea, coffee & more",
-      image: "/public/assets/images/newImage/products/vegacocolassi.jpg",
+      image: "/assets/images/newImage/products/vegacocolassi.jpg",
       products: [
         "Coconut Creamer",
         "Almond Creamer",
