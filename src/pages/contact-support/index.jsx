@@ -274,7 +274,7 @@ const ContactSupport = () => {
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
-              <span>24/7 Cooking Support</span>
+              {/* <span>24/7 Cooking Support</span> */}
               <span>•</span>
               <span>Quality Guaranteed</span>
               <span>•</span>

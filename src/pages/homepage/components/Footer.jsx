@@ -21,9 +21,9 @@ const Footer = () => {
   const socialLinks = [
     { name: "Facebook", icon: "Facebook", url: "#" },
     { name: "Instagram", icon: "Instagram", url: "#" },
-    { name: "Twitter", icon: "Twitter", url: "#" },
+    // { name: "Twitter", icon: "Twitter", url: "#" },
     { name: "YouTube", icon: "Youtube", url: "#" },
-    { name: "LinkedIn", icon: "Linkedin", url: "#" },
+    // { name: "LinkedIn", icon: "Linkedin", url: "#" },
   ];
 
   return (
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {footerSections.map((section) => (
+          {/* {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="text-lg font-semibold mb-4 text-secondary">
                 {section.title}
@@ -103,7 +103,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
 
