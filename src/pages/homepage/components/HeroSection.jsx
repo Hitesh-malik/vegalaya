@@ -21,7 +21,7 @@ const HeroSection = () => {
       id: 2,
       title: "VegaBerryShake",
       subtitle: "Real berries blended into a smooth, dairy-free delight.",
-      image: "/public/assets/images/newImage/slider/vegaBerryShake.jpg",
+      image: "assets/images/newImage/slider/vegaBerryShake.jpg",
       cta: "Explore Berry Shake",
       subtitle2: "Berrylicious. Nourishing. 100% Plant-Based.",
     },
@@ -30,7 +30,7 @@ const HeroSection = () => {
       title: "VegaKesarChai",
       subtitle:
         "Aromatic saffron chai – vegan, soothing, and naturally indulgent.",
-      image: "/public/assets/images/newImage/slider/vegakesarChai.jpg",
+      image: "assets/images/newImage/slider/vegakesarChai.jpg",
       cta: "Sip the Bliss",
       subtitle2: "Spiced with Tradition. Steeped in Purity.",
     },
@@ -48,7 +48,7 @@ const HeroSection = () => {
       title: "VegaMoka",
       subtitle:
         "Plant-based mocha blend — rich, bold, and naturally energizing.",
-      image: "/public/assets/images/newImage/slider/vegaMoka.jpg",
+      image: "assets/images/newImage/slider/vegaMoka.jpg",
       cta: "Fuel with Flavor",
       subtitle2: "Indulgence Meets Vitality.",
     },
@@ -57,7 +57,7 @@ const HeroSection = () => {
       id: 5,
       subtitle:
         "Taste the future of sustainable beverages. Crafted with love, exported with purpose.",
-      image: "/assets/images/no_image.png",
+      image: "assets/images/no_image.png",
       cta: "Explore Our Range",
       subtitle2: "Farm to Cup • Purely Plant-Based • Proudly Indian",
     },
