@@ -1,7 +1,7 @@
-import React from 'react';
-import Button from '../../../components/ui/Button';
-import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
+import React from "react";
+import Button from "../../../components/ui/Button";
+import Icon from "../../../components/AppIcon";
+import Image from "../../../components/AppImage";
 
 const SocialMediaSection = () => {
   const socialPlatforms = [
@@ -9,19 +9,21 @@ const SocialMediaSection = () => {
       name: "Instagram",
       handle: "@VEGALAYAofficial",
       followers: "125K",
-      description: "Daily recipe inspiration, cooking tips, and community creations",
+      description:
+        "Daily recipe inspiration, cooking tips, and community creations",
       icon: "Instagram",
       color: "bg-gradient-to-r from-purple-500 to-pink-500",
-      url: "https://instagram.com/VEGALAYAofficial"
+      url: "https://instagram.com/VEGALAYAofficial",
     },
     {
       name: "Facebook",
       handle: "VEGALAYA Foods",
       followers: "89K",
-      description: "Join our cooking community for live sessions and recipe sharing",
+      description:
+        "Join our cooking community for live sessions and recipe sharing",
       icon: "Facebook",
       color: "bg-blue-600",
-      url: "https://facebook.com/VEGALAYAfoods"
+      url: "https://facebook.com/VEGALAYAfoods",
     },
     {
       name: "YouTube",
@@ -30,7 +32,7 @@ const SocialMediaSection = () => {
       description: "Step-by-step cooking tutorials and chef collaborations",
       icon: "Youtube",
       color: "bg-red-600",
-      url: "https://youtube.com/VEGALAYAkitchen"
+      url: "https://youtube.com/VEGALAYAkitchen",
     },
     {
       name: "WhatsApp",
@@ -39,40 +41,47 @@ const SocialMediaSection = () => {
       description: "Instant cooking help and recipe assistance",
       icon: "MessageCircle",
       color: "bg-green-600",
-      url: "https://wa.me/919876543210"
-    }
+      url: "https://wa.me/918178370793",
+    },
   ];
 
   const communityPosts = [
     {
       id: 1,
       user: "Priya Sharma",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
-      content: "Made the most amazing pasta with VEGALAYA Pesto sauce! My family loved it. Thank you for the recipe suggestion! 🍝❤️",
-      image: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=300",
+      avatar:
+        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150",
+      content:
+        "Made the most amazing pasta with VEGALAYA Pesto sauce! My family loved it. Thank you for the recipe suggestion! 🍝❤️",
+      image:
+        "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=300",
       likes: 24,
-      platform: "Instagram"
+      platform: "Instagram",
     },
     {
       id: 2,
       user: "Rajesh Kumar",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
-      content: "VEGALAYA\'s cooking helpline saved my dinner party! The chef guided me through the perfect marinade technique. Excellent support! 👨‍🍳",
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      content:
+        "VEGALAYA's cooking helpline saved my dinner party! The chef guided me through the perfect marinade technique. Excellent support! 👨‍🍳",
       likes: 18,
-      platform: "Facebook"
+      platform: "Facebook",
     },
     {
       id: 3,
       user: "Sneha Patel",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
-      content: "Just watched the new VEGALAYA cooking tutorial on YouTube. The sandwich spread combinations are genius! Can\'t wait to try them all. 🥪",
+      avatar:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
+      content:
+        "Just watched the new VEGALAYA cooking tutorial on YouTube. The sandwich spread combinations are genius! Can't wait to try them all. 🥪",
       likes: 31,
-      platform: "YouTube"
-    }
+      platform: "YouTube",
+    },
   ];
 
   const handleSocialClick = (url) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
@@ -82,8 +91,12 @@ const SocialMediaSection = () => {
           <Icon name="Users" size={24} className="text-white" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-text-primary">Join Our Community</h3>
-          <p className="text-sm text-text-secondary">Connect with fellow food enthusiasts and get cooking inspiration</p>
+          <h3 className="text-xl font-bold text-text-primary">
+            Join Our Community
+          </h3>
+          <p className="text-sm text-text-secondary">
+            Connect with fellow food enthusiasts and get cooking inspiration
+          </p>
         </div>
       </div>
 
@@ -96,22 +109,34 @@ const SocialMediaSection = () => {
             onClick={() => handleSocialClick(platform.url)}
           >
             <div className="flex items-start space-x-4">
-              <div className={`w-12 h-12 ${platform.color} rounded-lg flex items-center justify-center`}>
+              <div
+                className={`w-12 h-12 ${platform.color} rounded-lg flex items-center justify-center`}
+              >
                 <Icon name={platform.icon} size={24} className="text-white" />
               </div>
-              
+
               <div className="flex-1 min-w-0">
                 <div className="flex items-center space-x-2 mb-1">
-                  <h4 className="font-semibold text-text-primary">{platform.name}</h4>
+                  <h4 className="font-semibold text-text-primary">
+                    {platform.name}
+                  </h4>
                   <span className="text-xs bg-accent/20 text-primary px-2 py-1 rounded-full">
                     {platform.followers}
                   </span>
                 </div>
-                <p className="text-sm text-text-secondary mb-2">{platform.handle}</p>
-                <p className="text-xs text-text-secondary leading-relaxed">{platform.description}</p>
+                <p className="text-sm text-text-secondary mb-2">
+                  {platform.handle}
+                </p>
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  {platform.description}
+                </p>
               </div>
-              
-              <Icon name="ExternalLink" size={16} className="text-text-secondary" />
+
+              <Icon
+                name="ExternalLink"
+                size={16}
+                className="text-text-secondary"
+              />
             </div>
           </div>
         ))}
@@ -168,22 +193,27 @@ const SocialMediaSection = () => {
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6 text-center">
-        <h4 className="text-lg font-semibold text-text-primary mb-2">Share Your VEGALAYA Creations</h4>
+        <h4 className="text-lg font-semibold text-text-primary mb-2">
+          Share Your VEGALAYA Creations
+        </h4>
         <p className="text-sm text-text-secondary mb-4">
-          Tag us in your cooking adventures and get featured in our community highlights!
+          Tag us in your cooking adventures and get featured in our community
+          highlights!
         </p>
-        
+
         <div className="flex flex-wrap justify-center gap-3">
           <Button
             variant="outline"
             size="sm"
             iconName="Camera"
             iconPosition="left"
-            onClick={() => handleSocialClick("https://instagram.com/VEGALAYAofficial")}
+            onClick={() =>
+              handleSocialClick("https://instagram.com/VEGALAYAofficial")
+            }
           >
             Share on Instagram
           </Button>
-          
+
           <Button
             variant="outline"
             size="sm"
