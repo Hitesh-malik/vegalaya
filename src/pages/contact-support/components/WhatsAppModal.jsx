@@ -67,7 +67,7 @@ const WhatsAppModal = ({ isOpen, onClose }) => {
       return;
     }
 
-    const phoneNumber = "918178370793"; // Your WhatsApp number
+    const phoneNumber = "9871041214"; // Your WhatsApp number
     const encodedMessage = encodeURIComponent(customMessage);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
