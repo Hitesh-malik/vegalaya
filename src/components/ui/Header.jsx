@@ -42,19 +42,22 @@ const Header = () => {
       <div className="w-full">
         <div className="flex items-center justify-between h-16 px-4 lg:px-6">
           {/* Logo */}
-          <Link to="/homepage" className="flex items-center space-x-2 group">
-            <div className="relative">
+          <Link
+            to="/homepage"
+            className="flex items-center space-x-2 group py-1 pt-3"
+          >
+            <div className="relative flex items-center pt-4">
               <img
                 src="/assets/images/vagalayaLogo.png"
                 alt="Vagalaya Logo"
-                className="w-10 h-10 rounded-lg object-cover transform transition-transform group-hover:scale-105"
+                className="w-24 h-24 rounded-lg object-cover transform transition-transform group-hover:scale-105"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary font-accent">
+              <span className="text-2xl font-bold text-primary font-accent">
                 VEGALAYA
               </span>
-              <span className="text-xs text-text-secondary -mt-1">Store</span>
+              <span className="text-sm text-text-secondary -mt-1">Store</span>
             </div>
           </Link>
 
