@@ -45,10 +45,10 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-white/80 mb-6 leading-relaxed">
+            {/* <p className="text-white/80 mb-6 leading-relaxed">
               Transform your meals with our premium range of mayonnaise,
               spreads, and sauces crafted for the discerning taste.
-            </p>
+            </p> */}
 
             <div className="space-y-3 mb-6">
               {/* <div className="flex items-center space-x-3">

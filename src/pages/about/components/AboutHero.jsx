@@ -26,7 +26,7 @@ const AboutHero = () => {
               <img
                 src="/assets/images/vagalayaLogo.png"
                 alt="Vagalaya Logo"
-                className="w-20 h-20 rounded-lg object-cover lg:w-32 lg:h-32 xl:w-40 xl:h-40"
+                className="w-20 h-20 rounded-lg object-cover lg:w-52 lg:h-52 xl:w-0 xl:h-40"
               />
             </div>
           </div>

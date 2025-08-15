@@ -80,7 +80,7 @@ const ProductCard = ({ product, onAddToCart }) => {
                 {product.size} • {product.category}
               </p>
             </div>
-            <div className="flex items-center gap-1 ml-2">
+            {/* <div className="flex items-center gap-1 ml-2">
               <Icon
                 name="Star"
                 size={14}
@@ -89,7 +89,7 @@ const ProductCard = ({ product, onAddToCart }) => {
               <span className="text-sm font-medium text-text-primary">
                 {product.rating}
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Tags */}
@@ -105,7 +105,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           </div>
 
           {/* Price and Action */}
-          <div className="flex items-center justify-between">
+          {/* <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-lg font-bold text-primary">
                 ₹{product.price}
@@ -126,7 +126,7 @@ const ProductCard = ({ product, onAddToCart }) => {
             >
               Add
             </Button>
-          </div>
+          </div> */}
 
           {/* Usage Context */}
           <div className="mt-3 pt-3 border-t border-border">
