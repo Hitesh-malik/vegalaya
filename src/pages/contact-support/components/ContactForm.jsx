@@ -30,9 +30,9 @@ const ContactForm = () => {
     { value: "other", label: "Other" },
   ];
 
-  // Initialize EmailJS
+  // Initialize EmailJS with your public key
   useEffect(() => {
-    emailjs.init("gIcTG7-mZL0sYugco");
+    emailjs.init("EiSy8VSJz4NwBmE88");
   }, []);
 
   const handleInputChange = (e) => {
@@ -96,29 +96,28 @@ const ContactForm = () => {
         (type) => type.value === formData.inquiryType
       );
 
-      // Prepare template parameters for EmailJS (matching your template variables)
+      // Prepare template parameters for EmailJS
+      // Make sure these variable names match your EmailJS template
       const templateParams = {
-        user_name: formData.name,
-        user_email: formData.email,
-        phone_number: formData.phone,
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
         inquiry_type: selectedInquiry
           ? selectedInquiry.label
           : formData.inquiryType,
         subject: formData.subject,
         message: formData.message,
-        to_email: "pandeyjimayank2001@gmail.com", // Your email address
-        submission_date: new Date().toLocaleDateString(),
-        submission_time: new Date().toLocaleTimeString(),
+        to_email: "your-email@example.com", // Replace with your actual email
       };
 
       console.log("Sending email with params:", templateParams);
 
-      // Send email using EmailJS with updated template ID
+      // Send email using EmailJS with your credentials
       const result = await emailjs.send(
-        "service_137qk48", // Your service ID
-        "template_4rvupyt", // Updated template ID
+        "service_r4ej4zy", // Your service ID
+        "template_6hz0shn", // Your template ID
         templateParams,
-        "gIcTG7-mZL0sYugco" // Your public key
+        "EiSy8VSJz4NwBmE88" // Your public key
       );
 
       console.log("SUCCESS!", result.text);
