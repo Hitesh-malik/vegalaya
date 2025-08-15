@@ -51,10 +51,10 @@ const Footer = () => {
             </p>
 
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Icon name="Phone" size={18} className="text-secondary" />
                 <span className="text-white/80">1800-123-VEGALAYA</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3">
                 <Icon name="Mail" size={18} className="text-secondary" />
                 <span className="text-white/80">
