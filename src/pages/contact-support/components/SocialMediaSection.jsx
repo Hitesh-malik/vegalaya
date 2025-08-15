@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../../components/ui/Button";
 import Icon from "../../../components/AppIcon";
 import Image from "../../../components/AppImage";
+import WhatsAppModal from "./WhatsAppModal";
 
 const SocialMediaSection = () => {
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
+
   const socialPlatforms = [
     {
       name: "Instagram",
@@ -106,7 +109,13 @@ const SocialMediaSection = () => {
           <div
             key={platform.name}
             className="border border-border rounded-lg p-4 hover:border-primary/50 transition-colors cursor-pointer"
-            onClick={() => handleSocialClick(platform.url)}
+            onClick={() => {
+              if (platform.name === "WhatsApp") {
+                setIsWhatsAppModalOpen(true);
+              } else {
+                handleSocialClick(platform.url);
+              }
+            }}
           >
             <div className="flex items-start space-x-4">
               <div
@@ -219,12 +228,18 @@ const SocialMediaSection = () => {
             size="sm"
             iconName="MessageSquare"
             iconPosition="left"
-            onClick={() => handleSocialClick("https://wa.me/919876543210")}
+            onClick={() => setIsWhatsAppModalOpen(true)}
           >
             WhatsApp Support
           </Button>
         </div>
       </div>
+
+      {/* WhatsApp Modal */}
+      <WhatsAppModal
+        isOpen={isWhatsAppModalOpen}
+        onClose={() => setIsWhatsAppModalOpen(false)}
+      />
     </div>
   );
 };

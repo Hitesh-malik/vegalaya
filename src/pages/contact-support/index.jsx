@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/ui/Header";
 import ContactForm from "./components/ContactForm";
 import QuickContactCard from "./components/QuickContactCard";
@@ -8,17 +8,17 @@ import SocialMediaSection from "./components/SocialMediaSection";
 import CorporateContactSection from "./components/CorporateContactSection";
 import Button from "../../components/ui/Button";
 import Icon from "../../components/AppIcon";
+import WhatsAppModal from "./components/WhatsAppModal";
 
 const ContactSupport = () => {
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
+
   const handleCookingHelpline = () => {
     window.location.href = "tel:+919876543210";
   };
 
   const handleWhatsAppSupport = () => {
-    window.open(
-      "https://wa.me/919876543210?text=Hi! I need cooking support with VEGALAYA products.",
-      "_blank"
-    );
+    setIsWhatsAppModalOpen(true);
   };
 
   const handleLiveChat = () => {
@@ -290,6 +290,12 @@ const ContactSupport = () => {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Modal */}
+      <WhatsAppModal
+        isOpen={isWhatsAppModalOpen}
+        onClose={() => setIsWhatsAppModalOpen(false)}
+      />
     </div>
   );
 };
