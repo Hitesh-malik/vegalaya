@@ -34,15 +34,15 @@ const HeroSection = () => {
       cta: "Sip the Bliss",
       subtitle2: "Spiced with Tradition. Steeped in Purity.",
     },
-    // {
-    //   id: 4,
-    //   title: "VegaCocoLassi",
-    //   subtitle:
-    //     "Dairy-free coconut lassi — creamy, hydrating, and refreshingly pure.",
-    //   image: "/assets/images/NewVegaCocalassi.jpg",
-    //   cta: "Discover Coconut Joy",
-    //   subtitle2: "Tropical Goodness in Every Sip.",
-    // },
+    {
+      id: 4,
+      title: "VegaCocoLassi",
+      subtitle:
+        "Dairy-free coconut lassi — creamy, hydrating, and refreshingly pure.",
+      image: "assets/images/newImage/slider/NewVegaCocalassi.jpg",
+      cta: "Discover Coconut Joy",
+      subtitle2: "Tropical Goodness in Every Sip.",
+    },
     {
       id: 4,
       title: "VegaMoka",
@@ -53,14 +53,14 @@ const HeroSection = () => {
       subtitle2: "Indulgence Meets Vitality.",
     },
 
-    {
-      id: 5,
-      subtitle:
-        "Taste the future of sustainable beverages. Crafted with love, exported with purpose.",
-      image: "assets/images/no_image.png",
-      cta: "Explore Our Range",
-      subtitle2: "Farm to Cup • Purely Plant-Based • Proudly Indian",
-    },
+    // {
+    //   id: 5,
+    //   subtitle:
+    //     "Taste the future of sustainable beverages. Crafted with love, exported with purpose.",
+    //   image: "assets/images/no_image.png",
+    //   cta: "Explore Our Range",
+    //   subtitle2: "Farm to Cup • Purely Plant-Based • Proudly Indian",
+    // },
   ];
 
   useEffect(() => {
@@ -112,26 +112,26 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 lg:px-6">
           <div className="max-w-4xl mx-auto text-center text-white">
             {/* Brand Tagline */}
-            <div className="mb-8">
+            {/* <div className="mb-8">
               <h1 className="text-5xl lg:text-7xl font-bold font-accent mb-4">
                 VEGALAYA
               </h1>
               <p className="text-xl lg:text-2xl font-medium opacity-90">
                 {heroSlides[currentSlide].subtitle2}
               </p>
-            </div>
+            </div> */}
 
             {/* Current Slide Content */}
-            <div className="mb-12">
+            {/* <div className="mb-12">
               {heroSlides[currentSlide].title && (
                 <h2 className="text-3xl lg:text-5xl font-bold mb-4">
                   {heroSlides[currentSlide].title}
                 </h2>
-              )}
-              <p className="text-lg lg:text-xl opacity-90 mb-8">
+              )} */}
+              {/* <p className="text-lg lg:text-xl opacity-90 mb-8">
                 {heroSlides[currentSlide].subtitle}
-              </p>
-              <Link to="/product-categories">
+              </p> */}
+              {/* <Link to="/product-categories">
                 <Button
                   size="lg"
                   className="bg-white text-primary hover:bg-gray-100"
@@ -140,10 +140,10 @@ const HeroSection = () => {
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
               </Link>
-            </div>
+            </div> */}
 
             {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2">
+            {/* <div className="flex justify-center space-x-2">
               {heroSlides.map((_, index) => (
                 <button
                   key={index}
@@ -154,7 +154,7 @@ const HeroSection = () => {
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
