@@ -43,7 +43,7 @@ const ProductCategoryCards = () => {
       title: "Everyday Creamers",
       subtitle: "Smooth, sustainable creamers for tea, coffee & more",
       description: "Smooth, sustainable creamers for tea, coffee & more",
-      image: "/assets/images/newImage/products/vegacocolassi.jpg",
+      image: "/assets/images/newImage/products/vegaAlmondCreamer.jpg",
       products: [
         "Coconut Creamer",
         "Almond Creamer",
@@ -162,14 +162,14 @@ const ProductCategoryCards = () => {
         </div>
 
         {/* View All Categories CTA */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Link to="/product-categories">
             <Button size="lg">
               View All Categories
               <Icon name="Grid3X3" size={20} className="ml-2" />
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

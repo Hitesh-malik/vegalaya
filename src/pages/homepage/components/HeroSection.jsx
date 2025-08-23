@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Image from "../../../components/AppImage";
 import Button from "../../../components/ui/Button";
 import Icon from "../../../components/AppIcon";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   const heroSlides = [
-    // {
-    //   id: 1,
-    //   title: "VegaMangoLassi",
-    //   subtitle:
-    //     "Naturally sweetened mango lassi — dairy-free, creamy & refreshing.",
-    //   image: "/assets/images/NewVegaMangoLassi.jpg",
-    //   cta: "Try Mango Magic",
-    //   subtitle2: "Authentic Taste, Plant-Based Twist.",
-    // },
     {
       id: 2,
       title: "VegaBerryShake",
@@ -44,7 +36,7 @@ const HeroSection = () => {
       subtitle2: "Tropical Goodness in Every Sip.",
     },
     {
-      id: 4,
+      id: 5,
       title: "VegaMoka",
       subtitle:
         "Plant-based mocha blend — rich, bold, and naturally energizing.",
@@ -52,15 +44,6 @@ const HeroSection = () => {
       cta: "Fuel with Flavor",
       subtitle2: "Indulgence Meets Vitality.",
     },
-
-    // {
-    //   id: 5,
-    //   subtitle:
-    //     "Taste the future of sustainable beverages. Crafted with love, exported with purpose.",
-    //   image: "assets/images/no_image.png",
-    //   cta: "Explore Our Range",
-    //   subtitle2: "Farm to Cup • Purely Plant-Based • Proudly Indian",
-    // },
   ];
 
   useEffect(() => {
@@ -74,6 +57,11 @@ const HeroSection = () => {
   const prevSlide = () =>
     setCurrentSlide((p) => (p - 1 + heroSlides.length) % heroSlides.length);
 
+  // Method 1: Handle click with useNavigate
+  const handleSlideClick = () => {
+    navigate("/product-categories");
+  };
+
   return (
     <section
       className="
@@ -83,8 +71,40 @@ const HeroSection = () => {
         overflow-hidden
       "
     >
-      {/* Background Slides */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none">
+      {/* Background Slides - Method 1: Using onClick handler */}
+      <div className="absolute inset-0 w-full h-full">
+        {heroSlides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 will-change-opacity transform-gpu cursor-pointer ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+            aria-hidden={index !== currentSlide}
+            onClick={handleSlideClick}
+            role="button"
+            tabIndex={index === currentSlide ? 0 : -1}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                handleSlideClick();
+              }
+            }}
+            aria-label={`View ${slide.title} products`}
+          >
+            <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
+            <Image
+              src={slide.image}
+              alt={slide.title || "Hero image"}
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              loading={index === currentSlide ? "eager" : "lazy"}
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Alternative Method 2: Using Link wrapper (uncomment to use this instead) */}
+      {/*
+      <Link to="/product-categories" className="absolute inset-0 w-full h-full block">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
@@ -93,68 +113,24 @@ const HeroSection = () => {
             }`}
             aria-hidden={index !== currentSlide}
           >
-            <div className="absolute inset-0 bg-black/25 z-10" />
+            <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
             <Image
               src={slide.image}
               alt={slide.title || "Hero image"}
-              // The critical bits:
               className="absolute inset-0 w-full h-full object-cover object-center"
-              // eager only for the visible slide to reduce pop-in
               loading={index === currentSlide ? "eager" : "lazy"}
               decoding="async"
             />
           </div>
         ))}
-      </div>
+      </Link>
+      */}
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center">
+      <div className="relative z-20 h-full flex items-center pointer-events-none">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="max-w-4xl mx-auto text-center text-white">
-            {/* Brand Tagline */}
-            {/* <div className="mb-8">
-              <h1 className="text-5xl lg:text-7xl font-bold font-accent mb-4">
-                VEGALAYA
-              </h1>
-              <p className="text-xl lg:text-2xl font-medium opacity-90">
-                {heroSlides[currentSlide].subtitle2}
-              </p>
-            </div> */}
-
-            {/* Current Slide Content */}
-            {/* <div className="mb-12">
-              {heroSlides[currentSlide].title && (
-                <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-                  {heroSlides[currentSlide].title}
-                </h2>
-              )} */}
-              {/* <p className="text-lg lg:text-xl opacity-90 mb-8">
-                {heroSlides[currentSlide].subtitle}
-              </p> */}
-              {/* <Link to="/product-categories">
-                <Button
-                  size="lg"
-                  className="bg-white text-primary hover:bg-gray-100"
-                >
-                  {heroSlides[currentSlide].cta}
-                  <Icon name="ArrowRight" size={20} className="ml-2" />
-                </Button>
-              </Link>
-            </div> */}
-
-            {/* Slide Indicators */}
-            {/* <div className="flex justify-center space-x-2">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? "bg-white" : "bg-white/50"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div> */}
+            {/* Your commented content can go here */}
           </div>
         </div>
       </div>
@@ -176,7 +152,7 @@ const HeroSection = () => {
       </button>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 text-white animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 text-white animate-bounce pointer-events-none">
         <Icon name="ChevronDown" size={24} />
       </div>
     </section>
