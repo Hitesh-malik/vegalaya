@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/* Center Section - Social Links */}
-          <div className="flex flex-col items-center lg:items-end gap-3">
+          <div className="flex flex-col  lg:items-end gap-3">
             <div className="flex space-x-3">
               {socialLinks.map((social) => (
                 <a
