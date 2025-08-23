@@ -140,7 +140,7 @@ const ProductCategories = () => {
     //   price: 135,
     //   originalPrice: null,
     //   rating: 4.5,
-    //   image: "/public/assets/images/newImage/products/vegastrawberrylassi.jpg",
+    //   image: "/public/assets/images/newImage/products/VEgaBerryShake22.jpg",
     //   isNew: false,
     //   isBestseller: true,
     //   tags: ["Strawberry", "Sweet", "Refreshing"],
