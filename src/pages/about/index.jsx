@@ -3,6 +3,7 @@ import Header from "../../components/ui/Header";
 import Footer from "../homepage/components/Footer";
 import AboutHero from "./components/AboutHero";
 import OurStory from "./components/OurStory";
+import OurInspiration from "./components/OurInspiration";
 import OurPhilosophy from "./components/OurPhilosophy";
 import OurJourney from "./components/OurJourney";
 import OurValues from "./components/OurValues";
@@ -22,6 +23,9 @@ const About = () => {
 
       {/* Our Story Section */}
       <OurStory />
+
+      {/* Our Inspiration Section */}
+      <OurInspiration />
 
       {/* Our Philosophy Section */}
       <OurPhilosophy />
