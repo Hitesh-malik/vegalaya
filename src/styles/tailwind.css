@@ -7,14 +7,14 @@
 @layer base {
   :root {
     /* Core Colors */
-    --color-background: #ffe6a7; /* white */
-    --color-foreground: #ffe6a7; /* gray-900 */
+    --color-background: #FFFFFF; /* white */
+    --color-foreground: #1A1A1A; /* gray-900 */
     --color-border: rgba(43, 58, 135, 0.1); /* navy-800 with opacity */
     --color-input: #FFFFFF; /* white */
     --color-ring: #2B3A87; /* navy-800 */
     
     /* Card Colors */
-    --color-card: #ffe6a7; /* white */
+    --color-card: #FFFFFF; /* white */
     --color-card-foreground: #1A1A1A; /* gray-900 */
     --color-popover: #FFFFFF; /* white */
     --color-popover-foreground: #1A1A1A; /* gray-900 */
