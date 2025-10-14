@@ -276,7 +276,7 @@ const ContactSupport = () => {
               <span>•</span>
               <span>Quality Guaranteed</span>
               <span>•</span>
-              <span>Expert Culinary Team</span>
+              <span>100% Plant-Based</span>
             </div>
 
             <div className="mt-8 pt-6 border-t border-white/20 text-sm text-white/60">

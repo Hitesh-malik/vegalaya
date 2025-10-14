@@ -200,10 +200,10 @@ const SocialMediaSection = () => {
             iconName="Camera"
             iconPosition="left"
             onClick={() =>
-              handleSocialClick("https://instagram.com/VEGALAYAofficial")
+              handleSocialClick("https://www.facebook.com/profile.php?id=61577283060582")
             }
           >
-            Share on Instagram
+            Share on Facebook
           </Button>
 
           <Button
