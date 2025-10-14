@@ -8,16 +8,7 @@ const SocialMediaSection = () => {
   const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
 
   const socialPlatforms = [
-    {
-      name: "Instagram",
-      handle: "@VEGALAYAofficial",
-      followers: "125K",
-      description:
-        "Daily recipe inspiration, cooking tips, and community creations",
-      icon: "Instagram",
-      color: "bg-gradient-to-r from-purple-500 to-pink-500",
-      url: "https://instagram.com/VEGALAYAofficial",
-    },
+    
     {
       name: "Facebook",
       handle: "VEGALAYA Foods",
@@ -26,17 +17,9 @@ const SocialMediaSection = () => {
         "Join our cooking community for live sessions and recipe sharing",
       icon: "Facebook",
       color: "bg-blue-600",
-      url: "https://facebook.com/VEGALAYAfoods",
+      url: "https://www.facebook.com/profile.php?id=61577283060582",
     },
-    {
-      name: "YouTube",
-      handle: "VEGALAYA Kitchen",
-      followers: "45K",
-      description: "Step-by-step cooking tutorials and chef collaborations",
-      icon: "Youtube",
-      color: "bg-red-600",
-      url: "https://youtube.com/VEGALAYAkitchen",
-    },
+    
     {
       name: "WhatsApp",
       handle: "Cooking Support",
