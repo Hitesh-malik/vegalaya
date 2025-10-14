@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Center Section - Social Links */}
           <div className="flex flex-col  lg:items-end gap-3">
-            <div className="flex space-x-3">
+            {/* <div className="flex space-x-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -81,14 +81,10 @@ const Footer = () => {
                   <Icon name={social.icon} size={16} />
                 </a>
               ))}
-            </div>
+            </div> */}
 
             {/* Certifications - Moved to center */}
             <div className="flex items-center space-x-4 text-xs">
-              <div className="flex items-center space-x-1 text-white/80">
-                <Icon name="Shield" size={14} className="text-secondary" />
-                <span>ISO Certified</span>
-              </div>
               <div className="flex items-center space-x-1 text-white/80">
                 <Icon name="Award" size={14} className="text-secondary" />
                 <span>FSSAI Approved</span>
