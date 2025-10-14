@@ -18,42 +18,9 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
-      {/* Hero Section with Dynamic Product Showcase */}
       <HeroSection />
-
-      {/* Flavor Discovery Quiz Widget */}
-      {/* <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary font-accent mb-4">
-              Find Your Perfect Flavor Match
-            </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              Take our personalized quiz to discover VEGALAYA products that match
-              your taste preferences
-            </p>
-          </div>
-          <FlavorQuizWidget />
-        </div>
-      </section> */}
-
-      {/* Taste the Difference - Product Categories */}
       <ProductCategoryCards />
-
-      {/* Let's Brew a Better Future Section */}
       <BrewBetterFuture />
-
-      {/* Scrolling Testimonial Banner */}
-      {/* <TestimonialBanner /> */}
-
-      {/* VEGALAYA Kitchen Stories */}
-      {/* <KitchenStoriesSection /> */}
-
-      {/* Seasonal Campaign Banners */}
-      {/* <SeasonalCampaigns /> */}
-
-      {/* Footer with Quick Links */}
       <Footer />
     </div>
   );
