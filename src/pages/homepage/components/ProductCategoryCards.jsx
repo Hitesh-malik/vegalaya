@@ -96,14 +96,15 @@ const ProductCategoryCards = () => {
                 </div>
 
                 {/* Title Overlay */}
-                <div className="absolute bottom-4 left-4 text-white">
+                {/* <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold mb-1">{category.title}</h3>
                   <p className="text-sm opacity-90">{category.subtitle}</p>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}
               <div className="p-6">
+              <h3 className="text-2xl font-bold mb-1 text-primary">{category.title}</h3>
                 <p className="text-text-secondary mb-4">
                   {category.description}
                 </p>
