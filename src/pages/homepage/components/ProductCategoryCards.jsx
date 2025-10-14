@@ -88,9 +88,7 @@ const ProductCategoryCards = () => {
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 appetite-filter"
                 />
-                <div
-                  className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-80`}
-                ></div>
+        
 
                 {/* Category Icon */}
                 <div className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
