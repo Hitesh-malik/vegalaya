@@ -450,7 +450,7 @@ const ProductCategories = () => {
               )}
 
               {/* Load More Button */}
-              {filteredProducts.length > 0 && filteredProducts.length >= 7 && (
+              {/* {filteredProducts.length > 0 && filteredProducts.length >= 7 && (
                 <div className="text-center mt-12">
                   <Button
                     variant="outline"
@@ -461,7 +461,7 @@ const ProductCategories = () => {
                     Load More Products
                   </Button>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
