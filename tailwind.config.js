@@ -60,7 +60,7 @@ export default {
         'background-canvas': 'var(--color-background-canvas)' /* warm-white */
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
         accent: ['Playfair Display', 'serif']
       },
