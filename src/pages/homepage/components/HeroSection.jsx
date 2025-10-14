@@ -66,12 +66,10 @@ const HeroSection = () => {
     <section
       className="
         relative
-        h-[100dvh] min-h-screen
-        bg-gradient-to-br from-primary/5 to-secondary/10
+        h-[80vh] min-h-screen
         overflow-hidden
       "
     >
-      {/* Background Slides - Method 1: Using onClick handler */}
       <div className="absolute inset-0 w-full h-full">
         {heroSlides.map((slide, index) => (
           <div
@@ -90,11 +88,10 @@ const HeroSection = () => {
             }}
             aria-label={`View ${slide.title} products`}
           >
-            <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
             <Image
               src={slide.image}
               alt={slide.title || "Hero image"}
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-contain object-center"
               loading={index === currentSlide ? "eager" : "lazy"}
               decoding="async"
             />
@@ -102,40 +99,6 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Alternative Method 2: Using Link wrapper (uncomment to use this instead) */}
-      {/*
-      <Link to="/product-categories" className="absolute inset-0 w-full h-full block">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 will-change-opacity transform-gpu ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-            aria-hidden={index !== currentSlide}
-          >
-            <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
-            <Image
-              src={slide.image}
-              alt={slide.title || "Hero image"}
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              loading={index === currentSlide ? "eager" : "lazy"}
-              decoding="async"
-            />
-          </div>
-        ))}
-      </Link>
-      */}
-
-      {/* Content */}
-      <div className="relative z-20 h-full flex items-center pointer-events-none">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            {/* Your commented content can go here */}
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
@@ -151,10 +114,6 @@ const HeroSection = () => {
         <Icon name="ChevronRight" size={24} />
       </button>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 text-white animate-bounce pointer-events-none">
-        <Icon name="ChevronDown" size={24} />
-      </div>
     </section>
   );
 };
