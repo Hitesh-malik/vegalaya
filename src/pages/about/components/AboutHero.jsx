@@ -14,7 +14,7 @@ const AboutHero = () => {
               <br />
               Brewed with Purpose.
             </h1>
-            <p className="text-lg lg:text-xl xl:text-2xl text-text-primary max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl xl:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
               From sustainable farms to your cup—vegalaya is india's answer to
               conscious, plant-powered indulgence.
             </p>

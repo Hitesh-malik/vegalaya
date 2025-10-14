@@ -79,12 +79,12 @@ const OurStory = () => {
               <h3 className="text-2xl font-bold text-primary mb-6">
                 From Vision to Reality
               </h3>
-              <p className="text-lg text-text-primary leading-relaxed mb-6">
+              <p className="text-lg text-text-secondary leading-relaxed mb-6">
                 Our journey began with a simple question: "What if we could
                 create plant-based beverages that don't just replace dairy, but
                 elevate the entire experience?"
               </p>
-              <p className="text-lg text-text-primary leading-relaxed mb-6">
+              <p className="text-lg text-text-secondary leading-relaxed mb-6">
                 Today, we're proud to serve customers across India and beyond,
                 bringing the authentic flavors of our homeland to the world
                 while staying true to our commitment to sustainability and

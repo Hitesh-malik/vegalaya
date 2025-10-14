@@ -18,7 +18,7 @@ const OurInspiration = () => {
               From Personal Struggles to Healthier, Sustainable Choices
             </h3>
 
-            <div className="prose prose-lg max-w-none text-text-primary">
+            <div className="prose prose-lg max-w-none text-text-secondary">
               <p className="text-lg leading-relaxed mb-6">
                 Vegalaya was born out of personal experiences, family care, and
                 a desire to make healthy living accessible to everyone. Growing
@@ -38,25 +38,17 @@ const OurInspiration = () => {
                 expensive, or nutritionally inadequate alternatives—highlighting
                 a real gap in the market.
               </p>
-
-              <div className="bg-surface p-8 rounded-lg shadow-sm my-8">
-                <div className="flex items-start mb-4">
-                  <Icon
-                    name="Coffee"
-                    size={20}
-                    className="text-primary mr-3 mt-1"
-                  />
-                  <p className="text-lg leading-relaxed">
-                    I have always loved coffee, but plant-based milk
+              <p className="text-lg leading-relaxed mb-6">
+              I have always loved coffee, but plant-based milk
                     alternatives were often bland, spoil quickly, and were
                     impossible to finish before going bad. That challenge
                     sparked a new idea: why not create versatile, long-lasting
                     products that could stay on the shelf and be used anytime—in
                     tea, coffee, curries, or any dish—without compromising taste
                     or nutrition?
-                  </p>
-                </div>
-              </div>
+              </p>
+
+               
 
               <p className="text-lg leading-relaxed mb-6">
                 Vegalaya is more than just plant-based foods; it's a solution.
