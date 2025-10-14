@@ -78,14 +78,14 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
       )}
 
       {/* Ingredients */}
-      {product.ingredients && (
+      {/* {product.ingredients && (
         <div className="bg-surface rounded-lg p-4">
           <h3 className="font-semibold text-text-primary mb-2">Ingredients</h3>
           <p className="text-text-secondary text-sm leading-relaxed">
             {product.ingredients}
           </p>
         </div>
-      )}
+      )} */}
 
       {/* Dietary Information & Nutritional Highlights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -109,7 +109,7 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
         )}
 
         {/* Nutritional Info */}
-        {product.nutritionalInfo && (
+        {/* {product.nutritionalInfo && (
           <div className="bg-surface rounded-lg p-4">
             <h3 className="font-semibold text-text-primary mb-3">
               Nutritional Highlights
@@ -135,7 +135,7 @@ const ProductInfo = ({ product, onAddToCart, onSaveForLater }) => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Rating & Reviews */}

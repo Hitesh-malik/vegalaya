@@ -2,17 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../../../components/AppIcon";
 import Image from "../../../components/AppImage";
-import Button from "../../../components/ui/Button";
 
 const ProductCard = ({ product, onAddToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const handleAddToCart = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onAddToCart(product);
-  };
 
   return (
     <div
@@ -33,7 +27,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           />
 
           {/* Badges */}
-          <div className="absolute top-3 left-3 flex flex-col gap-2">
+          {/* <div className="absolute top-3 left-3 flex flex-col gap-2">
             {product.isNew && (
               <span className="bg-conversion-accent text-white text-xs font-medium px-2 py-1 rounded-full">
                 New
@@ -49,10 +43,10 @@ const ProductCard = ({ product, onAddToCart }) => {
                 {product.discount}% OFF
               </span>
             )}
-          </div>
+          </div> */}
 
           {/* Quick Recipe Overlay */}
-          <div
+          {/* <div
             className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-300 ${
               isHovered ? "opacity-100" : "opacity-0"
             }`}
@@ -66,7 +60,7 @@ const ProductCard = ({ product, onAddToCart }) => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Product Info */}
@@ -77,7 +71,7 @@ const ProductCard = ({ product, onAddToCart }) => {
                 {product.name}
               </h3>
               <p className="text-sm text-text-secondary mt-1">
-                {product.size} • {product.category}
+                {product.category}
               </p>
             </div>
             {/* <div className="flex items-center gap-1 ml-2">

@@ -69,7 +69,7 @@ const ProductCategories = () => {
     },
     {
       id: 3,
-      name: "VEGALAYA Vega Keshar Chai",
+      name: "VEGALAYA Vega kesar Chai",
       category: "Beverages",
       size: "200ml",
       price: 125,

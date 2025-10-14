@@ -38,7 +38,7 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onToggle }) => {
       "Office",
       "Health & Fitness",
     ],
-    size: ["200ml", "300ml", "320ml", "340ml", "500ml"],
+    // size: ["200ml", "300ml", "320ml", "340ml", "500ml"],
     brand: ["VEGALAYA Vega"],
   };
 
