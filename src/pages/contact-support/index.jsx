@@ -268,9 +268,7 @@ const ContactSupport = () => {
             </div>
 
             <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-              Your culinary success is our priority. We're committed to
-              providing exceptional support and helping you create memorable
-              meals with VEGALAYA products.
+              Crafting memorable meals should be a joy. We're committed to supporting your culinary journey with exceptional, 100% plant-based VEGALAYA products.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
