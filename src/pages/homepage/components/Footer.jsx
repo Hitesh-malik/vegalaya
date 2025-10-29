@@ -62,7 +62,9 @@ const Footer = () => {
                   className="text-secondary mt-0.5"
                 />
                 <span className="text-white/80">
-                  VEGALAYA Foods Pvt. Ltd., New Delhi India
+                  VEGALAYA Foods Pvt. Ltd.
+                  <br />
+                  New Delhi, India
                 </span>
               </div>
             </div>

@@ -112,9 +112,9 @@ const SocialMediaSection = () => {
                   <h4 className="font-semibold text-text-primary">
                     {platform.name}
                   </h4>
-                  <span className="text-xs bg-accent/20 text-primary px-2 py-1 rounded-full">
+                  {/* <span className="text-xs bg-accent/20 text-primary px-2 py-1 rounded-full">
                     {platform.followers}
-                  </span>
+                  </span> */}
                 </div>
                 <p className="text-sm text-text-secondary mb-2">
                   {platform.handle}
