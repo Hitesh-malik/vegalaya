@@ -9,9 +9,9 @@ const ProductInfo = ({ product }) => {
       {/* Product Title & Brand */}
       <div>
         <div className="flex items-center space-x-2 mb-2">
-          <span className="text-sm font-medium text-primary bg-accent/20 px-2 py-1 rounded-full">
+          {/* <span className="text-sm font-medium text-primary bg-accent/20 px-2 py-1 rounded-full">
             {product.brand}
-          </span>
+          </span> */}
            
         </div>
         <h1 className="text-2xl lg:text-3xl font-bold text-text-primary mb-2">

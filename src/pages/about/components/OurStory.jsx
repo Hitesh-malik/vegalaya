@@ -66,7 +66,7 @@ const OurStory = () => {
                         Expansion in the market
                       </div>
                       <div className="text-sm text-text-secondary mt-1">
-                        Hit in the Indian market
+                        Hit in the German and  Indian market
                       </div>
                     </div>
                   </div>
