@@ -28,7 +28,7 @@ const ProductCategories = () => {
       originalPrice: 165,
       discount: 12,
       rating: 4.5,
-      image: "assets/images/newImage/newProduct/VegaCocoLassi.png",
+      image: "assets/images/newImage/newProduct/VegaCocoLassi.webp",
       isNew: true,
       isBestseller: false,
       tags: ["Refreshing", "Coconut", "Traditional"],
@@ -52,7 +52,7 @@ const ProductCategories = () => {
       price: 185,
       originalPrice: null,
       rating: 4.7,
-      image: "assets/images/newImage/newProduct/VegaMangoLassi.png",
+      image: "assets/images/newImage/newProduct/VegaMangoLassi.webp",
       isNew: false,
       isBestseller: true,
       tags: ["Mango", "Sweet", "Creamy"],
@@ -73,7 +73,7 @@ const ProductCategories = () => {
       originalPrice: 140,
       discount: 11,
       rating: 4.6,
-      image: "assets/images/newImage/newProduct/VegaKesarChai.png",
+      image: "assets/images/newImage/newProduct/VegaKesarChai.webp",
       isNew: true,
       isBestseller: false,
       tags: ["Saffron", "Premium", "Traditional"],
@@ -93,7 +93,7 @@ const ProductCategories = () => {
       price: 165,
       originalPrice: null,
       rating: 4.4,
-      image: "assets/images/newImage/newProduct/VegaMoka.png",
+      image: "assets/images/newImage/newProduct/VegaMoka.webp",
       isNew: false,
       isBestseller: true,
       tags: ["Coffee", "Chocolate", "Premium"],
@@ -114,7 +114,7 @@ const ProductCategories = () => {
       originalPrice: 175,
       discount: 11,
       rating: 4.3,
-      image: "assets/images/newImage/newProduct/VegaBerryShake.png",
+      image: "assets/images/newImage/newProduct/VegaBerryShake.webp",
       isNew: false,
       isBestseller: false,
       tags: ["Berry", "Antioxidant", "Healthy"],
@@ -134,7 +134,7 @@ const ProductCategories = () => {
       price: 135,
       originalPrice: null,
       rating: 4.5,
-      image: "assets/images/newImage/newProduct/VegaStrawberryLassi.png",
+      image: "assets/images/newImage/newProduct/VegaStrawberryLassi.webp",
       isNew: false,
       isBestseller: true,
       tags: ["Strawberry", "Sweet", "Refreshing"],
@@ -158,7 +158,7 @@ const ProductCategories = () => {
       price: 160,
       originalPrice: null,
       rating: 4.3,
-      image: "assets/images/newImage/newProduct/VegaChoco.png",
+      image: "assets/images/newImage/newProduct/VegaChoco.webp",
       isNew: true,
       isBestseller: false,
       tags: ["Chocolate", "Rich", "Creamy"],
@@ -183,7 +183,7 @@ const ProductCategories = () => {
       originalPrice: 210,
       discount: 10,
       rating: 4.4,
-      image: "assets/images/newImage/newProduct/VegaAlmondCreamer.png",
+      image: "assets/images/newImage/newProduct/VegaAlmondCreamer.webp",
       isNew: false,
       isBestseller: false,
       tags: ["Almond", "Nutty", "Vegan"],
@@ -206,7 +206,7 @@ const ProductCategories = () => {
       price: 160,
       originalPrice: null,
       rating: 4.2,
-      image: "assets/images/newImage/newProduct/VegaSoyCreamer.png",
+      image: "assets/images/newImage/newProduct/VegaSoyCreamer.webp",
       isNew: false,
       isBestseller: false,
       tags: ["Soy", "Vegan", "Smooth"],
@@ -229,7 +229,7 @@ const ProductCategories = () => {
       price: 145,
       originalPrice: null,
       rating: 4.0,
-      image: "assets/images/newImage/newProduct/VegaJowarCreamer.png",
+      image: "assets/images/newImage/newProduct/VegaJowarCreamer.webp",
       isNew: false,
       isBestseller: false,
       tags: ["Jowar", "Vegan", "Healthy"],
@@ -373,7 +373,7 @@ const ProductCategories = () => {
                   />
 
                   {/* View Mode Toggle */}
-                  <div className="flex border border-border rounded-lg overflow-hidden">
+                  {/* <div className="flex border border-border rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode("grid")}
                       className={`p-2 ${
@@ -394,7 +394,7 @@ const ProductCategories = () => {
                     >
                       <Icon name="List" size={16} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
